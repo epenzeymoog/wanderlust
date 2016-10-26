@@ -1,0 +1,22 @@
+.left {
+	display: inline-block;
+	float: left;
+	width: 40%;
+}
+
+.right {
+	float: right;
+}
+
+.clean-list ul {
+	list-style: none;
+	padding-left: 0;
+}
+
+.show-large {
+	display: none;
+
+	@media (min-width: $md-screen) {
+		display: block;
+	}
+}
