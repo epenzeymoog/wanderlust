@@ -1,0 +1,107 @@
+.promotions {
+	background-color: $almost-white;
+	padding: 3em 2em 5em 2em;
+
+	@media (min-width: $ex-lg-screen) {
+		padding: 3em 0 5em 0;
+	}
+}
+
+.section-title {
+	color: $main;
+	font-family: $Futura;
+	font-size: 2em;
+	font-weight: 300;
+	margin: 0;
+	padding-bottom: 1em;
+}
+
+.cards {
+	display: inline-block;
+	padding-bottom: 0em;
+	width: 100%;
+
+	@media (min-width: $md-screen) {
+		padding-bottom: 2em;
+	}
+}
+
+.card-list {
+	background-color: #FFF;
+	border-radius: 5px;
+	display: inline-block;
+	margin-bottom: 2em;
+	margin-right: 2.26%;
+	width: 100%;
+	&:last-child {
+		margin-right: 0;
+	}
+
+	@media (min-width: $md-screen) {
+		margin-bottom: 0em;
+		width: 31.33%;
+	}
+}
+
+.card-list__item {
+	overflow: hidden;
+}
+
+.card-section__photo {
+	border-radius: 5px 5px 0px 0px;
+	height: 200px;
+	width: 100%;
+}
+
+.card-section__title h1 {
+	color: $main;
+	font-size: 1.5em;
+	font-weight: 300;
+	padding: .5em;
+	margin: 0;
+	text-align: center;
+}
+
+.test {
+	border: 1px solid $off-white;
+}
+
+.card-section__detail {
+	color: $main;
+	padding: .5em;
+}
+
+.strikethrough {
+	color: $secondary;
+	text-decoration: line-through;
+}
+
+.oslo {
+	background: url(../images/promotions/Oslo.jpg) center no-repeat;
+	background-size: cover;
+}
+
+.boston {
+	background: url(../images/promotions/boston.jpg) center no-repeat;
+	background-size: cover;
+}
+
+.rio {
+	background: url(../images/promotions/Rio-de-Jeniero.jpg) center no-repeat;
+	background-size: cover;
+}
+
+.napa {
+	background: url(../images/promotions/napa-valley.jpeg) center no-repeat;
+	background-size: cover;
+}
+
+.st-thomas {
+	background: url(../images/promotions/st-thomas.jpg) center no-repeat;
+	background-size: cover;
+}
+
+.bangkok {
+	background: url(../images/promotions/Bangkok.jpg) center no-repeat;
+	background-size: cover;
+}

@@ -1,7 +1,24 @@
 //Colors
 $white: #FFF;
+$almost-white: #F9F9F9;
+$off-white: #EBEBEB;
+$cta: #5BE7B5;
+$alt-cta: #98D1D5;
+$background: #007DA9;
+
+//Text and box/border colors
+$main: #4A4A4A;
+$secondary: #9B9B9B;
+
+//Calendar colors
+$low: #9CD260;
+$medium-low: #E4A53F;
+$medium-high: #F6D34B;
+$high: #D83F3F;
+$unavailable: #EBEBEB;
 
 //Type
+$body-font: 16px/1.5 "futura-pt", sans-serif;
 $Amatic: 'Amatica SC', cursive;
 $Futura: "futura-pt", sans-serif;
 
@@ -9,3 +26,6 @@ $Futura: "futura-pt", sans-serif;
 $sm-screen: '375px';
 $md-screen: '700px';
 $lg-screen: '900px';
+$ex-lg-screen: '1200px';
+
+

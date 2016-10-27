@@ -6,72 +6,80 @@ layout: layout
 <%= partial "partials/nav" %>
 <h1 class="hero__tagline show-large">Discover your inner explorer</h1>  
 
-<div class="form-table container--small">
+<div class="container">
+	<div class="form-table">
   
-  <input id="tab1" type="radio" name="tabs" checked>
-  <label for="tab1" class="form-table__label">FLIGHTS</label>
-    
-  <input id="tab2" type="radio" name="tabs">
-  <label for="tab2" class="form-table__label">LODGING</label>
-    
-  <input id="tab3" type="radio" name="tabs">
-  <label for="tab3" class="form-table__label">CARS</label>
+	  <input id="tab1" type="radio" name="tabs" checked>
+	  <label for="tab1" class="form-table__label">FLIGHTS</label>
+	    
+	  <input id="tab2" type="radio" name="tabs">
+	  <label for="tab2" class="form-table__label">LODGING</label>
+	    
+	  <input id="tab3" type="radio" name="tabs">
+	  <label for="tab3" class="form-table__label">CARS</label>
 
-<section class="content" id="content1">    
-    <div class="tab-content"> 
-     <ul class="flight-search">
-         <li><a href="#">round trip</a></li>
-         <li><a href="#">one-way</a></li>
-         <li><a href="#">multi-city</a></li>   
-      </ul>
-
-      <section class="column">
-      <section class="row">
-      <ul class="module-6"> 
-      	<label>flying from</label>	 
-         <input type="text" name="fname" placeholder="city or airport">
-         
-        <label>flying to</label> 
-         <input type="text" name="fname" placeholder="city or airport">
-      </section>
-         
-         <label>departing</label>
-         <input type="date" name="date" required placeholder="depart">
-         
-         <label>returning</label>
-         <input type="date" name="date" required placeholder="return">
-			
-
-				<label class="select-style">Adults</label>
-         <select>
-					<option value="option1">1</option>
-					<option value="option2">2</option>
-         </select>
-
-         <label class="select-style">Children</label>
-         <select>
-					<option value="option1">1</option>
-					<option value="option2">2</option>
-         </select>
+		<section class="content" id="content1">    
+    	<div class="tab-content"> 
+     		<ul class="flight-search">
+         	<li><a href="#">round trip</a></li>
+         	<li><a href="#">one-way</a></li>
+         	<li><a href="#">multi-city</a></li>   
       	</ul>
-      </section>
-    </div>
 
-    <input type="button" value="SEARCH" class="search" onclick="location.href='#';">
+	      <section class="column">
+	      	<div class="row">
+	      		<div class="row-half"
+	      			<label>flying from</label>	 
+	         			<input type="text" name="fname" placeholder="city or airport">
+	         	</div>
+	         	<div class="row-half">
+	        		<label>flying to</label> 
+	         			<input type="text" name="fname" placeholder="city or airport">
+	         	</div>
+	      	</div>
+	         
+	      	<div class="row">
+	      		<div class="row-half">
+	         		<label>departing</label>
+	         			<input type="date" name="date" required placeholder="depart">
+	          </div>
+	          <div class="row-half">
+	         		<label>returning</label>
+	         			<input type="date" name="date" required placeholder="return">
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="row-half">
+							<label class="select-style">Adults</label>
+		         		<select>
+									<option value="option1">1</option>
+									<option value="option2">2</option>
+		         		</select>
+	         	</div>
+						<div class="row-half">
+		         	<label class="select-style">Children</label>
+		         		<select>
+									<option value="option1">1</option>
+									<option value="option2">2</option>
+		         		</select>
+	         	</div>
+	      	</div>	
+	     	</section>
+    	</div>
+
+    <input type="button" value="SEARCH" class="search" onclick="location.href='/flight-results';">
 </section>
     
 <section class="content" id="content2">    
-     <div class="tab-content"> 
-        <section class="column">
-        <ul class="module-6">  
-          <label>destination</label>
-           <input type="text" name="fname" placeholder="city or hotel name">
-           <label>check-in</label>
-           <input type="date" name="date" required placeholder="depart">
-           <label>check-out</label>
-           <input type="date" name="date" required placeholder="return">
-
-
+  <div class="tab-content"> 
+    <section class="column">
+    	<div class="row">
+    		<div class="row-half">
+      		<label>destination</label>
+      		<input type="text" name="fname" placeholder="city or hotel name">
+      	</div>
+      	<div class="row-half">
           <label>rooms</label>
             <label class="select-style">
               <select>
@@ -84,9 +92,23 @@ layout: layout
                <option value="Option 5">6</option>
               </select>
             </label>
-           </li>
+       	</div>
+      </div>
 
-           <label>adults</label>
+      <div class="row">
+      	<div class="row-half">          		
+       		<label>check-in</label>
+       		<input type="date" name="date" required placeholder="depart">
+       	</div>
+       	<div class="row-half">           		
+       		<label>check-out</label>
+       		<input type="date" name="date" required placeholder="return">
+       	</div>
+			</div>
+
+			<div class="row">
+				<div class="row-half">
+          <label>adults</label>
             <label class="select-style">
               <select>
                <option disabled selected>1</option>
@@ -97,10 +119,11 @@ layout: layout
                <option value="Option 4">5</option>
                <option value="Option 5">6</option>
               </select>
-            </label>
-           </li>
-           
-           <label>children</label>
+          	</label>
+        </div>
+       
+       	<div class="row-half">
+	       <label>children</label>
             <label class="select-style">
               <select>
                <option disabled selected>0</option>
@@ -111,95 +134,196 @@ layout: layout
                <option value="Option 4">5</option>
                <option value="Option 5">6</option>
               </select>
-            </label>
-           </li>    
-        </ul>
-        </section>
-      </div>
-      <input type="button" value="SEARCH" class="search" onclick="location.href='#';">
+            </label> 
+      	</div>    
+    	</div>
+    </section>
+  </div>
+  <input type="button" value="SEARCH" class="search" onclick="location.href='#';">
 </section>
 
 <section class="content" id="content3">    
-     <div class="tab-content"> 
-
-        <ul class="module-6">  
-				<section class="column">
-        <ul class="module-6">  
-          <label>car pick up</label>
-           <input type="text" name="fname" placeholder="city, zipcode or airport">
-           <label>car drop off</label>
-           <input type="text" name="fname" placeholder="city, zipcode or airport">
-
-           <label>pick up day</label>
-           <input type="date" name="date" required placeholder="depart"> 
-
-            <label>pick up time</label>
-            <label class="select-style">
-              <select>
-               <option disabled selected>12:00pm</option>
-               <option value="Option 1">12:00pm</option>
-               <option value="Option 1">1:00pm</option>
-               <option value="Option 2">2:00pm</option>
-               <option value="Option 3">3:00pm</option>
-               <option value="Option 4">4:00pm</option>
-               <option value="Option 5">5:00pm</option>
-              </select>
-            </label>
-           </li>
-
-           <label>drop off day</label>
-           <input type="date" name="date" required placeholder="return">
-
-          <label>drop off time</label>
-            <label class="select-style">
-              <select>
-               <option disabled selected>12:00pm</option>
-               <option value="Option 1">12:00pm</option>
-               <option value="Option 1">1:00pm</option>
-               <option value="Option 2">2:00pm</option>
-               <option value="Option 3">3:00pm</option>
-               <option value="Option 4">4:00pm</option>
-               <option value="Option 5">5:00pm</option>
-              </select>
-            </label>
-           </li>
-          </ul>
-          <ul class="module-6"> 
-
-           <label>vehicle type</label>
-            <label class="select-style">
-              <select>
-               <option disabled selected>economy</option>
-               <option value="Option 1">economy</option>
-               <option value="Option 1">compacy</option>
-               <option value="Option 2">fullsize</option>
-               <option value="Option 3">premium</option>
-               <option value="Option 4">luxury</option>
-               <option value="Option 5">convertible</option>
-               <option value="Option 5">minivan</option>
-               <option value="Option 5">sports utility vehicle</option>
-              </select>
-            </label>
-           </li>
-           
-           <label>company</label>
-            <label class="select-style">
-              <select>
-               <option disabled selected>no preference</option>
-               <option value="Option 1">no preference</option>
-               <option value="Option 1">avis</option>
-               <option value="Option 2">budget</option>
-               <option value="Option 3">enterprise</option>
-               <option value="Option 4">hertz</option>
-               <option value="Option 5">thrifty</option>
-              </select>
-            </label>
-        	</ul>
-        </section>
-       </ul>
+	<div class="tab-content"> 
+		<section class="column">
+			<div class="row">
+				<div class="row-half">
+    			<label>car pick up</label>
+     			<input type="text" name="fname" placeholder="city, zipcode or airport">
+     		</div>
+     		<div class="row-half">
+     			<label>car drop off</label>
+     			<input type="text" name="fname" placeholder="city, zipcode or airport">
+     		</div>
+			</div>
+			<div class="row">
+				<div class="row-half">
+     			<label>pick up day</label>
+     			<input type="date" name="date" required placeholder="depart"> 
+				</div>
+				<div class="row-half">
+      		<label>pick up time</label>
+      			<label class="select-style">
+			        <select>
+				        <option disabled selected>12:00pm</option>
+				        <option value="Option 1">12:00pm</option>
+				        <option value="Option 1">1:00pm</option>
+				        <option value="Option 2">2:00pm</option>
+				        <option value="Option 3">3:00pm</option>
+				        <option value="Option 4">4:00pm</option>
+				        <option value="Option 5">5:00pm</option>
+			        </select>
+			      </label>
+     		</div>
+     	</div>
+			<div class="row">
+				<div class="row-half">
+     			<label>drop off day</label>
+     			<input type="date" name="date" required placeholder="return">
+				</div>
+				<div class="row-half">
+			    <label>drop off time</label>
+			      <label class="select-style">
+			        <select>
+			         <option disabled selected>12:00pm</option>
+			         <option value="Option 1">12:00pm</option>
+			         <option value="Option 1">1:00pm</option>
+			         <option value="Option 2">2:00pm</option>
+			         <option value="Option 3">3:00pm</option>
+			         <option value="Option 4">4:00pm</option>
+			         <option value="Option 5">5:00pm</option>
+			        </select>
+			      </label>
+      	</div>
       </div>
+			<div class="row">
+				<div class="row-half">
+		      <label>vehicle type</label>
+		      	<label class="select-style">
+			        <select>
+			          <option disabled selected>economy</option>
+			          <option value="Option 1">economy</option>
+			          <option value="Option 1">compacy</option>
+			          <option value="Option 2">fullsize</option>
+			          <option value="Option 3">premium</option>
+			          <option value="Option 4">luxury</option>
+			          <option value="Option 5">convertible</option>
+			          <option value="Option 5">minivan</option>
+			          <option value="Option 5">sports utility vehicle</option>
+			        </select>
+		      </label>
+		    </div>
+     		<div class="row-half">
+		      <label>company</label>
+		      <label class="select-style">
+		        <select>
+		          <option disabled selected>no preference</option>
+		          <option value="Option 1">no preference</option>
+		          <option value="Option 1">avis</option>
+		          <option value="Option 2">budget</option>
+		          <option value="Option 3">enterprise</option>
+		          <option value="Option 4">hertz</option>
+		          <option value="Option 5">thrifty</option>
+		        </select>
+		      </label>
+      	</div>
+  		</div>
+  </section>
+ 
+</div>
       <input type="button" value="SEARCH" class="search" onclick="location.href='#';">
   </section>
 </div>
+</div>
 
 </header>
+
+<section class="promotions">
+	<div class="container">
+		<h1 class="section-title">Featured Deals</h1>
+
+		<section class="cards">
+		<div class="card-list">
+			<div class="card-list__item">
+				<div class="card-section__photo oslo">
+				</div>
+				<div class="card-section__title">
+					<h1>Oslo, Norway</h1>
+					<p><span class="card-section__detail left">Hotel Aurora</span>
+					<span class="card-section__detail right"><span class="strikethrough">$249</span> $199</span></p>
+				</div>	
+			</div>
+		</div>
+
+		<div class="card-list">
+			<div class="card-list__item">
+				<div class="card-section__photo boston">
+				</div>
+				<div class="card-section__title">
+					<h1>Boston</h1>
+					<p class="card-section__detail left">Marriot Inn</p>
+					<p class="card-section__detail right"><span class="strikethrough">$189</span> $159</p>
+				</div>	
+			</div>
+		</div>
+
+		<div class="card-list">
+			<div class="card-list__item">
+				<div class="card-section__photo rio">
+				</div>
+				<div class="card-section__title">
+					<h1>Rio de Jeniero</h1>
+					<p class="card-section__detail left">Hotel Novotel</p>
+					<p class="card-section__detail right"><span class="strikethrough">$150</span> $99</p>
+				</div>	
+			</div>
+		</div>
+		</section>
+
+		<section class="cards">
+		<div class="card-list">
+			<div class="card-list__item">
+				<div class="card-section__photo st-thomas">
+				</div>
+				<div class="card-section__title">
+					<h1>St. Thomas</h1>
+					<p class="card-section__detail left">Paradise Inn</p>
+					<p class="card-section__detail right"><span class="strikethrough">$109</span> $89</p>
+				</div>	
+			</div>
+		</div>
+
+		<div class="card-list">
+			<div class="card-list__item">
+				<div class="card-section__photo napa">
+				</div>
+				<div class="card-section__title">
+					<h1>Napa Valley</h1>
+					<p class="card-section__detail left">Napa Lodge</p>
+					<p class="card-section__detail right"><span class="strikethrough">$360</span> $310</p>
+				</div>	
+			</div>
+		</div>
+
+		<div class="card-list">
+			<div class="card-list__item">
+				<div class="card-section__photo bangkok">
+				</div>
+				<div class="card-section__title">
+					<h1>Bangkok, Thailand</h1>
+					<p class="card-section__detail left">Hilton Bangkok</p>
+					<p class="card-section__detail right"><span class="strikethrough">$289</span> $250</p>
+				</div>	
+			</div>
+		</div>
+		</section>
+
+	</div>
+
+</section>
+
+<%= partial "partials/footer" %>
+
+
+
+
+

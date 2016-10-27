@@ -1,5 +1,6 @@
 nav {
 	padding-top: 1em;
+	width: 93%;
 
 	ul {
 		margin-top: .5em;
@@ -33,7 +34,7 @@ nav li {
 
 .icon {
 	display: inline-block;
-	margin-left: 6%;
+	padding-bottom: 1em;
 	width: 1.5em;
 
 	@media (min-width: $md-screen) {
@@ -46,7 +47,7 @@ nav li {
 		display: inline-block;
 		font-family: $Amatic;
 		font-size: 1em;
-		letter-spacing: 3px;
+		letter-spacing: 1px;
 		margin: 0;
 		margin-top: .5em;
 		text-transform: uppercase;

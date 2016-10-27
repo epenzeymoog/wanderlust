@@ -5,10 +5,14 @@
   font-weight: 300;
   letter-spacing: .1px;
   margin: 0 auto;
-  width: 95%;
+  width: 93%;
 	
 	input {
 	  display: none;
+	}
+
+	@media (min-width: $ex-lg-screen) {
+		width: 100%;
 	}
 }
 
@@ -16,6 +20,25 @@ ul {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.row {
+	margin-left: 1em;
+
+	@media (min-width: $md-screen) {
+		margin-left: 3em;
+	}
+}
+
+.row-half {
+display: block;
+width: 100%;
+
+	@media (min-width: $md-screen) {
+		font-size: 1.1em;
+		display: inline-block;	
+		width: 48%;
+	}
 }
 
 .form-table__label{
@@ -33,12 +56,23 @@ ul {
   padding: 5px 20px 5px 10px;
   text-align: center;
   width: 3.75em;
+
+  @media (min-width: $md-screen) {
+  	font-size: 1em;
+  }
 }
 
 .content {
   clear: both;
   display: none;
   width: 100%;
+}
+
+.flight-search li:first-of-type {
+	@media (min-width: $md-screen) {
+		padding-left: 3.2em;
+		margin-bottom: 1em;
+	}
 }
 
 .flight-search a {
@@ -52,15 +86,19 @@ ul {
   &:hover {
   	text-decoration: underline;
   }
+
+  @media (min-width: $md-screen){
+  	font-size: 1.2em;
+  }
 }
 
 .column {
 	clear: both;
 	margin: 0 1em;
-	padding-top: .5em;
+	padding-top: 1em;
 }
 
-.tab-content .module-6 #hidden li p {
+.tab-content #hidden li p {
   color: hsla(195, 195%, 195%, 0.00);
 }
 
@@ -72,15 +110,18 @@ label:hover {
 }
 
 input:checked + label {  
-  background: #FFF;
-  border: 1px solid white;
+  background: hsla(195, 195%, 195%, .9);
+  border-bottom: 1px solid #EAEAEC; 
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
   color: grey;
 }
 
 #tab1:checked ~ #content1,
 #tab2:checked ~ #content2,
 #tab3:checked ~ #content3 {  
-  background-color: hsla(195, 195%, 195%, 1);
+  background-color: hsla(195, 195%, 195%, .9);
   display: block;
   padding-bottom: 1em;
 }
@@ -96,25 +137,21 @@ input[type="time"],
 input[type="submit"],
 textarea,
 select {
-  background: #fff;
-  border: 1px solid #e3e6e9;
+  background: hsla(195, 195%, 195%, .9);
+  border: 1px solid grey;
   border-radius: 3px;
   color: #606060;
   display: inline-block;
   font-size: .9em;
   height: 30px;
   line-height: normal;
-  margin: 5px 10px 20px 0;
+  margin: 5px 0px 20px 0;
   padding: 0;
   padding-left: 8px;
   outline: none;
   transition: ease-in-out 0.2s;
  	-webkit-appearance: none; 
- 	width: 97%;
-
- 	@media (min-width: $md-screen) {
- 		width: 37%;
- 	}
+ 	width: 90%;
 }
 
 select {
@@ -122,12 +159,17 @@ select {
   -moz-appearance: none;
   transition: ease-in-out 0.2s;
   -webkit-appearance: none;
-  width: 100%;
+  width: 93%;
+
+  @media (min-width: $md-screen) {
+  	width: 92%;
+  }
 }
 
 input[type="button"] {
   background-color: #5BE7B5;
-  border: 1px solid #FFF;
+  border: 1px solid #5BE7B5;
+  border-radius: 5px;
   color: white;
   display: block;
   margin: 0 auto;
@@ -136,6 +178,10 @@ input[type="button"] {
 
   &:hover {
   	cursor: pointer;
+  }
+
+  @media (min-width: $md-screen) {
+  	width: 180px;
   }
 }
 
