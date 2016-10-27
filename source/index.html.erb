@@ -3,7 +3,22 @@ title: Wanderlust
 layout: layout
 ---
 <header class="hero">	
-<%= partial "partials/nav" %>
+
+<section class="container">
+	<section class="left"> 
+		<!-- <a href="/index"> -->
+		<%= image_tag "logo.svg", :class => 'icon' %>
+		<h1 class="icon__text">wanderlust</h1>
+		<!-- </a> -->
+	</section>
+
+	<section class="clean-list">
+		<ul>
+			<li class="right nav__link"><%= link_to "Welcome, Eva", "#", target: "_blank" %></li>
+		</ul>
+	</section>
+</section>
+
 <h1 class="hero__tagline show-large">Discover your inner explorer</h1>  
 
 <div class="container">
@@ -28,7 +43,7 @@ layout: layout
 
 	      <section class="column">
 	      	<div class="row">
-	      		<div class="row-half"
+	      		<div class="row-half">
 	      			<label>flying from</label>	 
 	         			<input type="text" name="fname" placeholder="city or airport">
 	         	</div>
@@ -68,7 +83,7 @@ layout: layout
 	     	</section>
     	</div>
 
-    <input type="button" value="SEARCH" class="search" onclick="location.href='/flight-results';">
+    <input type="button" value="SEARCH" class="search" onclick="location.href='/flight-results.html';">
 </section>
     
 <section class="content" id="content2">    
@@ -322,8 +337,3 @@ layout: layout
 </section>
 
 <%= partial "partials/footer" %>
-
-
-
-
-

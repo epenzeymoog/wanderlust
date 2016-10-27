@@ -1,0 +1,15 @@
+.filter label{
+  display: block;
+}
+
+.fileter input[type=checkbox] {
+  padding-right:5px;
+}
+
+.filter input[type=checkbox]:hover {
+  background-color: $off-white;
+  cursor: pointer;
+}
+
+
+// input[type=checkbox]

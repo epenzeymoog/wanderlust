@@ -1,19 +1,69 @@
 nav {
-	padding-top: 1em;
-	width: 93%;
+	background-color: $background;
+	width: 100%;
 
 	ul {
 		margin-top: .5em;
 	}
 }
 
-nav a {
+nav .container {
+	padding: 1.5em 1em 4.5em 1em;
+}
+
+.services {
+	font-size: 1em;
+	padding-left: 1em;
+	text-transform: uppercase;
+	
+	a {
+		color: $white;
+		font-family: $Futura;
+		font-weight: 300;
+		text-decoration: none;
+	}
+
+	@media (min-width: 520px) {
+		font-size: 1em;
+	}
+}
+
+.nav__link a {
 	color: $white;
 	font-family: $Futura;
 	font-weight: 300;
-	letter-spacing: 1px;
 	text-decoration: none;
 }
+
+.nav--large-screen {
+	display: none;
+
+	@media (min-width: 520px) {
+		display: inline;
+	}
+}
+
+.nav--small-screen {
+	background: $background;
+	display: block;
+	position: relative;
+	right: 1.5em;
+	width: 103%;
+
+	li {
+		display: inline;
+		padding-right: 1em;
+
+		&:last-of-type {
+			padding-right: 0;
+		}
+	}
+
+	@media (min-width: 520px) {
+		display: none;
+	}
+}
+
 
 nav li {
 	display: inline-block;
@@ -27,24 +77,21 @@ nav li {
 
 	@media (min-width: $sm-screen) {
 		display: inline-block;
-		padding-right: 20px;
+		padding-right: 1em;
 		padding-top: 0;
 	}
 }
 
 .icon {
+	margin-left: 1em;
 	display: inline-block;
 	padding-bottom: 1em;
 	width: 1.5em;
-
-	@media (min-width: $md-screen) {
-		margin-left: 1em;
-	}
 }
 
 .icon__text {
 		color: $white;
-		display: inline-block;
+		display: none;
 		font-family: $Amatic;
 		font-size: 1em;
 		letter-spacing: 1px;
@@ -54,6 +101,7 @@ nav li {
 		vertical-align: top;
 
 		@media (min-width: $md-screen) {
+			display: inline-block;
 			font-size: 1.5em;
 			letter-spacing: 5px;
 			margin-left: 1em;
