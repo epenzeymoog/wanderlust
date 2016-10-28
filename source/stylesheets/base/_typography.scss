@@ -1,0 +1,46 @@
+.card-column__price {
+	font-weight: 300;
+}
+
+.card-column__type {
+	color: $secondary;
+}
+
+.card-column__detail {
+	font-size: .75em;
+	line-height: 1;
+	padding-bottom: .5em;
+}
+
+.card-row__main {
+	padding-right: 15px;
+}
+
+.card-row__detail {
+	color: $secondary;
+	padding-right: 15px;
+}
+
+.card-row__detail--additional {
+	text-decoration: underline;
+}
+
+.filter__title {
+	font-size: 1.5rem;
+	font-weight: 300;
+	margin-top: 1em;
+
+	&:first-of-type {
+		margin-top: 3em;
+	}
+}
+
+.filter__subtitle {
+	font-size: 1.125rem;
+	margin-top: .5em;
+}
+
+.filter__label {
+	color: $secondary;
+	font-size: 1rem;
+}

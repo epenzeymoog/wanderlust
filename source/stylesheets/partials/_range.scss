@@ -1,22 +1,27 @@
-$track-color: #979797 !default;
+.filter__range-values {
+  height: 1.5em;
+  width: 100%;
+}
+
+$track-color: $light-grey !default;
 $thumb-color: $background !default;
 
 $thumb-radius: 100px !default;
 $thumb-height: 22px !default;
 $thumb-width: 22px !default;
-$thumb-shadow-size: 1px !default;
-$thumb-shadow-blur: 1px !default;
-$thumb-shadow-color: #949494 !default;
+$thumb-shadow-size: 2px !default;
+$thumb-shadow-blur: 5px !default;
+$thumb-shadow-color: $light-grey !default;
 $thumb-border-width: 0px !default;
 $thumb-border-color: #fff !default;
 
 $track-width: 50% !default;
 $track-height: 1px !default;
 $track-shadow-size: 0px !default;
-$track-shadow-blur: 2px !default;
-$track-shadow-color: #222 !default;
+$track-shadow-blur: 0px !default;
+$track-shadow-color: $light-grey !default;
 $track-border-width: 0px !default;
-$track-border-color: #000 !default;
+$track-border-color: $light-grey !default;
 
 $track-radius: 5px !default;
 $contrast: 5% !default;

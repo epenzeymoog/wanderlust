@@ -1,18 +1,103 @@
+//Containers
+
 .container {
 	margin: 0 auto;
 	max-width: 1000px;
 }
 
 .container--narrow {
-	border: 1px solid blue;
 	float: left;
 	margin-left: 1em;
-	max-width: 230px;
+	width: 180px;
 }
 
 .container--medium {
-	border: 1px solid green;
-	float: right;
+	padding-left: 1.5em;
 	margin-right: 1em;
 	max-width: 600px;
+	// border: 1px solid red;
+
+	@media (min-width: 828px) {
+		width: 600px;
+	}
+}
+
+.user-selection {
+	border-bottom: 1px solid $light-grey;
+	padding-bottom: 2em;
+}
+
+//Rows
+
+.card-row {
+	width: 74%;
+	padding-bottom: .5em;
+
+	p {
+		display: inline-block;
+	}
+}
+
+//Columns
+.column {
+	display: inline-block;
+}
+
+.column__1 {
+	width: 31%;
+}
+
+.column__2 {
+	width: 31%;
+}
+
+.column__3 {
+	width: 15%;
+}
+
+.column__4 {
+	width: 21%;
+}
+
+.card-column {
+	bottom: 3em;
+	display: inline-block;
+	position: relative;
+	right: .1em;
+	text-align: right;
+}
+
+.card-result {
+	clear: right;
+	width: 100%;
+}
+
+.card-container {
+	border-bottom: 1px solid $light-grey;
+	padding: 2em 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.row {
+	margin-left: 1em;
+
+	@media (min-width: $md-screen) {
+		margin-left: 3em;
+	}
+}
+
+.row-half {
+display: block;
+width: 100%;
+
+	@media (min-width: $md-screen) {
+		font-size: 1.1em;
+		display: inline-block;	
+		width: 48%;
+	}
 }

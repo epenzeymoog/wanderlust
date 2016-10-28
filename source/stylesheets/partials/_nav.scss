@@ -1,110 +1,74 @@
 nav {
 	background-color: $background;
+	height: 6em;
+	padding-bottom: .5em;
+	padding-top: 1em;
 	width: 100%;
 
 	ul {
-		margin-top: .5em;
+		display: inline-block;
+	}
+
+	@media (min-width: 660px) {
+		height: 4em;
 	}
 }
 
-nav .container {
-	padding: 1.5em 1em 4.5em 1em;
-}
+.nav--secondary {
+	height: 6em;
+	padding-bottom: .5em;
+	padding-top: 1em;
+	width: 100%;
 
-.services {
-	font-size: 1em;
-	padding-left: 1em;
-	text-transform: uppercase;
-	
-	a {
-		color: $white;
-		font-family: $Futura;
-		font-weight: 300;
-		text-decoration: none;
-	}
-
-	@media (min-width: 520px) {
-		font-size: 1em;
+	.nav-single__link {
+		display: block;
 	}
 }
 
-.nav__link a {
+.nav-list {
+	float: left;
+	margin-left: 1em;
+	margin-top: .8em;	
+
+	@media (min-width: 66px) {
+		float: right;
+	}
+}
+
+.nav-list__link {
 	color: $white;
-	font-family: $Futura;
-	font-weight: 300;
-	text-decoration: none;
+	display: block;
+	float: left;
+	margin-right: 16px;
+	text-transform: uppercase;
+
+	@media (min-width: $sm-screen) {	
+		margin-right: 30px;
+	}
 }
 
-.nav--large-screen {
+.nav-single__link {
+	color: white;
 	display: none;
 
-	@media (min-width: 520px) {
-		display: inline;
+	@media (min-width: $md-screen) {
+		display: block;
 	}
 }
 
-.nav--small-screen {
-	background: $background;
-	display: block;
-	position: relative;
-	right: 1.5em;
-	width: 103%;
-
-	li {
-		display: inline;
-		padding-right: 1em;
-
-		&:last-of-type {
-			padding-right: 0;
-		}
-	}
-
-	@media (min-width: 520px) {
-		display: none;
-	}
-}
-
-
-nav li {
-	display: inline-block;
-	padding-right: 1em;
-	padding-bottom: 10px;
-	text-align: left;
-	
-	a:hover {
-		text-decoration: underline;
-	}
-
-	@media (min-width: $sm-screen) {
-		display: inline-block;
-		padding-right: 1em;
-		padding-top: 0;
-	}
-}
-
-.icon {
-	margin-left: 1em;
-	display: inline-block;
-	padding-bottom: 1em;
-	width: 1.5em;
+.logo {
+	float: left;
+	width: 1.8em;
 }
 
 .icon__text {
-		color: $white;
-		display: none;
-		font-family: $Amatic;
-		font-size: 1em;
-		letter-spacing: 1px;
-		margin: 0;
-		margin-top: .5em;
-		text-transform: uppercase;
-		vertical-align: top;
+	color: $white;
+	font-family: $Amatic;
+	font-size: 1.8em;
+	letter-spacing: 1px;
+	text-align: right;
 
-		@media (min-width: $md-screen) {
-			display: inline-block;
-			font-size: 1.5em;
-			letter-spacing: 5px;
-			margin-left: 1em;
-			margin-top: .1em;
-		}
+	&:hover {
+		text-decoration: none;
 	}
+}

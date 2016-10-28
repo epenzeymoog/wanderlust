@@ -1,9 +1,23 @@
-form-table input .search {
-  background-color: #87D035;
+input[type="button"] {
+  border-radius: 5px;
+  
+  display: block;
+  margin: 0 auto;
+
+  &:hover {
+  	cursor: pointer;
+  }
+
+  @media (min-width: $md-screen) {
+  	
+  }
+}
+
+.form-table .search {
+  background-color: #5BE7B5;
+  border: 1px solid #5BE7B5;
   color: white; 
-  margin-left: 1em;
-  padding: 1px 50px;
-  width: 80%;
+  width: 170px;
   height: 4em;
 }
 
@@ -12,16 +26,54 @@ form-table input .search {
 	border-radius: 5px;
 	color: $white;
 	font-size: 1.125em;
+	height: 42px;
 	letter-spacing: .5px;
 	text-transform: uppercase;
 }
 
 .button--main {
 	background-color: $cta;
-	padding: .57em 1.95em;
+	width: 120px;
 }
 
 .button--secondary {
 	background-color: $alt-cta;
-	padding: .57em 1.95em;
+	width: 120px;
+}
+
+.button--tertiary {
+	background-color: $cta;
+	width: 180px;
+}
+
+.results-page {
+	display: inline-block;
+	float: right;
+	margin-top: 1em;
+
+	.results-page__button {
+		background-color: $white;
+		border: 1px solid $light-grey;
+		border-radius: 3px;
+		color: $background;
+		display: inline-block;
+		height: 28px;
+		margin-right: 5px;
+		width: 30px;
+
+		&:nth-of-type(4) {
+			border: none;
+			cursor: default;
+			margin: 0;
+			padding: 0;
+		}
+
+		&:last-of-type {
+			margin-right: 0;
+		}
+	}
+}
+
+.results-page__button p {
+	padding-left:2px;
 }

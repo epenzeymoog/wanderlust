@@ -1,31 +1,21 @@
 <nav>
-	<div class="container">
+<div class="container">
+	<ul class="container--narrow">
+		<li><a href="/index.html"><img class="logo" src="../images/logo.svg"></a></li>
+		<li class="right"><a class="icon__text clean-link" href="/index.html">Wanderlust</a></li>
+	</ul>
 
-		<section class="left"> 
-			<!-- <a href="/index"> -->
-			<%= image_tag "logo.svg", :class => 'icon' %>
-			<h1 class="icon__text">wanderlust</h1>
-			<!-- </a> -->
-		</section>
+	<div class="container--medium nav-list clean-list">
+		<ul>
+			<li class="nav-list__link"><a class="clean-link" href="/index">Flights</a></li>
+			<li class="nav-list__link"><a class="clean-link" href="/index">Lodging</a></li>
+			<li class="nav-list__link"><a class="clean-link" href="/index">Cars</a></li>
+			<li class="nav-list__link"><a class="clean-link" href="/index">Specials</a></li>
+		</ul>
 
-		<section class="clean-list">
-			<ul>
-				<div class="services nav--large-screen left">
-					<li><%= link_to "Flights", "#", target: "_blank" %></li>
-					<li><%= link_to "Lodging", "#", target: "_blank" %></li>
-					<li><%= link_to "Cars", "#", target: "_blank" %></li>
-					<li><%= link_to "Specials", "#", target: "_blank" %></li>
-				</div>
-
-				<li class="right nav__link"><%= link_to "Welcome, Eva", "#", target: "_blank" %></li>
-			</ul>
-		</section>
+		<ul class="right">
+			<li class="nav-single__link"><a class="clean-link" href="#">Welcome, Eva</a></li>
+		</ul>
 	</div>
+</div>
 </nav>
-
-	<div class="services clean-list services nav--small-screen">
-		<li><%= link_to "Flights", "#", target: "_blank" %></li>
-		<li><%= link_to "Lodging", "#", target: "_blank" %></li>
-		<li><%= link_to "Cars", "#", target: "_blank" %></li>
-		<li><%= link_to "Specials", "#", target: "_blank" %></li>
-	</div>
