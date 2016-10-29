@@ -1,11 +1,13 @@
 //Containers
 
+//Main container
 .container {
 	margin: 0 auto;
 	padding: 0 1em;
 	max-width: 1000px;
 }
 
+//Nav containers
 .container--narrow--nav {
 	float: left;
 	width: 57%;
@@ -23,21 +25,12 @@
 	}
 }
 
-.container--narrow {
-	display: none;
-	
-	@media (min-width: $md-screen) {
-		display: block;
-		float: left;
-		max-width: 30%
-	}
-
-	@media (min-width: $lg-screen) {
-		max-width: 33%
-	}
+//Third styles
+.one-third {
+	max-width: 33%
 }
 
-.container--medium {
+.two-thirds {
 	max-width: 100%;
 
 	@media (min-width: $md-screen) {
@@ -45,31 +38,12 @@
 	}
 }
 
-.user-selection {
-	padding-bottom: 2em;
-}
-
-//Rows
-
-.card-row {
+.thirds {
 	width: 100%;
-	p {
-		display: inline-block;
-		width: 100%;
 
-		@media (min-width: 500px) {
-			width: initial;
-		}
-	}
-	
 	@media (min-width: $md-screen) {
-		width: 74%;
-		padding-bottom: .5em;	
-		text-align: left;
-
-		&:last-of-type {
-			padding-bottom: 0;
-		}
+		margin-right: 1.33%;
+		width: 32%;
 	}
 }
 
@@ -118,50 +92,5 @@
 	@media (min-width: 827px) {
 		margin-left: .2em;
 		width: 21%;
-	}
-}
-
-.card-column {
-	bottom: 3em;
-	display: inline-block;
-	position: relative;
-	right: .1em;
-	text-align: right;
-}
-
-.card-result {
-	clear: right;
-	width: 100%;
-}
-
-.card-container {
-	border: 1px solid $light-grey;
-	border-radius: 5px;
-	margin-bottom: 1em;
-	padding: 1em;
-}
-
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.row {
-	margin-left: 1em;
-
-	@media (min-width: $md-screen) {
-		margin-left: 3em;
-	}
-}
-
-.row-half {
-display: block;
-width: 100%;
-
-	@media (min-width: $md-screen) {
-		font-size: 1.1em;
-		display: inline-block;	
-		width: 48%;
 	}
 }

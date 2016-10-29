@@ -1,102 +1,126 @@
-.promotions {
+//Shared card styles
+.card {
 	background-color: $almost-white;
-	padding: 3em 2em 5em 2em;
-
-	@media (min-width: $ex-lg-screen) {
-		padding: 3em 0 5em 0;
-	}
+	border-radius: 5px;
 }
 
-.section-title {
-	color: $main;
-	font-family: $Futura;
-	font-size: 2em;
-	font-weight: 300;
-	margin: 0;
-	padding-bottom: 1em;
-}
-
-.cards {
-	display: inline-block;
-	padding-bottom: 0em;
+//Shared card row styles
+.card-row {
 	width: 100%;
+}
+
+//Wide card styles
+.card--wide {
+	border: 1px solid $light-grey;
+	margin-bottom: 1em;
+	padding: 1em;
+}
+
+.card--narrow__row {
+	display: inline-block;
+	margin: 0 auto;
+	padding-bottom: 0em;
 
 	@media (min-width: $md-screen) {
 		padding-bottom: 2em;
 	}
 }
 
-.card-list {
-	background-color: #FFF;
-	border-radius: 5px;
+.card--wide__row {
+
+}
+
+.card-column {
+	bottom: 3em;
+	position: relative;
+	right: .1em;
+	text-align: right;
+}
+
+//Narrow card styles
+.card--narrow {
 	display: inline-block;
 	margin-bottom: 2em;
-	margin-right: 2.26%;
-	width: 100%;
+	overflow: hidden;
 	&:last-child {
 		margin-right: 0;
 	}
 
-	@media (min-width: $md-screen) {
+	@media (min-width: 701px) {
 		margin-bottom: 0em;
-		width: 31.33%;
 	}
 }
 
-.card-list__item {
+.card--narrow__position {
+	display: block;
+	margin: 0 auto;
 	overflow: hidden;
+	padding-bottom: 0em;
+
+	@media (min-width: $md-screen) {
+		padding-bottom: 2em;
+	}
 }
 
-.card-section__photo {
-	border-radius: 5px 5px 0px 0px;
+
+//Styles from flight search results inputs - refactor/move to better place!!!
+.row {
+	margin-left: 1em;
+
+	@media (min-width: $md-screen) {
+		margin-left: 3em;
+	}
+}
+
+//Put this into the grid!
+.row-half {
+display: block;
+width: 100%;
+
+	@media (min-width: $md-screen) {
+		font-size: 1.1em;
+		display: inline-block;	
+		width: 48%;
+	}
+}
+
+.card--narrow__content {
+	color: $main;
+	margin: 0;
+	padding: .5em .5em 2em .5em;
+}
+
+//Promotions photos
+.oslo, .boston, .rio, .napa, .st-thomas, .bangkok {
+	background-size: cover;
 	height: 200px;
 	width: 100%;
 }
 
-.card-section__title h1 {
-	color: $main;
-	font-size: 1.5em;
-	font-weight: 300;
-	padding: .5em;
-	margin: 0;
-	text-align: center;
-}
-
-.test {
-	border: 1px solid $off-white;
-}
-
-.card-section__detail {
-	color: $main;
-	padding: .5em;
-}
-
 .oslo {
 	background: url(../images/promotions/Oslo.jpg) center no-repeat;
-	background-size: cover;
 }
 
 .boston {
 	background: url(../images/promotions/boston.jpg) center no-repeat;
-	background-size: cover;
 }
 
 .rio {
 	background: url(../images/promotions/Rio-de-Jeniero.jpg) center no-repeat;
-	background-size: cover;
 }
 
 .napa {
 	background: url(../images/promotions/napa-valley.jpeg) center no-repeat;
-	background-size: cover;
 }
 
 .st-thomas {
 	background: url(../images/promotions/st-thomas.jpg) center no-repeat;
-	background-size: cover;
 }
 
 .bangkok {
 	background: url(../images/promotions/Bangkok.jpg) center no-repeat;
-	background-size: cover;
 }
+
+//Hotel photos
+
+//Car photos

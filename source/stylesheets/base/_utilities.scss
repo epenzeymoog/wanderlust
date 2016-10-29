@@ -19,12 +19,10 @@
 	}
 }
 
-.show-large {
-	display: none;
-
-	@media (min-width: $md-screen) {
-		display: block;
-	}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .clean-list {
@@ -47,13 +45,6 @@
 
 .margin-top {
 	margin-top: 2em;
-}
-
-//styles for Cabin button in flight search results page
-.margin-bottom {
-	margin-bottom: 43px;
-	margin-left: 3px;
-	width: 120px;
 }
 
 .strikethrough {

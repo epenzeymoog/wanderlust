@@ -77,13 +77,6 @@
   color: hsla(195, 195%, 195%, 0.00);
 }
 
-label:hover {
-  background-color: #bdbdbd;
-  border: white solid 1px;
-  cursor: pointer;
-  font-color: grey;
-}
-
 input:checked + label {  
   background: hsla(195, 195%, 195%, .9);
   border-bottom: 1px solid #EAEAEC; 

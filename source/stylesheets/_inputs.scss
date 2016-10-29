@@ -1,5 +1,18 @@
+.user-selection {
+  padding-bottom: 2em;
+}
+
+.filter {
+  padding-right: 10% ;
+  width: 90%
+}
+
 .filter label{
   display: block;
+}
+
+.filter label:hover {
+  cursor: pointer;
 }
 
 .filter input[type=checkbox] {
@@ -30,12 +43,6 @@
 
 input[type="text"],
 input[type="date"],
-input[type="password"],
-input[type="email"], 
-input[type="number"],
-input[type="tel"],
-input[type="url"],
-input[type="time"],
 input[type="submit"],
 textarea,
 select {
@@ -56,7 +63,16 @@ select {
  	width: 90%;
 }
 
+input[type="date"],
+input[type="time"],
+input[type="submit"],
 select {
+  cursor: pointer;
+}
+
+select {
+  // background: #FFF url(../images/arrowdown.png) no-repeat;
+  // background-position: center right 7px;
   height: 32px;
   padding: 2px 8px;
   -moz-appearance: none;
@@ -69,12 +85,19 @@ select {
   }
 }
 
-input[type="date"] {
-::-webkit-datetime-edit-fields-wrapper { background: silver; }
-::-webkit-datetime-edit-text { color: black; }
-::-webkit-datetime-edit-month-field { color: black; }
-::-webkit-datetime-edit-day-field { color: black; }
-::-webkit-datetime-edit-year-field { color: black; }
-::-webkit-inner-spin-button { display: none; }
-::-webkit-calendar-picker-indicator { background: none; }
+input[type="date"]::-webkit-inner-spin-button, 
+input[type="date"]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
 }
+
+// input[type="date"] {
+//   background: #FFF url(../images/arrowdown.png) no-repeat;
+//   background-position: center right 7px;
+//   -webkit-appearance: none;
+// }
+
+// ::-webkit-calendar-picker-indicator {
+//   color: rgba(0, 0, 0, 0);
+//   opacity: 1
+// }
