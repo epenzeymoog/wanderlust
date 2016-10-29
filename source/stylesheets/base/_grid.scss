@@ -2,39 +2,74 @@
 
 .container {
 	margin: 0 auto;
+	padding: 0 1em;
 	max-width: 1000px;
 }
 
-.container--narrow {
+.container--narrow--nav {
 	float: left;
-	margin-left: 1em;
-	width: 180px;
+	width: 57%;
+
+	@media (min-width: $md-screen) {
+		width: 30%;
+	}
+}
+
+.container--medium--nav {
+	width: 100%;
+
+	@media (min-width: 828px) {
+		width: 66%;
+	}
+}
+
+.container--narrow {
+	display: none;
+	
+	@media (min-width: $md-screen) {
+		display: block;
+		float: left;
+		max-width: 30%
+	}
+
+	@media (min-width: $lg-screen) {
+		max-width: 33%
+	}
 }
 
 .container--medium {
-	padding-left: 1.5em;
-	margin-right: 1em;
-	max-width: 600px;
-	// border: 1px solid red;
+	max-width: 100%;
 
-	@media (min-width: 828px) {
-		width: 600px;
+	@media (min-width: $md-screen) {
+		max-width: 66%
 	}
 }
 
 .user-selection {
-	border-bottom: 1px solid $light-grey;
 	padding-bottom: 2em;
 }
 
 //Rows
 
 .card-row {
-	width: 74%;
-	padding-bottom: .5em;
-
+	width: 100%;
 	p {
 		display: inline-block;
+		width: 100%;
+
+		@media (min-width: 500px) {
+			width: initial;
+		}
+	}
+	
+	@media (min-width: $md-screen) {
+		width: 74%;
+		padding-bottom: .5em;	
+		text-align: left;
+
+		&:last-of-type {
+			padding-bottom: 0;
+		}
 	}
 }
 
@@ -44,19 +79,46 @@
 }
 
 .column__1 {
-	width: 31%;
+	width: 49%;
+
+	@media (min-width: 827px) {
+		width: 31%;
+	}
 }
 
 .column__2 {
-	width: 31%;
+	width: 49%;
+
+	@media (min-width: 827px) {
+		width: 31%;
+	}
 }
 
-.column__3 {
-	width: 15%;
+.column__3--small {
+	width: 23.9%;
+
+	@media (min-width: 827px) {
+		width: 15%;
+		display: none;
+	}
+}
+
+.column__3--medium {
+	display: none;
+
+	@media (min-width: 827px) {
+		display: inline-block;
+		width: 12%;
+	}
 }
 
 .column__4 {
-	width: 21%;
+	width: 48%;
+
+	@media (min-width: 827px) {
+		margin-left: .2em;
+		width: 21%;
+	}
 }
 
 .card-column {
@@ -73,8 +135,10 @@
 }
 
 .card-container {
-	border-bottom: 1px solid $light-grey;
-	padding: 2em 0;
+	border: 1px solid $light-grey;
+	border-radius: 5px;
+	margin-bottom: 1em;
+	padding: 1em;
 }
 
 ul {

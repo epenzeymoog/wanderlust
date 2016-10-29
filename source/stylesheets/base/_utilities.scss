@@ -22,7 +22,7 @@
 .show-large {
 	display: none;
 
-	@media (min-width: $lg-screen) {
+	@media (min-width: $md-screen) {
 		display: block;
 	}
 }
@@ -59,4 +59,22 @@
 .strikethrough {
 	color: $secondary;
 	text-decoration: line-through;
+}
+
+.hide--small {
+	display: none;
+
+	@media (min-width: $md-screen) {
+		display: block;
+	}
+}
+
+.hide--medium {
+	@media (min-width: $md-screen) {
+		display: none;
+	}
+}
+
+.block {
+	display: block;
 }

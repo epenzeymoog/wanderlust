@@ -9,7 +9,7 @@ nav {
 		display: inline-block;
 	}
 
-	@media (min-width: 660px) {
+	@media (min-width: 830px) {
 		height: 4em;
 	}
 }
@@ -39,21 +39,27 @@ nav {
 	color: $white;
 	display: block;
 	float: left;
+	line-height: 2;
 	margin-right: 16px;
 	text-transform: uppercase;
 
-	@media (min-width: $sm-screen) {	
+	&:last-of-type {
+			margin-right: 0px;
+		}
+
+	@media (min-width: $md-screen) {	
 		margin-right: 30px;
-	}
+	
+		&:last-of-type {
+			margin-right: 30px;
+		}
+	}	
 }
 
 .nav-single__link {
 	color: white;
-	display: none;
-
-	@media (min-width: $md-screen) {
-		display: block;
-	}
+	line-height: 2;
+	padding-right: 1em;
 }
 
 .logo {
@@ -66,6 +72,7 @@ nav {
 	font-family: $Amatic;
 	font-size: 1.8em;
 	letter-spacing: 1px;
+	margin-left: .5em;
 	text-align: right;
 
 	&:hover {

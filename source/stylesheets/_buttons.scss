@@ -1,8 +1,5 @@
 input[type="button"] {
   border-radius: 5px;
-  
-  display: block;
-  margin: 0 auto;
 
   &:hover {
   	cursor: pointer;
@@ -16,7 +13,9 @@ input[type="button"] {
 .form-table .search {
   background-color: #5BE7B5;
   border: 1px solid #5BE7B5;
-  color: white; 
+  color: white;
+  display: block;
+  margin: 0 auto;
   width: 170px;
   height: 4em;
 }
@@ -25,9 +24,11 @@ input[type="button"] {
 	border: none;
 	border-radius: 5px;
 	color: $white;
+	display: block;
 	font-size: 1.125em;
 	height: 42px;
 	letter-spacing: .5px;
+	margin: 0 auto;
 	text-transform: uppercase;
 }
 
@@ -36,17 +37,36 @@ input[type="button"] {
 	width: 120px;
 }
 
+.button--sm-screen {
+	background-color: $cta;
+	margin: 0 auto;
+	margin-top: 1em;
+	width: 100%;
+
+	@media (min-width: $md-screen) {
+		display: none;
+	}
+}
+
 .button--secondary {
 	background-color: $alt-cta;
-	width: 120px;
+	margin-right: 4%;
+	width: 96%;
+
+	@media (min-width: 827px) {
+		margin-right: 0;
+		width: 120px;
+	}
 }
 
 .button--tertiary {
 	background-color: $cta;
-	width: 180px;
+	font-size: 1em;
+	width: 100%;
 }
 
 .results-page {
+	clear: both;
 	display: inline-block;
 	float: right;
 	margin-top: 1em;
