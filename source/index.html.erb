@@ -35,7 +35,7 @@ layout: layout
 	  <input id="tab3" type="radio" name="tabs">
 	  <label for="tab3" class="form-table__label">Cars</label>
 
-		<section class="content" id="content1">    
+		<section class="content" id="content1"> 
     	<div class="tab-content"> 
      		<ul class="flight-search">
          	<li><a href="#">round trip</a></li>
@@ -79,6 +79,7 @@ layout: layout
 						<div class="full-to-half right">
 		         	<label class="select-style">Children</label>
 		         		<select>
+									<option value="option1">0</option>
 									<option value="option1">1</option>
 									<option value="option2">2</option>
 									<option value="option1">3</option>
@@ -96,11 +97,11 @@ layout: layout
   <div class="tab-content"> 
     <section class="inputs">
     	<div class="row">
-    		<div class="row-half">
-      		<label>destination</label>
-      		<input type="text" name="fname" placeholder="city or hotel name">
+    		<div class="full-to-half">
+      		<label>location</label>
+      		<input type="text" name="fname" placeholder="city, hotel or airbnb name">
       	</div>
-      	<div class="row-half">
+      	<div class="full-to-half right">
           <label>rooms</label>
             <label class="select-style">
               <select>
@@ -117,18 +118,18 @@ layout: layout
       </div>
 
       <div class="row">
-      	<div class="row-half">          		
+      	<div class="full-to-half">          		
        		<label>check-in</label>
        		<input type="date" name="date" required placeholder="depart">
        	</div>
-       	<div class="row-half">           		
+       	<div class="full-to-half right">           		
        		<label>check-out</label>
        		<input type="date" name="date" required placeholder="return">
        	</div>
 			</div>
 
 			<div class="row">
-				<div class="row-half">
+				<div class="full-to-half">
           <label>adults</label>
             <label class="select-style">
               <select>
@@ -143,7 +144,7 @@ layout: layout
           	</label>
         </div>
        
-       	<div class="row-half">
+       	<div class="full-to-half right">
 	       <label>children</label>
             <label class="select-style">
               <select>
@@ -160,28 +161,28 @@ layout: layout
     	</div>
     </section>
   </div>
-  <input type="button" value="SEARCH" class="search" onclick="location.href='#';">
+  <input type="button" value="SEARCH" class="button button--main button--form-table" onclick="location.href='/lodging-results.html';">
 </section>
 
 <section class="content" id="content3">    
 	<div class="tab-content"> 
 		<section class="inputs">
 			<div class="row">
-				<div class="row-half">
+				<div class="full-to-half">
     			<label>car pick up</label>
      			<input type="text" name="fname" placeholder="city, zipcode or airport">
      		</div>
-     		<div class="row-half">
+     		<div class="full-to-half right">
      			<label>car drop off</label>
      			<input type="text" name="fname" placeholder="city, zipcode or airport">
      		</div>
 			</div>
 			<div class="row">
-				<div class="row-half">
+				<div class="full-to-half">
      			<label>pick up day</label>
      			<input type="date" name="date" required placeholder="depart"> 
 				</div>
-				<div class="row-half">
+				<div class="full-to-half right">
       		<label>pick up time</label>
       			<label class="select-style">
 			        <select>
@@ -197,11 +198,11 @@ layout: layout
      		</div>
      	</div>
 			<div class="row">
-				<div class="row-half">
+				<div class="full-to-half">
      			<label>drop off day</label>
      			<input type="date" name="date" required placeholder="return">
 				</div>
-				<div class="row-half">
+				<div class="full-to-half right">
 			    <label>drop off time</label>
 			      <label class="select-style">
 			        <select>
@@ -217,7 +218,7 @@ layout: layout
       	</div>
       </div>
 			<div class="row">
-				<div class="row-half">
+				<div class="full-to-half">
 		      <label>vehicle type</label>
 		      	<label class="select-style">
 			        <select>
@@ -233,7 +234,7 @@ layout: layout
 			        </select>
 		      </label>
 		    </div>
-     		<div class="row-half">
+     		<div class="full-to-half right">
 		      <label>company</label>
 		      <label class="select-style">
 		        <select>
@@ -251,7 +252,7 @@ layout: layout
   </section>
  
 </div>
-      <input type="button" value="SEARCH" class="search" onclick="location.href='#';">
+      <input type="button" value="SEARCH" class="button button--main button--form-table" onclick="location.href='/car-results.html';">
   </section>
 </div>
 </div>
@@ -265,7 +266,7 @@ layout: layout
 		<ul class="card card--narrow full-to-thirds">
 			<li class="oslo"></li>
 			<ul class="card--narrow__content">
-				<li><h1 class="card--narrow__title">Oslo, Norway</h1></li>
+				<li><h1 class="card--narrow__title">Oslo</h1></li>
 				<li><p class="left">Hotel Aurora</p></li>
 				<li><p class="right"><span class="strikethrough">$249</span> $199</p></li>
 			</ul>			
@@ -312,7 +313,7 @@ layout: layout
 		<ul class="card card--narrow full-to-thirds">
 			<li class="bangkok"></li>
 			<ul class="card--narrow__content">
-				<li><h1 class="card--narrow__title">Bangkok, Thailand</h1></li>
+				<li><h1 class="card--narrow__title">Bangkok</h1></li>
 				<li><p class="left">Hilton Bangkok</p></li>
 				<li><p class="right"><span class="strikethrough">$289</span> $250</p></li>
 			</ul>	

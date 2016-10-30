@@ -1,0 +1,126 @@
+---
+title: Amsterdam Lodging
+layout: layout
+---
+
+<%= partial "partials/nav" %>
+
+<div class="container margin-top">
+
+	<div class="full-to-two-thirds">
+		<div class="user-selection">
+
+			<div class="column column__1">
+				<label>Location</label>
+	      	<input type="text" name="location" placeholder="Amsterdam">
+	      <label class="block">Arriving</label>
+      		<input type="date" name="returning" required placeholder="11/19/2016">
+			</div>
+
+			<div class="column column__2">	
+	      <label>Rooms</label>
+	      <select name="Rooms">
+					<option value="more filters selected">1 Room</option>
+				  <option value="volvo">2 Rooms</option>
+				  <option value="saab">3 Rooms</option>
+				  <option value="fiat">4 Rooms</option>
+				</select>
+				<label>Returning</label>
+	       	<input type="date" name="returning" required placeholder="11/29/2016">
+	    </div>
+
+			<div class="column column__3--small">
+				<label>Adults</label>
+				<select name="Adults">
+					<option value="more filters selected">1 Adults</option>
+				  <option value="volvo">2 Adults</option>
+				  <option value="saab">3 Adults</option>
+				  <option value="fiat">4 Adults</option>
+				</select>
+			</div>
+				
+			<div class="column column__3--small">
+				<label>Kids</label>
+				<select name="Kids">
+					<option value="more filters selected">0 Kids</option>
+				  <option value="volvo">2 Kids</option>
+				  <option value="saab">3 Kids</option>
+				  <option value="fiat">4 Kids</option>
+				</select>
+			</div>
+
+			<div class="column column__3--medium">
+				<label>Adults</label>
+				<select name="Adults">
+					<option value="more filters selected">1 Adult</option>
+				  <option value="volvo">2 Adults</option>
+				  <option value="saab">3 Adults</option>
+				  <option value="fiat">4 Adults</option>
+				</select>
+
+				<label>Kids</label>
+				<select name="Kids">
+					<option value="more filters selected">0 Kids</option>
+				  <option value="volvo">2 Kids</option>
+				  <option value="saab">3 Kids</option>
+				  <option value="fiat">4 Kids</option>
+				</select>
+			</div>
+
+			<div class="column column__4">			
+				<input type="button" value="Update" class="button button--secondary" onclick="location.href='/car-results.html';">
+			</div>
+		</div>
+
+		<ul class="card card--wide">
+			<ul class="card">
+				<ul class="half-to-third--small">
+					<li class="loft-apt"></li>
+					<li class="airbnb"></li>
+				</ul>
+			</ul>
+				<li class="card-row card--wide__row">
+					<ul>
+						<li><h2 class="lighter margin-bottom"><strong>Cozy loft</strong></h2></li>
+					</ul>
+				</li>
+				<li class="card-row card--wide__row">
+					<li class="stars-4"></li>
+				</li>
+
+				<li class="card-row card--wide__row">
+					<p class="card-row__detail">Neighborhood: Centrum</p>
+				</li>
+				<li class="card-row card--wide__row">
+					<p class="card-row__detail"><strong>68 Zuid Kolibrie Straat</strong></p>
+				</li>
+				<li class="card-row card--wide__row">
+					<p class="card-row__detail">12 mi from Schiphol Airport</p>
+				</li>
+				<li class="card-column card-column--small right hide--small">
+					<ul>
+						<li><h2 class="lighter"><strong>$790</strong></h2></li>
+						<li class="card-column__type">($79/day)</li>
+						<li class="card-column__detail"><strong>includes tax &amp; all fees</strong></li>
+						<li class="margin-left"><input type="button" value="Book" class="button button--main " onclick="location.href='/lodging-results.html';"></li>
+					</ul>
+				</li>
+
+				<li class="card-row hide--medium card--wide__row">
+					<ul>			
+						<li class="card-column__type">($79/day)</li>
+						<li><h2 class="lighter"><strong>$790</strong></h2></li>
+						<li class="card-column__detail"><strong>includes tax &amp; all fees</strong></li>
+					</ul>
+				</li>
+				<li><input type="button" value="Book" class="button button--sm-screen" onclick="location.href='/lodging-results.html';"></li>
+		</ul>
+
+		
+		<%=partial "partials/results-pages" %>
+
+	</div>
+
+	<%= partial "partials/footer" %>
+
+</div>

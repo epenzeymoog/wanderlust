@@ -37,7 +37,7 @@ input[type="button"] {
 	margin-top: 1em;
 	width: 100%;
 
-	@media (min-width: 828px) {
+	@media (min-width: $lg-screen) {
 		display: none;
 	}
 }
@@ -47,7 +47,7 @@ input[type="button"] {
 	margin-right: 4%;
 	width: 96%;
 
-	@media (min-width: 828px) {
+	@media (min-width: $lg-screen) {
 		margin-right: 0;
 		width: 120px;
 	}
@@ -56,6 +56,7 @@ input[type="button"] {
 .button--tertiary {
 	background-color: $cta;
 	font-size: 1em;
+	margin-bottom: 1.5em;
 	width: 100%;
 }
 

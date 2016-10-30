@@ -51,7 +51,7 @@ select {
   border-radius: 3px;
   color: #606060;
   display: inline-block;
-  font-size: .9em;
+  font-size: .9rem;
   height: 30px;
   line-height: normal;
   margin: 5px 0px 20px 0;
@@ -74,15 +74,9 @@ select {
   // background: #FFF url(../images/arrowdown.png) no-repeat;
   // background-position: center right 7px;
   height: 32px;
-  padding: 2px 8px;
   -moz-appearance: none;
   transition: ease-in-out 0.2s;
   -webkit-appearance: none;
-  width: 93%;
-
-  @media (min-width: $md-screen) {
-  	width: 92%;
-  }
 }
 
 input[type="date"]::-webkit-inner-spin-button, 

@@ -6,6 +6,12 @@
 	float: right;
 }
 
+.right-medium {
+	@media (min-width: $lg-screen) {
+		float: right;
+	}
+}
+
 .center {
 	display: block;
 	margin: 0 auto;
@@ -55,13 +61,13 @@ ul {
 .hide--small {
 	display: none;
 
-	@media (min-width: 828px) {
+	@media (min-width: $lg-screen) {
 		display: block;
 	}
 }
 
 .hide--medium {
-	@media (min-width: 828px) {
+	@media (min-width: $lg-screen) {
 		display: none;
 	}
 }

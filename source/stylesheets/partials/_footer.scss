@@ -1,65 +1,37 @@
 footer {
-	border-top: 1px solid $secondary;
 	clear: both;
 	display: block;
-	height: 5em;
-	margin-bottom: 3em;
-	padding: 2em;
-
-	@media (min-width: $md-screen) {
-		padding: 5em;
-	}
+	height: 6em;
+	padding: 3em 0;
 }
 
-.container-narrow {
-	margin: 0 auto;
-	max-width: 300px;
+footer ul:first-of-type {
+	border-top: 1px solid $light-grey;
 }
 
 footer li {
-	font-size: .8em;
-	margin: 0 auto;
-	text-align: center;
-	padding: 0;
-
-	@media (min-width: $sm-screen) {
-		float: left;
-		padding-right: 5px;
-
-		&:last-child {
-			padding-right: 0px;
-		}
-	}
-
-	@media (min-width: $md-screen) {
-		font-size: 1em;
-		padding-right: 15px;
-
-		&:last-child {
-			padding-right: 0px;
-		}
-	}
-}
-
-footer li a {
 	color: $background;
-	font-size: 1.125em;
-	text-decoration: none;
+	display: inline;
+	float: left;
+	padding-right: 15px;
+	padding-top: 1em;
+	text-align: center;
 	text-transform: uppercase;
 }
 
-.social {
-	padding: 3em;
-	width: 9.5em;
-
-	img:hover{
-		opacity: .5;
-	}
+footer p {
+	clear: both;
+	padding-bottom: 3em;
+	text-align: left;
+	width: 50%;
 }
 
-footer p {
+.social {
+	clear: both;
 	margin: 0 auto;
-	max-width: 620px;
-	padding-bottom: 2em;
-	text-align: center;
+	width: 100%;
+
+img:hover {
+		opacity: .5;
+	}
 }

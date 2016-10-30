@@ -50,6 +50,7 @@
   border: 1px solid #ccc;
   bottom: 0px;
   color: white;
+  cursor: pointer;
   font-size: .7em;
   font-weight: 100;
   float: left;
@@ -73,10 +74,7 @@
 }
 
 .flight-search li:first-of-type {
-	@media (min-width: $md-screen) {
-		padding-left: 3.2em;
-		margin-bottom: 1em;
-	}
+	margin-bottom: 1em;
 }
 
 .flight-search a {
@@ -91,7 +89,7 @@
   	text-decoration: underline;
   }
 
-  @media (min-width: $md-screen){
+  @media (min-width: $md-screen) {
   	font-size: 1.2em;
   }
 }
@@ -99,7 +97,7 @@
 .inputs {
 	clear: both;
 	margin: 0 1em;
-	padding: 1em 0;
+	padding: 2em 0 1em 0;
 }
 
 .tab-content #hidden li p {

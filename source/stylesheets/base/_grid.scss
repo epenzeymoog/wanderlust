@@ -19,6 +19,10 @@
 	max-width: 33%
 }
 
+.half {
+	max-width: 49%;
+}
+
 .full-to-half {
 width: 100%;
 
@@ -40,15 +44,25 @@ width: 100%;
 .half-to-third {
 	width: 57%;
 
-	@media (min-width: $md-screen) {
+	@media (min-width: $lg-screen) {
 		width: 31%;
 	}
 }
 
+.half-to-third--small {
+	width: 57%;
+
+	@media (min-width: $sm-screen) {
+		width: 31%;
+	}
+}
+
+
+
 .full-to-two-thirds {
 	width: 100%;
 
-	@media (min-width: 828px) {
+	@media (min-width: $lg-screen) {
 		width: 66%;
 	}
 }
@@ -61,7 +75,7 @@ width: 100%;
 .column__1 {
 	width: 49%;
 
-	@media (min-width: 828px) {
+	@media (min-width: $lg-screen) {
 		width: 31%;
 	}
 }
@@ -69,7 +83,7 @@ width: 100%;
 .column__2 {
 	width: 49%;
 
-	@media (min-width: 828px) {
+	@media (min-width: $lg-screen) {
 		width: 31%;
 	}
 }
@@ -77,7 +91,7 @@ width: 100%;
 .column__3--small {
 	width: 23.9%;
 
-	@media (min-width: 828px) {
+	@media (min-width: $lg-screen) {
 		width: 15%;
 		display: none;
 	}
@@ -86,7 +100,7 @@ width: 100%;
 .column__3--medium {
 	display: none;
 
-	@media (min-width: 828px) {
+	@media (min-width: $lg-screen) {
 		display: inline-block;
 		width: 12%;
 	}
@@ -95,7 +109,7 @@ width: 100%;
 .column__4 {
 	width: 48%;
 
-	@media (min-width: 828px) {
+	@media (min-width: $lg-screen) {
 		margin-left: .2em;
 		width: 21%;
 	}

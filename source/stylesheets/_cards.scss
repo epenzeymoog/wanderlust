@@ -28,7 +28,11 @@
 }
 
 .card--wide__row {
+	clear: both;
 
+	@media (min-width: $lg-screen) {
+		clear: initial;
+	}
 }
 
 .card-column {
@@ -36,6 +40,10 @@
 	position: relative;
 	right: .1em;
 	text-align: right;
+}
+
+.card-column--small {
+	bottom: 8.5em;
 }
 
 //Narrow card styles
@@ -71,12 +79,13 @@
 	width: 100%;
 }
 
+
 .oslo {
 	background: url(../images/promotions/Oslo.jpg) center no-repeat;
 }
 
 .boston {
-	background: url(../images/promotions/boston.png) center no-repeat;
+	background: url(../images/promotions/boston.jpg) center no-repeat;
 }
 
 .rio {
@@ -84,7 +93,7 @@
 }
 
 .napa {
-	background: url(../images/promotions/napa-valley.jpeg) center no-repeat;
+	background: url(../images/promotions/napa-valley.jpg) center no-repeat;
 }
 
 .st-thomas {
@@ -92,9 +101,101 @@
 }
 
 .bangkok {
-	background: url(../images/promotions/Bangkok.jpg) center no-repeat;
+	background: url(../images/promotions/bangkok.jpg) center no-repeat;
 }
 
 //Hotel photos
+.dropjes {
+	background: url(../images/lodging/dropjes.jpg) center no-repeat;
+	background-size: cover;
+}
+
+.hagel-slag {
+	background: url(../images/lodging/hagel-slag.jpg) center no-repeat;
+	background-size: cover;
+}
+
+.canal-apt {
+	background: url(../images/lodging/canal-apt.jpg) center no-repeat;
+	background-size: cover;
+}
+
+.condo-apt {
+	background: url(../images/lodging/condo-apt.jpg) center no-repeat;
+	background-size: cover;
+}
+
+.brouwer {
+	background: url(../images/lodging/brouwer.jpg) center no-repeat;
+	background-size: cover;
+}
+
+.loft-apt {
+	background: url(../images/lodging/loft-apt.jpg) center no-repeat;
+	background-size: cover;
+}
+
+.airbnb {	
+	background: url(../images/lodging/airbnb.png) center no-repeat;
+	bottom: 1.5em;
+	display: inline-block;
+	float: left;
+	height: 20px;
+	left: 8em;
+	position: relative;
+	width: 33%;
+}
+
+.stars-4 {	
+	background: url(../images/lodging/4-stars.png) center no-repeat;
+	bottom: 6em;
+	display: inline-block;
+	float: left;
+	height: 20px;
+	left: 11em;
+	position: relative;
+	width: 16%;
+}
 
 //Car photos
+.golf, .corsa, .polo, .ka, .panda, .fiesta, .dropjes, .hagel-slag, .canal-apt,
+.condo-apt, .brouwer, .loft-apt {
+	border: 1px solid $light-grey;
+	border-radius: 5px;
+	display: inline-block;
+	float: left;
+	height: 120px;
+	margin-right: 3em;
+	margin-top: 5px;
+	width: 100%;
+}
+
+.golf {
+	background: url(../images/cars/golf.jpg) center no-repeat;
+	background-size: cover;
+}
+
+.corsa {
+	background: url(../images/cars/corsa.jpg) center no-repeat;
+	background-size: cover;
+}
+
+.polo {
+	background: url(../images/cars/polo.jpg) center no-repeat;
+	background-size: cover;
+}
+
+.ka {
+	background: url(../images/cars/ka.jpg) center no-repeat;
+	background-size: cover;
+}
+
+.panda {
+	background: url(../images/cars/panda.jpg) center no-repeat;
+	background-size: cover;
+}
+
+.fiesta {
+	background: url(../images/cars/fiesta.jpg) center no-repeat;
+	background-size: cover;
+}
