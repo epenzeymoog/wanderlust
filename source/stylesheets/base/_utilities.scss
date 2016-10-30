@@ -55,17 +55,21 @@ ul {
 .hide--small {
 	display: none;
 
-	@media (min-width: $md-screen) {
+	@media (min-width: 828px) {
 		display: block;
 	}
 }
 
 .hide--medium {
-	@media (min-width: $md-screen) {
+	@media (min-width: 828px) {
 		display: none;
 	}
 }
 
 .block {
 	display: block;
+}
+
+.margin-left {
+	margin-left: 10px;
 }

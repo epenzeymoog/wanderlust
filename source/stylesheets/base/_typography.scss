@@ -3,6 +3,17 @@
 	font-weight: lighter;
 }
 
+.section-title {
+	color: $main;
+	font-family: $Futura;
+	font-size: 2em;
+	font-weight: 300;
+	letter-spacing: .5px;
+	margin: 0;
+	padding: 1em 0;
+	text-transform: uppercase;
+}
+
 .card--narrow__title {
 	font-size: 1.5em;
 	font-weight: 300;

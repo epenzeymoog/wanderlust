@@ -6,14 +6,8 @@ input[type="button"] {
   }
 }
 
-.form-table .search {
-  background-color: #5BE7B5;
-  border: 1px solid #5BE7B5;
-  color: white;
+.form-table .button--form-table {
   display: block;
-  margin: 0 auto;
-  width: 170px;
-  height: 4em;
 }
 
 .button {
@@ -43,7 +37,7 @@ input[type="button"] {
 	margin-top: 1em;
 	width: 100%;
 
-	@media (min-width: $md-screen) {
+	@media (min-width: 828px) {
 		display: none;
 	}
 }
@@ -53,7 +47,7 @@ input[type="button"] {
 	margin-right: 4%;
 	width: 96%;
 
-	@media (min-width: 827px) {
+	@media (min-width: 828px) {
 		margin-right: 0;
 		width: 120px;
 	}

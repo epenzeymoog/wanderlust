@@ -4,7 +4,6 @@ header {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 100vh;
 
   @media (min-width: $md-screen) {
   	height: initial;
@@ -12,19 +11,19 @@ header {
 }
 
 .hero__tagline {
-	font-size: 3.5em;
+	display: none;
+	color: $white;
+	font-family: $Amatic;
+	font-size: 3em;
 	margin: 0;
-	padding-top: 4em;
+	padding: 1em 0;
 	text-align: center;
+
+	@media (min-width: 500px) {
+		display: block;
+	}
 
 	@media (min-width: $lg-screen) {
 		font-size: 5em;
-		padding-top: 3em;
 	}
-}
-
-.hero__tagline {
-	color: $white;
-	font-family: $Amatic;
-	font-size: 5em;
 }

@@ -6,6 +6,7 @@
 
 //Shared card row styles
 .card-row {
+	padding-bottom: .4em;
 	width: 100%;
 }
 
@@ -63,33 +64,6 @@
 }
 
 
-//Styles from flight search results inputs - refactor/move to better place!!!
-.row {
-	margin-left: 1em;
-
-	@media (min-width: $md-screen) {
-		margin-left: 3em;
-	}
-}
-
-//Put this into the grid!
-.row-half {
-display: block;
-width: 100%;
-
-	@media (min-width: $md-screen) {
-		font-size: 1.1em;
-		display: inline-block;	
-		width: 48%;
-	}
-}
-
-.card--narrow__content {
-	color: $main;
-	margin: 0;
-	padding: .5em .5em 2em .5em;
-}
-
 //Promotions photos
 .oslo, .boston, .rio, .napa, .st-thomas, .bangkok {
 	background-size: cover;
@@ -102,11 +76,11 @@ width: 100%;
 }
 
 .boston {
-	background: url(../images/promotions/boston.jpg) center no-repeat;
+	background: url(../images/promotions/boston.png) center no-repeat;
 }
 
 .rio {
-	background: url(../images/promotions/Rio-de-Jeniero.jpg) center no-repeat;
+	background: url(../images/promotions/rio.jpg) center no-repeat;
 }
 
 .napa {

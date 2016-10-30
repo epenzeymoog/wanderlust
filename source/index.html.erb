@@ -6,12 +6,12 @@ layout: layout
 
 <section class="nav--secondary">
 	<div class="container">
-		<ul class="container--narrow">
+		<ul class="half-to-third left">
 			<li><a href="/index.html"><img class="logo" src="../images/logo.svg"></a></li>
-			<li class="right"><a class="icon__text clean-link" href="/index.html">Wanderlust</a></li>
+			<li><a class="icon__text clean-link" href="/index.html">Wanderlust</a></li>
 		</ul>
 
-		<div class="container--medium nav-list clean-list">
+		<div class="nav-list clean-list">
 			<ul class="right">
 				<li class="nav-single__link"><a class="clean-link" href="#">Welcome, Eva</a></li>
 			</ul>
@@ -21,19 +21,19 @@ layout: layout
 
 
 
-<h1 class="hero__tagline show-medium">Discover your inner explorer</h1>  
+<h1 class="hero__tagline">Discover your inner explorer</h1>  
 
 <div class="container">
 	<div class="form-table">
   
 	  <input id="tab1" type="radio" name="tabs" checked>
-	  <label for="tab1" class="form-table__label">FLIGHTS</label>
+	  <label for="tab1" class="form-table__label">Flights</label>
 	    
 	  <input id="tab2" type="radio" name="tabs">
-	  <label for="tab2" class="form-table__label">LODGING</label>
+	  <label for="tab2" class="form-table__label">Lodging</label>
 	    
 	  <input id="tab3" type="radio" name="tabs">
-	  <label for="tab3" class="form-table__label">CARS</label>
+	  <label for="tab3" class="form-table__label">Cars</label>
 
 		<section class="content" id="content1">    
     	<div class="tab-content"> 
@@ -45,47 +45,51 @@ layout: layout
 
 	      <section class="inputs">
 	      	<div class="row">
-	      		<div class="row-half">
+	      		<div class="full-to-half">
 	      			<label>flying from</label>	 
-	         			<input type="text" name="fname" placeholder="city or airport">
+	         			<input type="text" name="flying from" placeholder="city or airport">
 	         	</div>
-	         	<div class="row-half">
+	         	<div class="full-to-half right">
 	        		<label>flying to</label> 
-	         			<input type="text" name="fname" placeholder="city or airport">
+	         			<input type="text" name="flying to" placeholder="city or airport">
 	         	</div>
 	      	</div>
 	         
 	      	<div class="row">
-	      		<div class="row-half">
+	      		<div class="full-to-half">
 	         		<label>departing</label>
-	         			<input type="date" name="date" required placeholder="depart">
+	         			<input type="date" name="departing" required placeholder="depart">
 	          </div>
-	          <div class="row-half">
+	          <div class="full-to-half right">
 	         		<label>returning</label>
-	         			<input type="date" name="date" required placeholder="return">
+	         			<input type="date" name="returning" required placeholder="return">
 						</div>
 					</div>
 
 					<div class="row">
-						<div class="row-half">
+						<div class="full-to-half">
 							<label class="select-style">Adults</label>
 		         		<select>
 									<option value="option1">1</option>
 									<option value="option2">2</option>
+									<option value="option1">3</option>
+									<option value="option2">4</option>
 		         		</select>
 	         	</div>
-						<div class="row-half">
+						<div class="full-to-half right">
 		         	<label class="select-style">Children</label>
 		         		<select>
 									<option value="option1">1</option>
 									<option value="option2">2</option>
+									<option value="option1">3</option>
+									<option value="option2">4</option>
 		         		</select>
 	         	</div>
 	      	</div>	
 	     	</section>
     	</div>
 
-    <input type="button" value="SEARCH" class="search" onclick="location.href='/flight-results.html';">
+    <input type="button" value="SEARCH" class="button button--main button--form-table" onclick="location.href='/flight-results.html';">
 </section>
     
 <section class="content" id="content2">    
@@ -255,10 +259,10 @@ layout: layout
 </header>
 
 <section class="container card--narrow__position">
-	<h1 class="section-title">Featured Deals</h1>
+	<h1 class="section-title">Featured Specials</h1>
 
 	<ul class="card-row card--narrow__row">
-		<ul class="card card--narrow thirds">
+		<ul class="card card--narrow full-to-thirds">
 			<li class="oslo"></li>
 			<ul class="card--narrow__content">
 				<li><h1 class="card--narrow__title">Oslo, Norway</h1></li>
@@ -267,7 +271,7 @@ layout: layout
 			</ul>			
 		</ul>
 
-		<ul class="card card--narrow thirds">
+		<ul class="card card--narrow full-to-thirds">
 			<li class="boston"></li>
 			<ul class="card--narrow__content">
 				<li><h1 class="card--narrow__title">Boston</h1></li>
@@ -276,7 +280,7 @@ layout: layout
 			</ul>
 		</ul>
 
-		<ul class="card card--narrow thirds">
+		<ul class="card card--narrow full-to-thirds">
 			<li class="rio"></li>
 			<ul class="card--narrow__content">
 				<li><h1 class="card--narrow__title">Rio de Jeniero</h1></li>
@@ -287,16 +291,7 @@ layout: layout
 	</ul>
 
 	<ul class="card-row card--narrow__row">
-		<ul class="card card--narrow thirds">
-			<li class="st-thomas"></li>
-			<ul class="card--narrow__content">
-				<li><h1 class="card--narrow__title">St. Thomas</h1></li>
-				<li><p class="left">Paradise Inn</p></li>
-				<li><p class="right"><span class="strikethrough">$109</span> $89</p></li>
-			</ul>	
-		</ul>
-
-		<ul class="card card--narrow thirds">
+		<ul class="card card--narrow full-to-thirds">
 			<li class="napa"></li>
 			<ul class="card--narrow__content">
 				<li><h1 class="card--narrow__title">Napa Valley</h1></li>
@@ -305,7 +300,16 @@ layout: layout
 			</ul>
 		</ul>
 
-		<ul class="card card--narrow thirds">
+		<ul class="card card--narrow full-to-thirds">
+			<li class="st-thomas"></li>
+			<ul class="card--narrow__content">
+				<li><h1 class="card--narrow__title">St. Thomas</h1></li>
+				<li><p class="left">Paradise Inn</p></li>
+				<li><p class="right"><span class="strikethrough">$109</span> $89</p></li>
+			</ul>	
+		</ul>
+
+		<ul class="card card--narrow full-to-thirds">
 			<li class="bangkok"></li>
 			<ul class="card--narrow__content">
 				<li><h1 class="card--narrow__title">Bangkok, Thailand</h1></li>

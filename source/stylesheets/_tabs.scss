@@ -1,24 +1,52 @@
 .form-table {
 	clear: both;
+  color: $main;
 	display: block;
   font-family: $Futura;
   font-weight: 300;
   letter-spacing: .1px;
   margin: 0 auto;
-  width: 93%;
+  padding-bottom: 3em;
 	
 	input {
 	  display: none;
 	}
-
-	@media (min-width: $ex-lg-screen) {
-		width: 100%;
-	}
 }
 
-.form-table__label{
+.form-table label {
+  letter-spacing: .3px;
+  text-transform: uppercase;
+}
+
+.form-table input[type="text"],
+.form-table input[type="date"],
+.form-table input[type="submit"],
+.form-table textarea,
+.form-table select {
+  background: hsla(195, 195%, 195%, .9);
+  border: 1px solid grey;
+  border-radius: 3px;
+  color: #606060;
   display: inline-block;
-  background: grey;
+  font-size: .9em;
+  height: 30px;
+  line-height: normal;
+  margin: 5px 0px 20px 0;
+  padding: 0;
+  padding-left: 8px;
+  outline: none;
+  transition: ease-in-out 0.2s;
+  width: 97%;
+  -ms-box-sizing:content-box;
+  -moz-box-sizing:content-box;
+  -webkit-box-sizing:content-box; 
+  box-sizing:content-box;
+  -webkit-appearance: none;
+}
+
+.form-table__label {
+  display: inline-block;
+  background: $secondary;
   border: 1px solid #ccc;
   bottom: 0px;
   color: white;
@@ -30,6 +58,7 @@
   margin: 0;
   padding: 5px 20px 5px 10px;
   text-align: center;
+  text-transform: uppercase;
   width: 3.75em;
 
   @media (min-width: $md-screen) {
@@ -70,7 +99,7 @@
 .inputs {
 	clear: both;
 	margin: 0 1em;
-	padding-top: 1em;
+	padding: 1em 0;
 }
 
 .tab-content #hidden li p {
@@ -90,6 +119,7 @@ input:checked + label {
 #tab2:checked ~ #content2,
 #tab3:checked ~ #content3 {  
   background-color: hsla(195, 195%, 195%, .9);
+  border-radius: 0 5px 5px 5px;
   display: block;
-  padding-bottom: 1em;
+  padding-bottom: 2em;
 }

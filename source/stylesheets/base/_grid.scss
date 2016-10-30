@@ -7,43 +7,49 @@
 	max-width: 1000px;
 }
 
-//Nav containers
-.container--narrow--nav {
-	float: left;
-	width: 57%;
-
-	@media (min-width: $md-screen) {
-		width: 30%;
-	}
+//This needs to go somewhere else!!!!
+.card--narrow__content {
+	color: $main;
+	margin: 0;
+	padding: .5em .5em 2em .5em;
 }
 
-.container--medium--nav {
-	width: 100%;
-
-	@media (min-width: 828px) {
-		width: 66%;
-	}
-}
-
-//Third styles
+//Grid
 .one-third {
 	max-width: 33%
 }
 
-.two-thirds {
-	max-width: 100%;
+.full-to-half {
+width: 100%;
 
 	@media (min-width: $md-screen) {
-		max-width: 66%
+		display: inline-block;
+		width: 49%;
 	}
 }
 
-.thirds {
+.full-to-thirds {
 	width: 100%;
 
 	@media (min-width: $md-screen) {
 		margin-right: 1.33%;
 		width: 32%;
+	}
+}
+
+.half-to-third {
+	width: 57%;
+
+	@media (min-width: $md-screen) {
+		width: 31%;
+	}
+}
+
+.full-to-two-thirds {
+	width: 100%;
+
+	@media (min-width: 828px) {
+		width: 66%;
 	}
 }
 
@@ -55,7 +61,7 @@
 .column__1 {
 	width: 49%;
 
-	@media (min-width: 827px) {
+	@media (min-width: 828px) {
 		width: 31%;
 	}
 }
@@ -63,7 +69,7 @@
 .column__2 {
 	width: 49%;
 
-	@media (min-width: 827px) {
+	@media (min-width: 828px) {
 		width: 31%;
 	}
 }
@@ -71,7 +77,7 @@
 .column__3--small {
 	width: 23.9%;
 
-	@media (min-width: 827px) {
+	@media (min-width: 828px) {
 		width: 15%;
 		display: none;
 	}
@@ -80,7 +86,7 @@
 .column__3--medium {
 	display: none;
 
-	@media (min-width: 827px) {
+	@media (min-width: 828px) {
 		display: inline-block;
 		width: 12%;
 	}
@@ -89,7 +95,7 @@
 .column__4 {
 	width: 48%;
 
-	@media (min-width: 827px) {
+	@media (min-width: 828px) {
 		margin-left: .2em;
 		width: 21%;
 	}
