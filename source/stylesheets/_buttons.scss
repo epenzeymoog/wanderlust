@@ -53,6 +53,12 @@ input[type="button"] {
 	}
 }
 
+.button--secondary--half {
+	background-color: $alt-cta;
+	margin-right: 5%;
+	width: 95%;
+}
+
 .button--tertiary {
 	background-color: $cta;
 	font-size: 1em;

@@ -6,6 +6,10 @@
 	float: right;
 }
 
+.clear {
+	clear:both;
+}
+
 .right-medium {
 	@media (min-width: $lg-screen) {
 		float: right;
@@ -16,6 +20,56 @@
 	display: block;
 	margin: 0 auto;
 }
+
+#fixed-img {
+	float: right;
+	margin-right: 10px;
+	position: fixed;
+
+	img {
+		width: 100%
+	}
+}
+
+body { 
+    margin:0 
+}
+#header {
+    background:red;
+    height:50px;
+}
+#container{
+    height:1500px;
+}
+#content{
+    background:#DDD;
+    height:1000px;
+    position:relative;
+}
+#sidebar{
+    background:yellow;
+    height:300px;
+    margin:20px;
+    width:150px;
+    float:right;
+}
+#footer {
+    background:blue;
+    height:200px;
+}
+.fixed{
+    position:fixed;
+    top:0;
+    right:0;
+}
+
+.bottom{
+    top:auto;
+    bottom:0;
+    position:absolute;
+}
+
+
 
 .show-medium {
 	display: none;

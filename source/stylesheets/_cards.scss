@@ -10,6 +10,18 @@
 	width: 100%;
 }
 
+.no-padding-bottom .card-row {
+	padding-bottom: 0;
+}
+
+.lodging {
+	margin-top: 0;
+
+	@media (min-width: $lg-screen) {
+		margin-top: -6em;
+	}
+}
+
 //Wide card styles
 .card--wide {
 	border: 1px solid $light-grey;
@@ -105,6 +117,12 @@
 }
 
 //Hotel photos
+.loft-apt {
+	background: url(../images/lodging/loft-apt.jpg) center no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
 .dropjes {
 	background: url(../images/lodging/dropjes.jpg) center no-repeat;
 	background-size: cover;
@@ -118,11 +136,13 @@
 .canal-apt {
 	background: url(../images/lodging/canal-apt.jpg) center no-repeat;
 	background-size: cover;
+	position: relative;
 }
 
 .condo-apt {
 	background: url(../images/lodging/condo-apt.jpg) center no-repeat;
 	background-size: cover;
+	position: relative;
 }
 
 .brouwer {
@@ -130,25 +150,20 @@
 	background-size: cover;
 }
 
-.loft-apt {
-	background: url(../images/lodging/loft-apt.jpg) center no-repeat;
-	background-size: cover;
-}
-
 .airbnb {	
 	background: url(../images/lodging/airbnb.png) center no-repeat;
-	bottom: 1.5em;
+	bottom: 5px;
 	display: inline-block;
 	float: left;
 	height: 20px;
-	left: 8em;
-	position: relative;
-	width: 33%;
+	position: absolute;
+	right: 0;
+	width: 5em;
 }
 
 .stars-4 {	
 	background: url(../images/lodging/4-stars.png) center no-repeat;
-	bottom: 6em;
+	bottom: 5.7em;
 	display: inline-block;
 	float: left;
 	height: 20px;
@@ -159,7 +174,8 @@
 
 //Car photos
 .golf, .corsa, .polo, .ka, .panda, .fiesta, .dropjes, .hagel-slag, .canal-apt,
-.condo-apt, .brouwer, .loft-apt {
+.condo-apt, .brouwer, .loft-apt, .dropjes, .hagel-slag, .canal-apt, .condo-apt,
+.brouwer {
 	border: 1px solid $light-grey;
 	border-radius: 5px;
 	display: inline-block;
