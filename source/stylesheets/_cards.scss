@@ -58,6 +58,7 @@
 	bottom: 8.5em;
 }
 
+
 //Narrow card styles
 .card--narrow {
 	display: inline-block;
@@ -83,6 +84,11 @@
 	}
 }
 
+.card--narrow__content {
+	color: $main;
+	margin: 0;
+	padding: .5em .5em 2em .5em;
+}
 
 //Promotions photos
 .oslo, .boston, .rio, .napa, .st-thomas, .bangkok {

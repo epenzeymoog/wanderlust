@@ -72,7 +72,7 @@ input[type="button"] {
 	float: right;
 	margin-top: 1em;
 
-	.results-page__button {
+	a {
 		background-color: $white;
 		border: 1px solid $light-grey;
 		border-radius: 3px;
@@ -80,21 +80,25 @@ input[type="button"] {
 		display: inline-block;
 		height: 28px;
 		margin-right: 5px;
+		text-decoration: none;
 		width: 30px;
 
 		&:nth-of-type(4) {
 			border: none;
 			cursor: default;
-			margin: 0;
-			padding: 0;
 		}
 
-		&:last-of-type {
-			margin-right: 0;
+		&:hover {
+			opacity: .7;
 		}
 	}
 }
 
+.arrow-right {
+	background: url(../images/arrow-right.png) center no-repeat;
+}
+
 .results-page__button p {
-	padding-left:2px;
+	padding-top: 2px;
+	text-align: center;
 }

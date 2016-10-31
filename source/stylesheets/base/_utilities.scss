@@ -133,3 +133,33 @@ ul {
 .margin-left {
 	margin-left: 10px;
 }
+
+
+.filter--secondary {
+	input[type="checkbox"] {
+		margin-right: 5px;
+	}
+
+	input[type="range"] {
+		width: 44%;
+	}
+
+	.filter__range-values {
+		height: 1.5em;
+	}
+
+	.filter__title {
+		margin-top: 0;
+	}
+
+	.filter__range-values {
+		width: 88%;
+	}
+
+}
+
+.padding-bottom {
+	padding-bottom: 2em;
+}
+
+
