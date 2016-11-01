@@ -6,7 +6,7 @@ layout: layout
 
 <section class="nav--secondary">
 	<div class="container">
-		<ul class="half-to-third left">
+		<ul class="half-to-third--large left">
 			<li><img class="logo" src="../images/logo.svg"></li>
 			<li><span class="icon__text" href="/index.html">Wanderlust</span></li>
 		</ul>
@@ -54,11 +54,11 @@ layout: layout
       	<div class="row">
       		<div class="full-to-half">
          		<label>departing</label>
-         			<input type="text" id="datepicker">
+         			<input type="text" id="datepickera" required placeholder="select date">
           </div>
           <div class="full-to-half right">
          		<label>returning</label>
-         			<input type="text" id="datepicker">
+         			<input type="text" id="datepickerb" requried placeholder="select date">
 					</div>
 				</div>
 
@@ -115,11 +115,11 @@ layout: layout
     <div class="row">
     	<div class="full-to-half">          		
      		<label>check-in</label>
-     		<input type="date" name="check-in date" required placeholder="depart">
+     		<input type="text" id="datepickere" requried placeholder="select date">
      	</div>
      	<div class="full-to-half right">           		
      		<label>check-out</label>
-     		<input type="date" name="check-out date" required placeholder="return">
+     		<input type="text" id="datepickerf" requried placeholder="select date">
      	</div>
 		</div>
 
@@ -170,7 +170,7 @@ layout: layout
 			<div class="row">
 				<div class="full-to-half">
      			<label>pick up day</label>
-     			<input type="date" name="pick-up day" required placeholder="depart"> 
+     			<input type="text" id="datepickerc" requried placeholder="select date"> 
 				</div>
 				<div class="full-to-half right">
       		<label>pick up time</label>
@@ -189,7 +189,7 @@ layout: layout
 			<div class="row">
 				<div class="full-to-half">
      			<label>drop off day</label>
-     			<input type="date" name="drop-off day" required placeholder="return">
+     			<input type="text" id="datepickerd" requried placeholder="select date">
 				</div>
 				<div class="full-to-half right">
 			    <label>drop off time</label>
@@ -320,5 +320,10 @@ layout: layout
 
 <script src="/javascripts/pikaday.js"></script>
 <script>
-    var picker = new Pikaday({ field: document.getElementById('datepicker') });
+new Pikaday({ field: document.getElementById('datepickera') });
+new Pikaday({ field: document.getElementById('datepickerb') });
+new Pikaday({ field: document.getElementById('datepickerc') });
+new Pikaday({ field: document.getElementById('datepickerd') });
+new Pikaday({ field: document.getElementById('datepickere') });
+new Pikaday({ field: document.getElementById('datepickerf') });
 </script>

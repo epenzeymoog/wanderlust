@@ -6,14 +6,15 @@ layout: layout
 <%= partial "partials/nav" %>
 
 <div class="container margin-top">
-	<div class="user-selection">
+	<div class="form-table--secondary">
 
 		<div class="full-to-half left">	
 				<div class="half">
 					<label>Location</label>
 		      		<input type="text" name="location" placeholder="Amsterdam">
 		      <label>Arriving</label>
-		       	<input type="date" name="arriving" required placeholder="11/19/2016">
+		       	<input type="text" id="datepicker3" placeholder="11/19/2016">
+		       	
 				</div>
 
 				<div class="half">
@@ -25,17 +26,18 @@ layout: layout
 					  <option value="fiat">4 Rooms</option>
 					</select>
 					<label>Departing</label>
-		       	<input type="date" name="departing" required placeholder="11/29/2016">
+		       <input type="text" id="datepicker4" placeholder="11/29/2016">
 		    </div>
 		</div>
 
 	<div class="full-to-half right">
 		    <div class="half-always filter--secondary">
-		      <div class="clean-list padding-bottom"><p>Type</p>
-		      	<label class="filter__label"><input type="checkbox">hotel</label>
-						<label class="filter__label"><input type="checkbox">airbnb</label>
+		      <div class="clean-list padding-bottom"><p class="padding-bottom--small">Type</p>
+		      	<label class="filter__label margin-right"><input type="checkbox">hotel</label>
+						<label class="filter__label margin-right"><input type="checkbox">airbnb</label>
+						<span class="ib"><label class="filter__label"><input type="checkbox">hostel</label></span>
 					</div>
-					<div class="filter__range-values margin-top">
+					<div class="filter__range-values">
 						<p class="filter__label left">$955</p>
 						<p class="filter__label right">$1944</p>
 					</div>
@@ -105,7 +107,7 @@ layout: layout
 				<li class="card-row card--wide__row">
 					<p class="card-row__detail">12 mi from Schiphol Airport</p>
 				</li>
-				<li class="card-column card-column--small right hide--small">
+				<li class="card-column card-column--small right hide-until-large">
 					<ul>
 						<li><h2 class="lighter"><strong>$580</strong></h2></li>
 						<li class="card-column__type">($58/day)</li>
@@ -114,7 +116,7 @@ layout: layout
 					</ul>
 				</li>
 
-				<li class="card-row hide--medium card--wide__row">
+				<li class="card-row hide-on-large card--wide__row">
 					<ul>			
 						<li class="card-column__type">($58/day)</li>
 						<li><h2 class="lighter"><strong>$590</strong></h2></li>
@@ -152,7 +154,7 @@ layout: layout
 				<li class="card-row card--wide__row">
 					<p class="card-row__detail">13 mi from Schiphol Airport</p>
 				</li>
-				<li class="card-column card-column--small right hide--small">
+				<li class="card-column card-column--small right hide-until-large">
 					<ul>
 						<li><h2 class="lighter"><strong>$790</strong></h2></li>
 						<li class="card-column__type">($79/day)</li>
@@ -161,7 +163,7 @@ layout: layout
 					</ul>
 				</li>
 
-				<li class="card-row hide--medium card--wide__row">
+				<li class="card-row hide-on-large card--wide__row">
 					<ul>			
 						<li class="card-column__type">($79/day)</li>
 						<li><h2 class="lighter"><strong>$790</strong></h2></li>
@@ -198,7 +200,7 @@ layout: layout
 				<li class="card-row card--wide__row">
 					<p class="card-row__detail">11 mi from Schiphol Airport</p>
 				</li>
-				<li class="card-column card-column--small right hide--small">
+				<li class="card-column card-column--small right hide-until-large">
 					<ul>
 						<li><h2 class="lighter"><strong>$580</strong></h2></li>
 						<li class="card-column__type">($58/day)</li>
@@ -207,7 +209,7 @@ layout: layout
 					</ul>
 				</li>
 
-				<li class="card-row hide--medium card--wide__row">
+				<li class="card-row hide-on-large card--wide__row">
 					<ul>			
 						<li class="card-column__type">($58/day)</li>
 						<li><h2 class="lighter"><strong>$580</strong></h2></li>
@@ -245,7 +247,7 @@ layout: layout
 				<li class="card-row card--wide__row">
 					<p class="card-row__detail">13 mi from Schiphol Airport</p>
 				</li>
-				<li class="card-column card-column--small right hide--small">
+				<li class="card-column card-column--small right hide-until-large">
 					<ul>
 						<li><h2 class="lighter"><strong>$790</strong></h2></li>
 						<li class="card-column__type">($79/day)</li>
@@ -254,7 +256,7 @@ layout: layout
 					</ul>
 				</li>
 
-				<li class="card-row hide--medium card--wide__row">
+				<li class="card-row hide-on-large card--wide__row">
 					<ul>			
 						<li class="card-column__type">($79/day)</li>
 						<li><h2 class="lighter"><strong>$790</strong></h2></li>
@@ -290,7 +292,7 @@ layout: layout
 				<li class="card-row card--wide__row">
 					<p class="card-row__detail">12 mi from Schiphol Airport</p>
 				</li>
-				<li class="card-column card-column--small right hide--small">
+				<li class="card-column card-column--small right hide-until-large">
 					<ul>
 						<li><h2 class="lighter"><strong>$620</strong></h2></li>
 						<li class="card-column__type">($62/day)</li>
@@ -299,7 +301,7 @@ layout: layout
 					</ul>
 				</li>
 
-				<li class="card-row hide--medium card--wide__row">
+				<li class="card-row hide-on-large card--wide__row">
 					<ul>			
 						<li class="card-column__type">($62/day)</li>
 						<li><h2 class="lighter"><strong>$620</strong></h2></li>
@@ -337,7 +339,7 @@ layout: layout
 				<li class="card-row card--wide__row">
 					<p class="card-row__detail">13 mi from Schiphol Airport</p>
 				</li>
-				<li class="card-column card-column--small right hide--small">
+				<li class="card-column card-column--small right hide-until-large">
 					<ul>
 						<li><h2 class="lighter"><strong>$790</strong></h2></li>
 						<li class="card-column__type">($79/day)</li>
@@ -346,7 +348,7 @@ layout: layout
 					</ul>
 				</li>
 
-				<li class="card-row hide--medium card--wide__row">
+				<li class="card-row hide-on-large card--wide__row">
 					<ul>			
 						<li class="card-column__type">($79/day)</li>
 						<li><h2 class="lighter"><strong>$790</strong></h2></li>
@@ -384,7 +386,7 @@ layout: layout
 				<li class="card-row card--wide__row">
 					<p class="card-row__detail">10 mi from Schiphol Airport</p>
 				</li>
-				<li class="card-column card-column--small right hide--small">
+				<li class="card-column card-column--small right hide-until-large">
 					<ul>
 						<li><h2 class="lighter"><strong>$740</strong></h2></li>
 						<li class="card-column__type">($74/day)</li>
@@ -393,7 +395,7 @@ layout: layout
 					</ul>
 				</li>
 
-				<li class="card-row hide--medium card--wide__row">
+				<li class="card-row hide-on-large card--wide__row">
 					<ul>			
 						<li class="card-column__type">($74/day)</li>
 						<li><h2 class="lighter"><strong>$740</strong></h2></li>
@@ -431,7 +433,7 @@ layout: layout
 				<li class="card-row card--wide__row">
 					<p class="card-row__detail">13 mi from Schiphol Airport</p>
 				</li>
-				<li class="card-column card-column--small right hide--small">
+				<li class="card-column card-column--small right hide-until-large">
 					<ul>
 						<li><h2 class="lighter"><strong>$790</strong></h2></li>
 						<li class="card-column__type">($79/day)</li>
@@ -440,7 +442,7 @@ layout: layout
 					</ul>
 				</li>
 
-				<li class="card-row hide--medium card--wide__row">
+				<li class="card-row hide-on-large card--wide__row">
 					<ul>			
 						<li class="card-column__type">($79/day)</li>
 						<li><h2 class="lighter"><strong>$790</strong></h2></li>
@@ -479,7 +481,7 @@ layout: layout
 				<li class="card-row card--wide__row">
 					<p class="card-row__detail">12 mi from Schiphol Airport</p>
 				</li>
-				<li class="card-column card-column--small right hide--small">
+				<li class="card-column card-column--small right hide-until-large">
 					<ul>
 						<li><h2 class="lighter"><strong>$740</strong></h2></li>
 						<li class="card-column__type">($74/day)</li>
@@ -488,7 +490,7 @@ layout: layout
 					</ul>
 				</li>
 
-				<li class="card-row hide--medium card--wide__row">
+				<li class="card-row hide-on-large card--wide__row">
 					<ul>			
 						<li class="card-column__type">($74/day)</li>
 						<li><h2 class="lighter"><strong>$740</strong></h2></li>
@@ -526,7 +528,7 @@ layout: layout
 				<li class="card-row card--wide__row">
 					<p class="card-row__detail">13 mi from Schiphol Airport</p>
 				</li>
-				<li class="card-column card-column--small right hide--small">
+				<li class="card-column card-column--small right hide-until-large">
 					<ul>
 						<li><h2 class="lighter"><strong>$790</strong></h2></li>
 						<li class="card-column__type">($79/day)</li>
@@ -535,7 +537,7 @@ layout: layout
 					</ul>
 				</li>
 
-				<li class="card-row hide--medium card--wide__row">
+				<li class="card-row hide-on-large card--wide__row">
 					<ul>			
 						<li class="card-column__type">($79/day)</li>
 						<li><h2 class="lighter"><strong>$790</strong></h2></li>
@@ -573,7 +575,7 @@ layout: layout
 				<li class="card-row card--wide__row">
 					<p class="card-row__detail">13 mi from Schiphol Airport</p>
 				</li>
-				<li class="card-column card-column--small right hide--small">
+				<li class="card-column card-column--small right hide-until-large">
 					<ul>
 						<li><h2 class="lighter"><strong>$790</strong></h2></li>
 						<li class="card-column__type">($79/day)</li>
@@ -582,7 +584,7 @@ layout: layout
 					</ul>
 				</li>
 
-				<li class="card-row hide--medium card--wide__row">
+				<li class="card-row hide-on-large card--wide__row">
 					<ul>			
 						<li class="card-column__type">($79/day)</li>
 						<li><h2 class="lighter"><strong>$790</strong></h2></li>
@@ -620,7 +622,7 @@ layout: layout
 				<li class="card-row card--wide__row">
 					<p class="card-row__detail">13 mi from Schiphol Airport</p>
 				</li>
-				<li class="card-column card-column--small right hide--small">
+				<li class="card-column card-column--small right hide-until-large">
 					<ul>
 						<li><h2 class="lighter"><strong>$790</strong></h2></li>
 						<li class="card-column__type">($79/day)</li>
@@ -629,7 +631,7 @@ layout: layout
 					</ul>
 				</li>
 
-				<li class="card-row hide--medium card--wide__row">
+				<li class="card-row hide-on-large card--wide__row">
 					<ul>			
 						<li class="card-column__type">($79/day)</li>
 						<li><h2 class="lighter"><strong>$790</strong></h2></li>
@@ -645,6 +647,12 @@ layout: layout
 
 </div>
 <%=partial "partials/results-pages" %>
-	<%= partial "partials/footer" %>
+<%= partial "partials/footer" %>
 
 </div>
+
+<script src="/javascripts/pikaday.js"></script>
+<script>
+new Pikaday({ field: document.getElementById('datepicker3') });
+new Pikaday({ field: document.getElementById('datepicker4') });
+</script>

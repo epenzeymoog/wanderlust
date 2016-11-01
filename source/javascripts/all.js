@@ -1,15 +1,12 @@
-// This is where it all goes :)
-
-(window).scroll(function() {
-    var threshold = 50;
-    $("#test").html($(window).scrollTop());
-    if ($(window).scrollTop() >= threshold)
-        $('#fixed-img').addClass('fixed');
-    else
-        $('#fixed-img').removeClass('fixed');
-    var check = $("#content").height() - $("#fixed-img").height()-21;
-    if ($(window).scrollTop() >= check)
-        $('#fixed-img').addClass('bottom');
-    else
-        $('#fixed-img').removeClass('bottom');
-});
+// Filter results drop down for flight & car results pages on small screens
+var expanded = false;
+function showCheckboxes() {
+    var checkboxes = document.getElementById("checkboxes");
+    if (!expanded) {
+        checkboxes.style.display = "block";
+        expanded = true;
+    } else {
+        checkboxes.style.display = "none";
+        expanded = false;
+    }
+}

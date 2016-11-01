@@ -58,7 +58,7 @@ header {
   background: hsla(195, 195%, 195%, .9);
   border: 1px solid grey;
   border-radius: 3px;
-  box-sizing:content-box;
+  box-sizing: content-box;
   color: #606060;
   display: inline-block;
   font-size: .9em;
@@ -70,9 +70,9 @@ header {
   outline: none;
   transition: ease-in-out 0.2s;
   width: 97%;
-  -ms-box-sizing:content-box;
-  -moz-box-sizing:content-box;
-  -webkit-box-sizing:content-box;
+  -ms-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
   -webkit-appearance: none;
 }
 

@@ -8,71 +8,28 @@
 }
 
 .clear {
-	clear:both;
+	clear: both;
 }
 
-.right-medium {
+//Hide & display
+.hide-until-large {
+	display: none;
+
 	@media (min-width: $lg-screen) {
-		float: right;
+		display: block;
 	}
 }
 
-//Positioning & alignment
-.center {
-	display: block;
-	margin: 0 auto;
+.hide-on-large {
+	@media (min-width: $lg-screen) {
+		display: none;
+	}
 }
 
-.bottom{
-    top:auto;
-    bottom:0;
-    position:absolute;
-}
-
-.margin-top {
-	margin-top: 2em;
-}
-
-.strikethrough {
-	color: $secondary;
-	text-decoration: line-through;
-}
-
-.block {
-	display: block;
-}
-
-.ib {
-	display: inline-block;
-}
-
-.margin-left {
-	margin-left: 10px;
-}
-
-.padding-bottom {
-	padding-bottom: 2em;
-}
-
-.align-top {
-	vertical-align: top;
-}
-
-.align-bottom {
-	vertical-align: bottom;
-}
-
-.centered-element {
-	float: right;
-	position: relative;
-	bottom: 2em;
-	right: 3%;
-}
-
-@-moz-document url-prefix() { 
-  .centered-element {
-     bottom: 3.5em
-  }
+.hide-on-medium {
+	@media (min-width: 600px) {
+		display: none;
+	}
 }
 
 //Clean lists & links
@@ -101,4 +58,65 @@
 	&:hover {
 		text-decoration: none;
 	}
+}
+
+//Positioning, spacing & alignment helpers
+.center {
+	display: block;
+	margin: 0 auto;
+}
+
+.block {
+	display: block;
+}
+
+.ib {
+	display: inline-block;
+}
+
+.margin-top {
+	margin-top: 2em;
+}
+
+.margin-left {
+	margin-left: 10px;
+}
+
+.margin-right {
+	margin-right: 10px;
+}
+
+.padding-bottom {
+	padding-bottom: 1.5em;
+}
+
+.padding-bottom--small {
+  padding-bottom: 8px;
+}
+
+.align-top {
+	vertical-align: top;
+}
+
+.align-bottom {
+	vertical-align: bottom;
+}
+
+.centered-element {
+	float: right;
+	position: relative;
+	bottom: 2em;
+	right: 1%;
+}
+
+@-moz-document url-prefix() { 
+  .centered-element {
+     bottom: 3.5em
+  }
+}
+
+//Misc
+.strikethrough {
+	color: $secondary;
+	text-decoration: line-through;
 }

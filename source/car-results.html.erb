@@ -2,12 +2,12 @@
 title: Amsterdam Cars
 layout: layout
 ---
-<script src="/javascripts/pikaday.js"></script>
+
 <%= partial "partials/nav" %>
 
 <div class="container margin-top">
 
-	<div class="one-third left hide--small">
+	<div class="one-third left hide-until-large">
 	<div class="filter">
 		<input type="button" value="Create price alert" class="button button--tertiary left" onclick="location.href='/flight-results.html';">
 		<p><strong><a href="#" class="clean-link">Read about driving rules in The Netherlands</a></strong></p>
@@ -46,47 +46,34 @@ layout: layout
 		</ul>
 
 		<ul class="filter__title"><strong>Car Type</strong>
-			<li><label class="filter__label"><input type="checkbox">Small</label></li>
-			<li><label class="filter__label"><input type="checkbox">Convertible</label></li>
-			<li><label class="filter__label"><input type="checkbox">Medium</label></li>
-			<li><label class="filter__label"><input type="checkbox">Large</label></li>
-			<li><label class="filter__label"><input type="checkbox">SUV</label></li>
-			<li><label class="filter__label"><input type="checkbox">Van</label></li>
-			<li><label class="filter__label"><input type="checkbox">Alitalia</label></li>
-			<li><label class="filter__label"><input type="checkbox">Luxury</label></li>
+		<% ["Small", "Convertible", "Medium", "Large", "SUV", "Van", "Luxury"].each do |car| %>
+				<li><label class="filter__label"><input type="checkbox"><%= car %></label></li>
+			<% end %>
 		</ul>
 		<ul class="filter__title"><strong>Rental Agency</strong>
-			<li><label class="filter__label"><input type="checkbox">Alamo</label></li>
-			<li><label class="filter__label"><input type="checkbox">Avis</label></li>
-			<li><label class="filter__label"><input type="checkbox">Budget</label></li>
-			<li><label class="filter__label"><input type="checkbox">Dollar</label></li>
-			<li><label class="filter__label"><input type="checkbox">Enterprise</label></li>
-			<li><label class="filter__label"><input type="checkbox">Eurocar</label></li>
-			<li><label class="filter__label"><input type="checkbox">Hertz</label></li>
-			<li><label class="filter__label"><input type="checkbox">Major Agency</label></li>
-			<li><label class="filter__label"><input type="checkbox">National</label></li>
-			<li><label class="filter__label"><input type="checkbox">Sixt</label></li>
-			<li><label class="filter__label"><input type="checkbox">Thrifty</label></li>
+			<% ["Alamo", "Avis", "Budget", "Dollar", "Enterprise", "Eurocar", "Hertz", "Major", "National", "Sixt", "Thrifty"].each do |rental| %>
+				<li><label class="filter__label"><input type="checkbox"><%= rental %></label></li>
+			<% end %>
 		</ul>		
-
+h
 	</div>
 	</div>
 
 	<div class="full-to-two-thirds right">
-		<div class="user-selection">
+		<div class="form-table--secondary">
 
-			<div class="half-to-third--secondary">
+			<div class="half-to-third">
 				<label>Pick-up location</label>
 	      		<input class="text--chosen" type="text" name="pick-up location" placeholder="AMS Schiphol">
 	      <label>Return location</label>
 	      		<input class="text--chosen" type="text" name="return location" placeholder="AMS Schiphol">
 			</div>
 
-			<div class="half-to-third--secondary">
+			<div class="half-to-third">
        	<label>Pick-up date</label>
-	       	<input type="text" id="datepicker">
+	       	<input type="text" id="datepicker" placeholder="11/19/2016">
 				<label>Return date</label>
-	       	<input type="text" id="datepicker">
+	       	<input type="text" id="datepicker2" placeholder="11/29/2016">
 
 	    </div>
 
@@ -162,7 +149,7 @@ layout: layout
 				<li class="card-row card--wide__row">
 					<p class="card-row__detail">5 people, 4 doors</p>
 				</li>
-				<li class="card-column card-column--small right hide--small">
+				<li class="card-column card-column--small right hide-until-large">
 					<ul>
 						<li><h2 class="lighter"><strong>$116</strong></h2></li>
 						<li class="card-column__type">($11/day)</li>
@@ -171,7 +158,7 @@ layout: layout
 					</ul>
 				</li>
 
-				<li class="card-row hide--medium card--wide__row">
+				<li class="card-row hide-on-large card--wide__row">
 					<ul>			
 						<li class="card-column__type">($11/day)</li>
 						<li><h2 class="lighter"><strong>$116</strong></h2></li>
@@ -202,7 +189,7 @@ layout: layout
 				<li class="card-row card--wide__row">
 					<p class="card-row__detail">5 people, 4 doors</p>
 				</li>
-				<li class="card-column card-column--small right hide--small">
+				<li class="card-column card-column--small right hide-until-large">
 					<ul>
 						<li><h2 class="lighter"><strong>$116</strong></h2></li>
 						<li class="card-column__type">($11/day)</li>
@@ -211,7 +198,7 @@ layout: layout
 					</ul>
 				</li>
 
-				<li class="card-row hide--medium card--wide__row">
+				<li class="card-row hide-on-large card--wide__row">
 					<ul>			
 						<li class="card-column__type">($11/day)</li>
 						<li><h2 class="lighter"><strong>$116</strong></h2></li>
@@ -242,7 +229,7 @@ layout: layout
 				<li class="card-row card--wide__row">
 					<p class="card-row__detail">5 people, 4 doors</p>
 				</li>
-				<li class="card-column card-column--small right hide--small">
+				<li class="card-column card-column--small right hide-until-large">
 					<ul>
 						<li><h2 class="lighter"><strong>$116</strong></h2></li>
 						<li class="card-column__type">($11/day)</li>
@@ -251,7 +238,7 @@ layout: layout
 					</ul>
 				</li>
 
-				<li class="card-row hide--medium card--wide__row">
+				<li class="card-row hide-on-large card--wide__row">
 					<ul>			
 						<li class="card-column__type">($11/day)</li>
 						<li><h2 class="lighter"><strong>$116</strong></h2></li>
@@ -282,7 +269,7 @@ layout: layout
 				<li class="card-row card--wide__row">
 					<p class="card-row__detail">5 people, 4 doors</p>
 				</li>
-				<li class="card-column card-column--small right hide--small">
+				<li class="card-column card-column--small right hide-until-large">
 					<ul>
 						<li><h2 class="lighter"><strong>$129</strong></h2></li>
 						<li class="card-column__type">($13/day)</li>
@@ -291,7 +278,7 @@ layout: layout
 					</ul>
 				</li>
 
-				<li class="card-row hide--medium card--wide__row">
+				<li class="card-row hide-on-large card--wide__row">
 					<ul>			
 						<li class="card-column__type">($13/day)</li>
 						<li><h2 class="lighter"><strong>$129</strong></h2></li>
@@ -322,7 +309,7 @@ layout: layout
 				<li class="card-row card--wide__row">
 					<p class="card-row__detail">5 people, 4 doors</p>
 				</li>
-				<li class="card-column card-column--small right hide--small">
+				<li class="card-column card-column--small right hide-until-large">
 					<ul>
 						<li><h2 class="lighter"><strong>$130</strong></h2></li>
 						<li class="card-column__type">($13/day)</li>
@@ -331,7 +318,7 @@ layout: layout
 					</ul>
 				</li>
 
-				<li class="card-row hide--medium card--wide__row">
+				<li class="card-row hide-on-large card--wide__row">
 					<ul>			
 						<li class="card-column__type">($13/day)</li>
 						<li><h2 class="lighter"><strong>$130</strong></h2></li>
@@ -362,7 +349,7 @@ layout: layout
 				<li class="card-row card--wide__row">
 					<p class="card-row__detail">5 people, 4 doors</p>
 				</li>
-				<li class="card-column card-column--small right hide--small">
+				<li class="card-column card-column--small right hide-until-large">
 					<ul>
 						<li><h2 class="lighter"><strong>$130</strong></h2></li>
 						<li class="card-column__type">($13/day)</li>
@@ -371,7 +358,7 @@ layout: layout
 					</ul>
 				</li>
 
-				<li class="card-row hide--medium card--wide__row">
+				<li class="card-row hide-on-large card--wide__row">
 					<ul>			
 						<li class="card-column__type">($13/day)</li>
 						<li><h2 class="lighter"><strong>$130</strong></h2></li>
@@ -389,6 +376,8 @@ layout: layout
 
 </div>
 
+<script src="/javascripts/pikaday.js"></script>
 <script>
-var picker = new Pikaday({ field: document.getElementById('datepicker') });
+new Pikaday({ field: document.getElementById('datepicker') });
+new Pikaday({ field: document.getElementById('datepicker2') });
 </script>

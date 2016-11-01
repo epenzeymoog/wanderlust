@@ -41,8 +41,8 @@ input[type="button"] {
 
 .button--secondary {
   background-color: $alt-cta;
-  margin-right: 4%;
-  width: 96%;
+  margin-left: 5%;
+  width: 97%;
 
   @media (min-width: $lg-screen) {
     margin-right: 0;
@@ -109,8 +109,20 @@ input[type="button"] {
 
 
 //Input styles
-.user-selection {
-  padding-bottom: 2em;
+.form-table--secondary {
+  padding-bottom: .5em;
+
+  @media (min-width: $md-screen) {
+    padding: 0 0 2em 1em;
+  }
+}
+
+.form-table--secondary select {
+  width: 80%;
+
+  @media (min-width: $sm-screen) {
+    width: 90%;
+  }
 }
 
 .filter {
@@ -182,18 +194,27 @@ select {
   background: hsla(195, 195%, 195%, .9);
   border: 1px solid grey;
   border-radius: 3px;
+  box-sizing: content-box;
   color: #606060;
   display: inline-block;
   font-size: .9rem;
   height: 30px;
   line-height: normal;
-  margin: 5px 0px 20px 0;
+  margin: 0px 0px 10px 0;
   padding: 0;
   padding-left: 8px;
   outline: none;
   transition: ease-in-out 0.2s;
  	-webkit-appearance: none; 
  	width: 90%;
+  -ms-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  -webkit-appearance: none;
+
+  @media (min-width: $sm-screen) {
+    margin: 5px 0px 20px 0;
+  }
 }
 
 input[type="date"],
@@ -204,8 +225,6 @@ select {
 }
 
 select {
-  // background: #FFF url(../images/arrowdown.png) no-repeat;
-  // background-position: center right 7px;
   height: 32px;
   -moz-appearance: none;
   transition: ease-in-out 0.2s;
@@ -218,13 +237,37 @@ input[type="date"]::-webkit-outer-spin-button {
   margin: 0; 
 }
 
-// input[type="date"] {
-//   background: #FFF url(../images/arrowdown.png) no-repeat;
-//   background-position: center right 7px;
-//   -webkit-appearance: none;
-// }
+//Filter drop down on small screens
+.form--dropdown {
+  display: inline-block;
+  width: 190px;
 
-// ::-webkit-calendar-picker-indicator {
-//   color: rgba(0, 0, 0, 0);
-//   opacity: 1
-// }
+  input[type="checkbox"] {
+    margin-right: 5px;
+  }
+}
+.multiselect {
+    width: 190px;
+}
+.selectBox {
+    position: relative;
+}
+.selectBox select {
+    width: 60%;
+    font-weight: bold;
+}
+.overSelect {
+    position: absolute;
+    left: 0; right: 0; top: 0; bottom: 0;
+}
+#checkboxes {
+    display: none;
+    background-color: $white;
+    border: 1px $secondary solid;
+    border-radius: 5px;
+    padding: 1em 3em 1em 1em;
+    position: absolute;
+}
+#checkboxes label {
+    display: block;
+}

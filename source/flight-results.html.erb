@@ -7,7 +7,7 @@ layout: layout
 
 <div class="container margin-top">
 
-	<div class="one-third left hide--small">
+	<div class="one-third left hide-until-large">
 		<section class="filter">
 			<input type="button" value="Create price alert" class="button button--tertiary left" onclick="location.href='/flight-results.html';">
 				
@@ -77,26 +77,26 @@ layout: layout
 	</div>
 
 <div class="full-to-two-thirds right">
-		<div class="user-selection">
+		<div class="form-table--secondary">
 
-			<div class="half-to-third--secondary">
+			<div class="half-to-third">
 				<label>From</label>
 	      		<input type="text" name="from" placeholder="Chicago ORD">
 	      <label>Departing</label>
-	       	<input type="date" name="departing" required placeholder="11/19/2016">
+	       	<input type="text" id="datepicker0" placeholder="11/19/2016">
 			</div>
 
-			<div class="half-to-third--secondary">
+			<div class="half-to-third">
        	<label class="block">To</label>
       		<input type="text" name="to" placeholder="Amsterdam ORS">
 				<label>Returning</label>
-	       	<input type="date" name="returning" required placeholder="11/29/2016">
+	        <input type="text" id="datepicker01" placeholder="11/29/2016">
 	    </div>
 
 			<div class="quarter-to-hide">
 				<label>Adults</label>
 				<select name="Adults">
-					<option value="more filters selected">1 Adults</option>
+					<option value="more filters selected">1 Adult</option>
 				  <option value="volvo">2 Adults</option>
 				  <option value="saab">3 Adults</option>
 				  <option value="fiat">4 Adults</option>
@@ -140,21 +140,7 @@ layout: layout
 
 
 	<section class="card--wide card--alternative">
-		<ul class="left two-thirds show-small">
-			<li class="full">
-				<select name="price">
-					<option value="lowest to highest">Sort by</option>
-					<option value="lowest to highest">Price: Lowest to highest</option>
-					<option value="lowest to highest">Price: Highest to lowest</option>
-					<option value="lowest to highest">Duration: shortest to longest</option>
-					<option value="lowest to highest">Duration: longest to shortest</option>
-					<option value="lowest to highest">Takeoff: earliest to latest</option>
-					<option value="lowest to highest">Takeoff: latest to earliest</option>
-				</select>
-			</li>
-		</ul>
-
-		<ul class="left hide-to-three-quarters"><p class="ib"><strong>Sort by:</strong></p>
+		<ul class="hide-to-three-quarters"><p class="ib"><strong>Sort by:</strong></p>
 			<li class="one-third">
 				<select name="price">
 					<option value="lowest to highest">Price</option>
@@ -178,6 +164,50 @@ layout: layout
 			</li>
 		</ul>
 
+		<ul class="right one-third hide-on-medium">
+			<li class="half right">
+				<select>
+					<option value="lowest to highest">Sort by</option>
+					<option value="lowest to highest">Price: Lowest to highest</option>
+					<option value="lowest to highest">Price: Highest to lowest</option>
+					<option value="lowest to highest">Duration: shortest to longest</option>
+					<option value="lowest to highest">Duration: longest to shortest</option>
+					<option value="lowest to highest">Takeoff: earliest to latest</option>
+					<option value="lowest to highest">Takeoff: latest to earliest</option>
+				</select>
+			</li>
+		</ul>
+
+		<form class="form--dropdown hide-on-large">
+	    <div class="multiselect hide-on-large">
+	       <div class="selectBox" onclick="showCheckboxes()">
+            <select>
+              <option>Filter results</option>
+            </select>
+            <div class="overSelect hide-on-large"></div>
+	       </div>
+	       <div id="checkboxes">
+	       		<p>Stops</p>
+	            <% ["nonstop", "1 stop", "2+ stops"].each do |stops| %>
+								<label class="filter__label"><input type="checkbox"><%= stops %></label>
+							<% end %>
+            <p>Airports: Chicago</p>
+	            <% ["ORD: O'Hare", "MDW: Midway"].each do |airport| %>
+								<label class="filter__label"><input type="checkbox"><%= airport %></label>
+							<% end %>
+
+            <p>Airports: Amsterdam</p>
+            	<label class="filter__label" for="AMS"><input type="checkbox">AMS: Schiphol Airport</label>
+            <p>Airlines</p>
+            	<% ["Aer Lingus", "Aeromexico", "Air Canada", "Air Europe", "Air France", "Alitalia", "American Airlines", "ANA", "Australian Airlines", "British Airways", "Cathay Pacific", "Copa Airlines", "Delta", "Emirates", "Etihad Airways", "EVA Air", "Finnair", "Iberia", "Jet Airways", "KLM", "LOT Polish Airlines", "SWISS", "United"].each do |airline| %>
+								<label class="filter__label"><input type="checkbox"><%= airline %></label>
+							<% end %>
+	       </div>
+	    </div>
+		</form>
+
+
+
 		<ul class="right on-quarter">
 			<li><p><a href="#" class="clean-link"><strong>Round-trip</strong></a></p></li>
 			<li><p><a href="#" class="clean-link">Flight-by-flight</a></p></li>
@@ -197,7 +227,7 @@ layout: layout
 			<li class="card-row card--wide__row">
 				<p class="card-row__detail">Royal Dutch Airlines</p>
 			</li>
-			<li class="card-column right hide--small">
+			<li class="card-column right hide-until-large">
 				<ul>
 					<li><h2 class="lighter"><strong>$955</strong></h2></li>
 					<li class="card-column__type">Economy</li>
@@ -223,7 +253,7 @@ layout: layout
 					<li class="card-row__detail--additional"><a class="clean-link" href="#">view all details</a></li>
 				</ul>
 			</li>
-			<li class="card-row hide--medium card--wide__row">
+			<li class="card-row hide-on-large card--wide__row">
 				<ul>			
 					<li class="card-column__type">Economy</li>
 					<li><h2 class="lighter"><strong>$955</strong></h2></li>
@@ -244,7 +274,7 @@ layout: layout
 			<li class="card-row card--wide__row">
 				<p class="card-row__detail">Royal Dutch Airlines</p>
 			</li>
-			<li class="card-column right hide--small">
+			<li class="card-column right hide-until-large">
 				<ul>
 					<li><h2 class="lighter"><strong>$955</strong></h2></li>
 					<li class="card-column__type">Economy</li>
@@ -270,7 +300,7 @@ layout: layout
 					<li class="card-row__detail--additional"><a class="clean-link" href="#">view all details</a></li>
 				</ul>
 			</li>
-			<li class="card-row hide--medium card--wide__row">
+			<li class="card-row hide-on-large card--wide__row">
 				<ul>			
 					<li class="card-column__type">Economy</li>
 					<li><h2 class="lighter"><strong>$955</strong></h2></li>
@@ -291,7 +321,7 @@ layout: layout
 			<li class="card-row card--wide__row">
 				<p class="card-row__detail">Royal Dutch Airlines</p>
 			</li>
-			<li class="card-column right hide--small">
+			<li class="card-column right hide-until-large">
 				<ul>
 					<li><h2 class="lighter"><strong>$955</strong></h2></li>
 					<li class="card-column__type">Economy</li>
@@ -317,7 +347,7 @@ layout: layout
 					<li class="card-row__detail--additional"><a class="clean-link" href="#">view all details</a></li>
 				</ul>
 			</li>
-			<li class="card-row hide--medium card--wide__row">
+			<li class="card-row hide-on-large card--wide__row">
 				<ul>			
 					<li class="card-column__type">Economy</li>
 					<li><h2 class="lighter"><strong>$955</strong></h2></li>
@@ -338,7 +368,7 @@ layout: layout
 			<li class="card-row card--wide__row">
 				<p class="card-row__detail">Royal Dutch Airlines</p>
 			</li>
-			<li class="card-column right hide--small">
+			<li class="card-column right hide-until-large">
 				<ul>
 					<li><h2 class="lighter"><strong>$955</strong></h2></li>
 					<li class="card-column__type">Economy</li>
@@ -364,7 +394,7 @@ layout: layout
 					<li class="card-row__detail--additional"><a class="clean-link" href="#">view all details</a></li>
 				</ul>
 			</li>
-			<li class="card-row hide--medium card--wide__row">
+			<li class="card-row hide-on-large card--wide__row">
 				<ul>			
 					<li class="card-column__type">Economy</li>
 					<li><h2 class="lighter"><strong>$955</strong></h2></li>
@@ -385,7 +415,7 @@ layout: layout
 			<li class="card-row card--wide__row">
 				<p class="card-row__detail">Royal Dutch Airlines</p>
 			</li>
-			<li class="card-column right hide--small">
+			<li class="card-column right hide-until-large">
 				<ul>
 					<li><h2 class="lighter"><strong>$955</strong></h2></li>
 					<li class="card-column__type">Economy</li>
@@ -411,7 +441,7 @@ layout: layout
 					<li class="card-row__detail--additional"><a class="clean-link" href="#">view all details</a></li>
 				</ul>
 			</li>
-			<li class="card-row hide--medium card--wide__row">
+			<li class="card-row hide-on-large card--wide__row">
 				<ul>			
 					<li class="card-column__type">Economy</li>
 					<li><h2 class="lighter"><strong>$955</strong></h2></li>
@@ -432,7 +462,7 @@ layout: layout
 			<li class="card-row card--wide__row">
 				<p class="card-row__detail">Royal Dutch Airlines</p>
 			</li>
-			<li class="card-column right hide--small">
+			<li class="card-column right hide-until-large">
 				<ul>
 					<li><h2 class="lighter"><strong>$955</strong></h2></li>
 					<li class="card-column__type">Economy</li>
@@ -458,7 +488,7 @@ layout: layout
 					<li class="card-row__detail--additional"><a class="clean-link" href="#">view all details</a></li>
 				</ul>
 			</li>
-			<li class="card-row hide--medium card--wide__row">
+			<li class="card-row hide-on-large card--wide__row">
 				<ul>			
 					<li class="card-column__type">Economy</li>
 					<li><h2 class="lighter"><strong>$955</strong></h2></li>
@@ -478,3 +508,9 @@ layout: layout
 	<%= partial "partials/footer" %>
 
 </div>
+
+<script src="/javascripts/pikaday.js"></script>
+<script>
+new Pikaday({ field: document.getElementById('datepicker0') });
+new Pikaday({ field: document.getElementById('datepicker01') });
+</script>
