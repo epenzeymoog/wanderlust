@@ -1,3 +1,4 @@
+//Floats
 .left {
 	float: left;
 }
@@ -16,51 +17,10 @@
 	}
 }
 
+//Positioning & alignment
 .center {
 	display: block;
 	margin: 0 auto;
-}
-
-#fixed-img {
-	float: right;
-	margin-right: 10px;
-	position: fixed;
-
-	img {
-		width: 100%
-	}
-}
-
-body { 
-    margin:0 
-}
-#header {
-    background:red;
-    height:50px;
-}
-#container{
-    height:1500px;
-}
-#content{
-    background:#DDD;
-    height:1000px;
-    position:relative;
-}
-#sidebar{
-    background:yellow;
-    height:300px;
-    margin:20px;
-    width:150px;
-    float:right;
-}
-#footer {
-    background:blue;
-    height:200px;
-}
-.fixed{
-    position:fixed;
-    top:0;
-    right:0;
 }
 
 .bottom{
@@ -69,22 +29,53 @@ body {
     position:absolute;
 }
 
-
-
-.show-medium {
-	display: none;
-
-	@media (min-width: $md-screen) {
-		display: block;
-	}
+.margin-top {
+	margin-top: 2em;
 }
 
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.strikethrough {
+	color: $secondary;
+	text-decoration: line-through;
 }
 
+.block {
+	display: block;
+}
+
+.ib {
+	display: inline-block;
+}
+
+.margin-left {
+	margin-left: 10px;
+}
+
+.padding-bottom {
+	padding-bottom: 2em;
+}
+
+.align-top {
+	vertical-align: top;
+}
+
+.align-bottom {
+	vertical-align: bottom;
+}
+
+.centered-element {
+	float: right;
+	position: relative;
+	bottom: 2em;
+	right: 3%;
+}
+
+@-moz-document url-prefix() { 
+  .centered-element {
+     bottom: 3.5em
+  }
+}
+
+//Clean lists & links
 .clean-list {
   list-style: none;
   padding: 0;
@@ -103,63 +94,11 @@ ul {
 	}
 }
 
-.margin-top {
-	margin-top: 2em;
-}
+.clean-link--secondary {
+	color: none;
+	text-decoration: none;
 
-.strikethrough {
-	color: $secondary;
-	text-decoration: line-through;
-}
-
-.hide--small {
-	display: none;
-
-	@media (min-width: $lg-screen) {
-		display: block;
+	&:hover {
+		text-decoration: none;
 	}
 }
-
-.hide--medium {
-	@media (min-width: $lg-screen) {
-		display: none;
-	}
-}
-
-.block {
-	display: block;
-}
-
-.margin-left {
-	margin-left: 10px;
-}
-
-
-.filter--secondary {
-	input[type="checkbox"] {
-		margin-right: 5px;
-	}
-
-	input[type="range"] {
-		width: 44%;
-	}
-
-	.filter__range-values {
-		height: 1.5em;
-	}
-
-	.filter__title {
-		margin-top: 0;
-	}
-
-	.filter__range-values {
-		width: 88%;
-	}
-
-}
-
-.padding-bottom {
-	padding-bottom: 2em;
-}
-
-

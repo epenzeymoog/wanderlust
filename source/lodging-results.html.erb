@@ -9,14 +9,14 @@ layout: layout
 	<div class="user-selection">
 
 		<div class="full-to-half left">	
-				<div class="column half">
+				<div class="half">
 					<label>Location</label>
 		      		<input type="text" name="location" placeholder="Amsterdam">
 		      <label>Arriving</label>
 		       	<input type="date" name="arriving" required placeholder="11/19/2016">
 				</div>
 
-				<div class="column half">
+				<div class="half">
 	       	<label>Rooms</label>
 		      <select name="Rooms">
 						<option value="more filters selected">1 Room</option>
@@ -30,12 +30,12 @@ layout: layout
 		</div>
 
 	<div class="full-to-half right">
-		    <div class="column half-always filter--secondary">
+		    <div class="half-always filter--secondary">
 		      <div class="clean-list padding-bottom"><p>Type</p>
 		      	<label class="filter__label"><input type="checkbox">hotel</label>
 						<label class="filter__label"><input type="checkbox">airbnb</label>
 					</div>
-					<div class="filter__range-values">
+					<div class="filter__range-values margin-top">
 						<p class="filter__label left">$955</p>
 						<p class="filter__label right">$1944</p>
 					</div>
@@ -44,9 +44,9 @@ layout: layout
 				</div>
 
 
-			<div class="column half-always">
+			<div class="half-always align-top">
 
-				<div class="column half-to-hide">
+				<div class="half-always">
 					<label>Adults</label>
 					<select name="Adults">
 						<option value="more filters selected">1 Adults</option>
@@ -56,7 +56,7 @@ layout: layout
 					</select>
 				</div>
 					
-				<div class="column half-to-hide">
+				<div class="half-always">
 					<label>Kids</label>
 					<select name="Kids">
 						<option value="more filters selected">0 Kids</option>
@@ -65,29 +65,11 @@ layout: layout
 					  <option value="fiat">4 Kids</option>
 					</select>
 				</div>
-
-				<input type="button" value="Update" class="button button--secondary--half" onclick="location.href='/flight-results.html';">
-
 			</div>
 
-<!-- 
-				<div class="column hide-to-one-quarter">
-					<label>Adults</label>
-					<select name="Adults">
-						<option value="more filters selected">1 Adult</option>
-					  <option value="volvo">2 Adults</option>
-					  <option value="saab">3 Adults</option>
-					  <option value="fiat">4 Adults</option>
-					</select>
-
-					<label>Kids</label>
-					<select name="Kids">
-						<option value="more filters selected">0 Kids</option>
-					  <option value="volvo">2 Kids</option>
-					  <option value="saab">3 Kids</option>
-					  <option value="fiat">4 Kids</option>
-					</select>
-				</div> -->
+			<div class="half-always centered-element">
+				<input type="button" value="Update" class="button button--secondary--half" onclick="location.href='/flight-results.html';">
+			</div>
 
 
 		</div>

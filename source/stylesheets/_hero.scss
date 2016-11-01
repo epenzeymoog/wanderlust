@@ -1,16 +1,17 @@
+//Hero styles
 header {
 	background: url("/images/iceland-field.jpeg") no-repeat center center fixed; 
+  background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
-
+  
   @media (min-width: $md-screen) {
   	height: initial;
   }
 }
 
-.hero__tagline {
+.prioritized-text {
 	display: none;
 	color: $white;
 	font-family: $Amatic;
@@ -19,11 +20,139 @@ header {
 	padding: 1em 0;
 	text-align: center;
 
-	@media (min-width: 500px) {
+	@media (min-width: $sm-screen) {
 		display: block;
 	}
 
 	@media (min-width: $lg-screen) {
 		font-size: 5em;
 	}
+}
+
+//Tab styles
+.form-table {
+	clear: both;
+  color: $main;
+	display: block;
+  font-family: $Futura;
+  font-weight: 300;
+  letter-spacing: .1px;
+  margin: 0 auto;
+  padding-bottom: 3em;
+	
+	input {
+	  display: none;
+	}
+}
+
+.form-table label {
+  letter-spacing: .3px;
+  text-transform: uppercase;
+}
+
+.form-table input[type="text"],
+.form-table input[type="date"],
+.form-table input[type="submit"],
+.form-table textarea,
+.form-table select {
+  background: hsla(195, 195%, 195%, .9);
+  border: 1px solid grey;
+  border-radius: 3px;
+  box-sizing:content-box;
+  color: #606060;
+  display: inline-block;
+  font-size: .9em;
+  height: 30px;
+  line-height: normal;
+  margin: 5px 0px 20px 0;
+  padding: 0;
+  padding-left: 8px;
+  outline: none;
+  transition: ease-in-out 0.2s;
+  width: 97%;
+  -ms-box-sizing:content-box;
+  -moz-box-sizing:content-box;
+  -webkit-box-sizing:content-box;
+  -webkit-appearance: none;
+}
+
+.form-table__meta-label {
+  background: $secondary;
+  border: 1px solid #ccc;
+  bottom: 0px;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  float: left;
+  font-size: .7em;
+  font-weight: 100;
+  left: 1px;
+  letter-spacing: 1px;
+  margin: 0;
+  padding: 5px 20px 5px 10px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 3.75em;
+
+  @media (min-width: $md-screen) {
+  	font-size: 1em;
+  }
+}
+
+.form-table__content {
+  clear: both;
+  display: none;
+  width: 100%;
+}
+
+.form-table__additional-options li:first-of-type {
+	margin-bottom: 1em;
+}
+
+.form-table__additional-options a {
+	color: $main;
+	display: inline;
+	float: left;
+  font-weight: 100;
+  padding: 1em 14px 0;
+  text-decoration: none;
+
+  &:hover {
+  	text-decoration: underline;
+  }
+
+  @media (min-width: $md-screen) {
+  	font-size: 1.2em;
+  }
+}
+
+.form-table__inputs {
+	clear: both;
+	margin: 0 1em;
+	padding: 2em 0 1em 0;
+}
+
+.form-table .block {
+  display: block;
+}
+
+//Hidden & current (checked) tab styles
+.tab-content #hidden li p {
+  color: hsla(195, 195%, 195%, 0.00);
+}
+
+input:checked + label {  
+  background: hsla(195, 195%, 195%, .9);
+  border: 1px solid $white;
+  border-bottom: 1px solid #EAEAEC; 
+  color: grey;
+}
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3 {  
+  background-color: hsla(195, 195%, 195%, .9);
+  border-radius: 0 5px 5px 5px;
+  display: block;
+  padding-bottom: 2em;
 }

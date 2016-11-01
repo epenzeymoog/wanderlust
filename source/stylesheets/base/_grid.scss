@@ -10,15 +10,22 @@
 	width: 100%;
 }
 
+.two-thirds {
+	width: 66%;
+}
+
 .half {
-	max-width: 49%;
+	display: inline-block;
+	max-width: 48.5%;
 }
 
 .half-always {
-	width: 49%;
+	display: inline-block;
+	width: 48.5%;
 }
 
 .one-third {
+	display: inline-block;
 	max-width: 33%
 }
 
@@ -26,12 +33,46 @@
 	width: 23.9%
 }
 
+//Hide and display
+.hide--small {
+	display: none;
 
-.column {
-	display: inline-block;
+	@media (min-width: $lg-screen) {
+		display: block;
+	}
 }
 
+.hide--medium {
+	@media (min-width: $lg-screen) {
+		display: none;
+	}
+}
+
+.show-small {
+	@media (min-width: 600px) {
+		display: none;
+	}
+}
+
+.show-medium {
+	display: none;
+
+	@media (min-width: $md-screen) {
+		display: block;
+	}
+}
+
+
 //Responsive grid
+.hide-to-three-quarters {
+	display: none;
+
+	@media (min-width: 600px) {
+		display: block;
+		width: 78%;
+	}
+}
+
 .full-to-half {
 width: 100%;
 
@@ -75,6 +116,7 @@ width: 100%;
 }
 
 .half-to-third--secondary {
+	display: inline-block;
 	width: 49%;
 
 	@media (min-width: $lg-screen) {
@@ -83,6 +125,7 @@ width: 100%;
 }
 
 .half-to-quarter {
+	display: inline-block;
 	width: 48%;
 
 	@media (min-width: $lg-screen) {
@@ -91,23 +134,13 @@ width: 100%;
 	}
 }
 
-
-
 .quarter-to-hide {
+	display: inline-block;
 	width: 23.9%;
 
 	@media (min-width: $lg-screen) {
 		display: none;
 	}
-}
-
-.half-to-hide {
-	margin-bottom: 23px;
-	width: 48.5%;
-
-	// @media (min-width: $lg-screen) {
-	// 	display: none;
-	// }
 }
 
 .hide-to-one-quarter {
@@ -127,6 +160,4 @@ width: 100%;
 		width: 12%;
 	}
 }
-
-
 

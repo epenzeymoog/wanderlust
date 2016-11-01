@@ -15,7 +15,7 @@ $thumb-shadow-color: $light-grey !default;
 $thumb-border-width: 0px !default;
 $thumb-border-color: #fff !default;
 
-$track-width: 50% !default;
+$track-width: 49% !default;
 $track-height: 1px !default;
 $track-shadow-size: 0px !default;
 $track-shadow-blur: 0px !default;
@@ -47,7 +47,7 @@ $contrast: 5% !default;
   cursor: pointer;
 }
 
-[type=range] {
+input[type="range"] {
   -webkit-appearance: none;
   margin: $thumb-height / 2 0;
   width: $track-width;
@@ -80,6 +80,7 @@ $contrast: 5% !default;
     background: $track-color;
     border: $track-border-width solid $track-border-color;
     border-radius: $track-radius;
+    width: 103%;
   }
 
   &::-moz-range-thumb {
@@ -120,3 +121,9 @@ $contrast: 5% !default;
     background: lighten($track-color, $contrast);
   }
 }
+
+input::-moz-focus-outer {
+  border: 0;
+}
+
+

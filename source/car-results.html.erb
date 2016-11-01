@@ -2,7 +2,7 @@
 title: Amsterdam Cars
 layout: layout
 ---
-
+<script src="/javascripts/pikaday.js"></script>
 <%= partial "partials/nav" %>
 
 <div class="container margin-top">
@@ -75,21 +75,22 @@ layout: layout
 	<div class="full-to-two-thirds right">
 		<div class="user-selection">
 
-			<div class="column half-to-third--secondary">
+			<div class="half-to-third--secondary">
 				<label>Pick-up location</label>
 	      		<input class="text--chosen" type="text" name="pick-up location" placeholder="AMS Schiphol">
 	      <label>Return location</label>
 	      		<input class="text--chosen" type="text" name="return location" placeholder="AMS Schiphol">
 			</div>
 
-			<div class="column half-to-third--secondary">
+			<div class="half-to-third--secondary">
        	<label>Pick-up date</label>
-	       	<input type="date" name="pick-up dae" required placeholder="11/19/2016">
+	       	<input type="text" id="datepicker">
 				<label>Return date</label>
-	       	<input type="date" name="return date" required placeholder="11/29/2016">
+	       	<input type="text" id="datepicker">
+
 	    </div>
 
-			<div class="column quarter-to-hide">
+			<div class="quarter-to-hide">
 				<label>Time</label>
 				<select name="pick-up time">
 					<option value="12:00pm">12 pm</option>
@@ -101,7 +102,7 @@ layout: layout
 				</select>
 			</div>
 				
-			<div class="column quarter-to-hide">
+			<div class="quarter-to-hide">
 				<label>Time</label>
 				<select name="return time">
 					<option value="12:00pm">12 pm</option>
@@ -113,7 +114,7 @@ layout: layout
 				</select>
 			</div>
 
-			<div class="column hide-to-twelfth">
+			<div class="hide-to-twelfth">
 				<label>Time</label>
 				<select name="pick-up time">
 					<option value="12:00pm">12 pm</option>
@@ -135,7 +136,7 @@ layout: layout
 				</select>
 			</div>		
 
-			<div class="column half-to-quarter">			
+			<div class="half-to-quarter">			
 				<input type="button" value="Update" class="button button--secondary" onclick="location.href='/car-results.html';">
 			</div>
 		</div>
@@ -387,3 +388,7 @@ layout: layout
 	<%= partial "partials/footer" %>
 
 </div>
+
+<script>
+var picker = new Pikaday({ field: document.getElementById('datepicker') });
+</script>

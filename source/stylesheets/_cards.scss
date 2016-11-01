@@ -90,6 +90,14 @@
 	padding: .5em .5em 2em .5em;
 }
 
+//Alternative card styles
+.card--alternative {
+	border: none;
+	border-radius: 5px;
+	height: 3em;
+	background-color: #ECF8FD;
+}
+
 //Promotions photos
 .oslo, .boston, .rio, .napa, .st-thomas, .bangkok {
 	background-size: cover;

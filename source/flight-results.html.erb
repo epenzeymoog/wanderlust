@@ -8,92 +8,92 @@ layout: layout
 <div class="container margin-top">
 
 	<div class="one-third left hide--small">
-	<div class="filter">
-		<input type="button" value="Create price alert" class="button button--tertiary left" onclick="location.href='/flight-results.html';">
+		<section class="filter">
+			<input type="button" value="Create price alert" class="button button--tertiary left" onclick="location.href='/flight-results.html';">
+				
+			<ul class="filter__title"><strong>Price</strong>
+				<div class="filter__range-values">
+					<li><p class="filter__label left">$955</p></li>
+					<li><p class="filter__label right">$1944</p></li>
+				</div>
+				<input type="range" value=0><input type="range" value=100>
+			</ul>
+
+			<ul class="filter__title"><strong>Stops</strong>
+				<li><label class="filter__label"><input type="checkbox">nonstop</label></li>
+				<li><label class="filter__label"><input type="checkbox">1 stop</label></li>
+				<li><label class="filter__label"><input type="checkbox">2+ stops</label></li>
+			</ul>
+
+			<ul class="filter__title"><p><strong>Times</strong></p>
+				<li><p class="filter__subtitle">Take-off: Chicago</p></li>
+				<li><p class="filter__label">Friday 5:30am - 10:00pm</p></li>
+				<li><input type="range" value=0><input type="range" value=100></li>
 			
-		<ul class="filter__title"><strong>Price</strong>
-			<div class="filter__range-values">
-				<li><p class="filter__label left">$955</p></li>
-				<li><p class="filter__label right">$1944</p></li>
-			</div>
-			<input type="range" value=0><input type="range" value=100>
-		</ul>
+				<li><p class="filter__subtitle">Take-off: Amsterdam</p></li>
+				<li><p class="filter__label">Friday 5:30am - 10:00pm</p></li>
+				<li><input type="range" value=0><input type="range" value=100></li>
 
-		<ul class="filter__title"><strong>Stops</strong>
-			<li><label class="filter__label"><input type="checkbox">nonstop</label></li>
-			<li><label class="filter__label"><input type="checkbox">1 stop</label></li>
-			<li><label class="filter__label"><input type="checkbox">2+ stops</label></li>
-		</ul>
-
-		<ul class="filter__title"><p><strong>Times</strong></p>
-			<li><p class="filter__subtitle">Take-off: Chicago</p></li>
-			<li><p class="filter__label">Friday 5:30am - 10:00pm</p></li>
-			<li><input type="range" value=0><input type="range" value=100></li>
-		
-			<li><p class="filter__subtitle">Take-off: Amsterdam</p></li>
-			<li><p class="filter__label">Friday 5:30am - 10:00pm</p></li>
-			<li><input type="range" value=0><input type="range" value=100></li>
-
-			<li><p class="filter__subtitle">Show landing times</p></li>
-		</ul>
-
-		<ul class="filter__title"><strong>Airports</strong>
-			<ul class="filter__subtitle"><p><strong>Chicago</strong></p>
-				<li><label class="filter__label"><input type="checkbox">ORD: O'Hare International</label></li>
-				<li><label class="filter__label"><input type="checkbox">MDW: Midway</label></li>
+				<li><p class="filter__subtitle">Show landing times</p></li>
 			</ul>
-			<ul class="filter__subtitle"><p><strong>Amsterdam</strong></p>
-				<li><label class="filter__label"><input type="checkbox">AMS: Schiphol Airport</label></li>
-			</ul>
-		</ul>
 
-		<ul class="filter__title"><strong>Airlines</strong>
-			<li><label class="filter__label"><input type="checkbox">Aer Lingus</label></li>
-			<li><label class="filter__label"><input type="checkbox">Aeromexico</label></li>
-			<li><label class="filter__label"><input type="checkbox">Air Canada</label></li>
-			<li><label class="filter__label"><input type="checkbox">Air Europe</label></li>
-			<li><label class="filter__label"><input type="checkbox">Air France</label></li>
-			<li><label class="filter__label"><input type="checkbox">Air India</label></li>
-			<li><label class="filter__label"><input type="checkbox">Alitalia</label></li>
-			<li><label class="filter__label"><input type="checkbox">American Airlines</label></li>
-			<li><label class="filter__label"><input type="checkbox">ANA</label></li>
-			<li><label class="filter__label"><input type="checkbox">Australian Airlines</label></li>
-			<li><label class="filter__label"><input type="checkbox">British Airways</label></li>
-			<li><label class="filter__label"><input type="checkbox">Cathay Pacific</label></li>
-			<li><label class="filter__label"><input type="checkbox">Copa Airlines</label></li>
-			<li><label class="filter__label"><input type="checkbox">Delta</label></li>
-			<li><label class="filter__label"><input type="checkbox">Emirates</label></li>
-			<li><label class="filter__label"><input type="checkbox">EtihadAirways</label></li>
-			<li><label class="filter__label"><input type="checkbox">EVA Air</label></li>
-			<li><label class="filter__label"><input type="checkbox">Finnair</label></li>
-			<li><label class="filter__label"><input type="checkbox">Iberia</label></li>
-			<li><label class="filter__label"><input type="checkbox">Jet Airways</label></li>
-			<li><label class="filter__label"><input type="checkbox">KLM</label></li>
-			<li><label class="filter__label"><input type="checkbox">LOT Polish Airlines</label></li>
-			<li><label class="filter__label"><input type="checkbox">SWISS</label></li>
-			<li><label class="filter__label"><input type="checkbox">United</label></li>
-		</ul>
-	</div>
+			<ul class="filter__title"><strong>Airports</strong>
+				<ul class="filter__subtitle"><p><strong>Chicago</strong></p>
+					<li><label class="filter__label"><input type="checkbox">ORD: O'Hare International</label></li>
+					<li><label class="filter__label"><input type="checkbox">MDW: Midway</label></li>
+				</ul>
+				<ul class="filter__subtitle"><p><strong>Amsterdam</strong></p>
+					<li><label class="filter__label"><input type="checkbox">AMS: Schiphol Airport</label></li>
+				</ul>
+			</ul>
+
+			<ul class="filter__title"><strong>Airlines</strong>
+				<li><label class="filter__label"><input type="checkbox">Aer Lingus</label></li>
+				<li><label class="filter__label"><input type="checkbox">Aeromexico</label></li>
+				<li><label class="filter__label"><input type="checkbox">Air Canada</label></li>
+				<li><label class="filter__label"><input type="checkbox">Air Europe</label></li>
+				<li><label class="filter__label"><input type="checkbox">Air France</label></li>
+				<li><label class="filter__label"><input type="checkbox">Air India</label></li>
+				<li><label class="filter__label"><input type="checkbox">Alitalia</label></li>
+				<li><label class="filter__label"><input type="checkbox">American Airlines</label></li>
+				<li><label class="filter__label"><input type="checkbox">ANA</label></li>
+				<li><label class="filter__label"><input type="checkbox">Australian Airlines</label></li>
+				<li><label class="filter__label"><input type="checkbox">British Airways</label></li>
+				<li><label class="filter__label"><input type="checkbox">Cathay Pacific</label></li>
+				<li><label class="filter__label"><input type="checkbox">Copa Airlines</label></li>
+				<li><label class="filter__label"><input type="checkbox">Delta</label></li>
+				<li><label class="filter__label"><input type="checkbox">Emirates</label></li>
+				<li><label class="filter__label"><input type="checkbox">EtihadAirways</label></li>
+				<li><label class="filter__label"><input type="checkbox">EVA Air</label></li>
+				<li><label class="filter__label"><input type="checkbox">Finnair</label></li>
+				<li><label class="filter__label"><input type="checkbox">Iberia</label></li>
+				<li><label class="filter__label"><input type="checkbox">Jet Airways</label></li>
+				<li><label class="filter__label"><input type="checkbox">KLM</label></li>
+				<li><label class="filter__label"><input type="checkbox">LOT Polish Airlines</label></li>
+				<li><label class="filter__label"><input type="checkbox">SWISS</label></li>
+				<li><label class="filter__label"><input type="checkbox">United</label></li>
+			</ul>
+		</section>
 	</div>
 
-	<div class="full-to-two-thirds right">
+<div class="full-to-two-thirds right">
 		<div class="user-selection">
 
-			<div class="column half-to-third--secondary">
+			<div class="half-to-third--secondary">
 				<label>From</label>
 	      		<input type="text" name="from" placeholder="Chicago ORD">
 	      <label>Departing</label>
 	       	<input type="date" name="departing" required placeholder="11/19/2016">
 			</div>
 
-			<div class="column half-to-third--secondary">
+			<div class="half-to-third--secondary">
        	<label class="block">To</label>
       		<input type="text" name="to" placeholder="Amsterdam ORS">
 				<label>Returning</label>
 	       	<input type="date" name="returning" required placeholder="11/29/2016">
 	    </div>
 
-			<div class="column quarter-to-hide">
+			<div class="quarter-to-hide">
 				<label>Adults</label>
 				<select name="Adults">
 					<option value="more filters selected">1 Adults</option>
@@ -103,7 +103,7 @@ layout: layout
 				</select>
 			</div>
 				
-			<div class="column quarter-to-hide">
+			<div class="quarter-to-hide">
 				<label>Kids</label>
 				<select name="Kids">
 					<option value="more filters selected">0 Kids</option>
@@ -113,7 +113,7 @@ layout: layout
 				</select>
 			</div>
 
-			<div class="column hide-to-twelfth">
+			<div class="hide-to-twelfth">
 				<label>Adults</label>
 				<select name="Adults">
 					<option value="more filters selected">1 Adult</option>
@@ -132,15 +132,60 @@ layout: layout
 			</div>
 			
 
-			<div class="column half-to-quarter">
+			<div class="half-to-quarter">
 			
 				<input type="button" value="Update" class="button button--secondary" onclick="location.href='/flight-results.html';">
 			</div>
 		</div>
 
-	
 
-	
+	<section class="card--wide card--alternative">
+		<ul class="left two-thirds show-small">
+			<li class="full">
+				<select name="price">
+					<option value="lowest to highest">Sort by</option>
+					<option value="lowest to highest">Price: Lowest to highest</option>
+					<option value="lowest to highest">Price: Highest to lowest</option>
+					<option value="lowest to highest">Duration: shortest to longest</option>
+					<option value="lowest to highest">Duration: longest to shortest</option>
+					<option value="lowest to highest">Takeoff: earliest to latest</option>
+					<option value="lowest to highest">Takeoff: latest to earliest</option>
+				</select>
+			</li>
+		</ul>
+
+		<ul class="left hide-to-three-quarters"><p class="ib"><strong>Sort by:</strong></p>
+			<li class="one-third">
+				<select name="price">
+					<option value="lowest to highest">Price</option>
+					<option value="lowest to highest">Lowest to highest</option>
+					<option value="lowest to highest">Highest to lowest</option>
+				</select>
+			</li>
+			<li class="one-third">
+				<select name="price">
+					<option value="lowest to highest">Duration</option>
+					<option value="lowest to highest">Show shortest first</option>
+					<option value="lowest to highest">Show longest first</option>
+				</select>
+			</li>
+			<li class="one-third">
+				<select name="price">
+					<option value="lowest to highest">Takeoff</option>
+					<option value="lowest to highest">Show earliest first</option>
+					<option value="lowest to highest">Show latest first</option>
+				</select>
+			</li>
+		</ul>
+
+		<ul class="right on-quarter">
+			<li><p><a href="#" class="clean-link"><strong>Round-trip</strong></a></p></li>
+			<li><p><a href="#" class="clean-link">Flight-by-flight</a></p></li>
+		</ul>
+
+	</section>
+
+
 		<ul class="card card--wide">
 			<li class="card-row card--wide__row">
 				<ul>
