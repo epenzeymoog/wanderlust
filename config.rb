@@ -43,9 +43,7 @@ configure :build do
   # activate :minify_javascript
 end
 
-# Global site settings (not shown here)
-set :site_url, ""
-# ...
+
 
 set :images_dir, 'images'
 set :http_prefix, '/wanderlust'
