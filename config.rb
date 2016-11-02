@@ -45,5 +45,5 @@ end
 
 
 
-set :images_dir, 'images'
-set :http_prefix, '/wanderlust'
+# set :images_dir, 'images'
+# set :http_prefix, '/wanderlust'
