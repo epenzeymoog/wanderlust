@@ -47,11 +47,5 @@ end
 set :site_url, ""
 # ...
 
-configure :build do
-  # Relative assets needed to deploy to Github Pages
-  activate :relative_assets
-  set :site_url, "/wanderlust"
-end
-
 set :images_dir, 'images'
 set :http_prefix, '/wanderlust'
