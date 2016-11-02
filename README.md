@@ -8,7 +8,11 @@
 
 
 <p>Clone the repository</p>
+<<<<<<< HEAD
 <code>git clone git@github.com:epenzeymoog/wanderlust.git></code>
+=======
+<code>git clone git@github.com:noaharogers/holiday.git></code>
+>>>>>>> 92c26185ecab5461cb9a3eee2ecb53115b48c2db
 
 <p>Make sure you have xcode installed:</p>
 <code>$ xcode-select --install</code>
@@ -20,4 +24,8 @@
 <code>$ middleman server</code>
 
 <p>View the project in your browser:</p>
+<<<<<<< HEAD
 <code>localhost: 4567</code>
+=======
+<code>localhost: 4567</code>
+>>>>>>> 92c26185ecab5461cb9a3eee2ecb53115b48c2db
