@@ -8,7 +8,7 @@
 
 
 <p>Clone the repository</p>
-<code>git clone git@github.com:epenzeymoog/wanderlust.git></code>
+<code>git clone git@github.com:epenzeymoog/wanderlust.git</code>
 
 
 <p>Make sure you have xcode installed:</p>
