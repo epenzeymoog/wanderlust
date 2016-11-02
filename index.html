@@ -1,0 +1,362 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <link href="https://fonts.googleapis.com/css?family=Amatica+SC" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+    <script src="https://use.typekit.net/xrd0jix.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <link type="image/ico" href="images/favicon.ico" rel="icon" />
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Wanderlust</title>
+
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+    <script src="/javascripts/all.js"></script>
+    <script src="./javascripts/all.js"></script>
+  </head>
+
+  <body class="index">
+    <header class="hero">	
+
+<section class="nav--secondary">
+	<div class="container">
+		<ul class="half-to-third--large left">
+			<li><img class="logo" src="../images/logo.svg"></li>
+			<li><span class="icon__text" href="/index.html">Wanderlust</span></li>
+		</ul>
+
+		<div class="nav-list clean-list right">
+			<p class="nav-single__link"><a class="clean-link" href="#">Log in</a></p>
+		</div>
+	</div>
+</section>
+
+
+<h1 class="prioritized-text">Discover your inner explorer</h1>  
+
+<section class="container form-table">
+  
+  <input id="tab1" type="radio" name="tabs" checked>
+  <label for="tab1" class="form-table__meta-label">Flights</label>
+    
+  <input id="tab2" type="radio" name="tabs">
+  <label for="tab2" class="form-table__meta-label">Lodging</label>
+    
+  <input id="tab3" type="radio" name="tabs">
+  <label for="tab3" class="form-table__meta-label">Cars</label>
+
+	<section class="form-table__content" id="content1">
+  	<div class="tab-content"> 
+   		<ul class="form-table__additional-options">
+       	<li><a href="#">round trip</a></li>
+       	<li><a href="#">one-way</a></li>
+       	<li><a href="#">multi-city</a></li>   
+    	</ul>
+
+      <section class="form-table__inputs">
+      	<div class="row">
+      		<div class="full-to-half">
+      			<label>flying from</label>	 
+         			<input type="text" name="flying from" placeholder="city or airport">
+         	</div>
+         	<div class="full-to-half right">
+        		<label>flying to</label> 
+         			<input type="text" name="flying to" placeholder="city or airport">
+         	</div>
+      	</div>
+         
+      	<div class="row">
+      		<div class="full-to-half">
+         		<label>departing</label>
+         			<input type="text" id="datepickera" required placeholder="select date">
+          </div>
+          <div class="full-to-half right">
+         		<label>returning</label>
+         			<input type="text" id="datepickerb" requried placeholder="select date">
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="full-to-half">
+						<label>Adults</label>
+	         		<select>
+								<option value="1">1</option>
+								<option value="0">0</option>
+								<option value="2">2</option>
+								<option value="1">3</option>
+								<option value="2">4</option>
+	         		</select>
+         	</div>
+					<div class="full-to-half right">
+	         	<label>Children</label>
+	         		<select>
+								<option value="0">0</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+	         		</select>
+         	</div>
+      	</div>	
+     	</section>
+  	</div>
+  <input type="button" value="SEARCH" class="button button--main block" onclick="location.href='/flight-results.html';">
+</section>
+  
+<section class="form-table__content" id="content2">    
+<div class="tab-content"> 
+  <section class="form-table__inputs">
+  	<div class="row">
+  		<div class="full-to-half">
+    		<label>location</label>
+    		<input type="text" name="location" placeholder="city, hotel or airbnb name">
+    	</div>
+    	<div class="full-to-half right">
+        <label>rooms</label>
+          <label>
+            <select>
+              <option selected value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select>
+          </label>
+     	</div>
+    </div>
+
+    <div class="row">
+    	<div class="full-to-half">          		
+     		<label>check-in</label>
+     		<input type="text" id="datepickere" requried placeholder="select date">
+     	</div>
+     	<div class="full-to-half right">           		
+     		<label>check-out</label>
+     		<input type="text" id="datepickerf" requried placeholder="select date">
+     	</div>
+		</div>
+
+		<div class="row">
+			<div class="full-to-half">
+        <label>adults</label>
+          <label>
+            <select>
+              <option selected value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+        	</label>
+      </div>
+     
+     	<div class="full-to-half right">
+       <label>children</label>
+          <label>
+            <select>
+              <option selected value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </label> 
+    	</div>    
+  	</div>
+  </section>
+  </div>
+  <input type="button" value="SEARCH" class="button button--main block" onclick="location.href='/lodging-results.html';">
+</section>
+
+<section class="form-table__content" id="content3">    
+	<div class="tab-content"> 
+		<section class="form-table__inputs">
+			<div class="row">
+				<div class="full-to-half">
+    			<label>car pick up</label>
+     			<input type="text" name="pick-up location" placeholder="city, zipcode or airport">
+     		</div>
+     		<div class="full-to-half right">
+     			<label>car drop off</label>
+     			<input type="text" name="drop-off location" placeholder="city, zipcode or airport">
+     		</div>
+			</div>
+			<div class="row">
+				<div class="full-to-half">
+     			<label>pick up day</label>
+     			<input type="text" id="datepickerc" requried placeholder="select date"> 
+				</div>
+				<div class="full-to-half right">
+      		<label>pick up time</label>
+      			<label>
+			        <select>
+				        <option selected value="12:00pm">12:00pm</option>>
+				        <option value="1:00pm">1:00pm</option>
+				        <option value="2:00pm">2:00pm</option>
+				        <option value="3:00pm">3:00pm</option>
+				        <option value="4:00pm">4:00pm</option>
+				        <option value="5:00pm">5:00pm</option>
+			        </select>
+			      </label>
+     		</div>
+     	</div>
+			<div class="row">
+				<div class="full-to-half">
+     			<label>drop off day</label>
+     			<input type="text" id="datepickerd" requried placeholder="select date">
+				</div>
+				<div class="full-to-half right">
+			    <label>drop off time</label>
+			      <label>
+			        <select>
+			          <option selected value="12:00pm">12:00pm</option>
+			          <option value="1:00pm">1:00pm</option>
+			          <option value="2:00pm">2:00pm</option>
+			          <option value="3:00pm">3:00pm</option>
+			          <option value="4:00pm">4:00pm</option>
+			          <option value="5:00pm">5:00pm</option>
+			        </select>
+			      </label>
+      	</div>
+      </div>
+			<div class="row">
+				<div class="full-to-half">
+		      <label>vehicle type</label>
+		      	<label>
+			        <select>
+			          <option selected value="economy">economy</option>
+			          <option value="compact">compact</option>
+			          <option value="fullsize">fullsize</option>
+			          <option value="premium">premium</option>
+			          <option value="luxury">luxury</option>
+			          <option value="convertible">convertible</option>
+			          <option value="minivan">minivan</option>
+			          <option value="SUV">sports utility vehicle</option>
+			          <option value="no preference">no preference</option>
+			        </select>
+		      </label>
+		    </div>
+     		<div class="full-to-half right">
+		      <label>company</label>
+		      <label>
+		        <select>
+		          <option selected value="no preference">no preference</option>
+		          <option value="Avis">Avis</option>
+		          <option value="Budget">Budget</option>
+		          <option value="Enterprise">Enterprise</option>
+		          <option value="Hertz">Hertz</option>
+		          <option value="Thifty">Thrifty</option>
+		        </select>
+		      </label>
+      	</div>
+  		</div>
+  </section>
+	</div>
+  <input type="button" value="SEARCH" class="button button--main block" onclick="location.href='/car-results.html';">
+</section>
+</section>
+</header>
+
+<section class="container card--narrow__position">
+	<h1 class="section-title">Featured Specials</h1>
+
+	<ul class="card-row card--narrow__row">
+		<ul class="card card--narrow full-to-thirds">
+			<li class="oslo"></li>
+				<a href="#" class="clean-link--secondary">
+				<ul class="card--narrow__content">
+					<li><h1 class="card--narrow__title">Oslo</h1></li>
+					<li><p class="left">Hotel Aurora</p></li>
+					<li><p class="right"><span class="strikethrough">$249</span> $199</p></li>
+				</ul>
+				</a>	
+		</ul>
+		
+		<ul class="card card--narrow full-to-thirds">
+			<li class="boston"></li>
+			<a href="#" class="clean-link--secondary">
+				<ul class="card--narrow__content">
+					<li><h1 class="card--narrow__title">Boston</h1></li>
+					<li><p class="left">Marriot Inn</p></li>
+					<li><p class="right"><span class="strikethrough">$189</span> $159</p></li>
+				</ul>
+			</a>
+		</ul>
+
+		<ul class="card card--narrow full-to-thirds">
+			<li class="rio"></li>
+			<a href="#" class="clean-link--secondary">
+				<ul class="card--narrow__content">
+					<li><h1 class="card--narrow__title">Rio de Jeniero</h1></li>
+					<li><p class="left">Hotel Novotel</p></li>
+					<li><p class="right"><span class="strikethrough">$150</span> $99</p></li>
+				</ul>
+			</a>
+		</ul>
+	</ul>
+
+	<ul class="card-row card--narrow__row">
+		<ul class="card card--narrow full-to-thirds">
+			<li class="napa"></li>
+			<a href="#" class="clean-link--secondary">
+				<ul class="card--narrow__content">
+					<li><h1 class="card--narrow__title">Napa Valley</h1></li>
+					<li><p class="left">Napa Lodge</p></li>
+					<li><p class="right"><span class="strikethrough">$360</span> $310</p></li>
+				</ul>
+			</a>
+		</ul>
+
+		<ul class="card card--narrow full-to-thirds">
+			<li class="st-thomas"></li>
+			<a href="#" class="clean-link--secondary">
+				<ul class="card--narrow__content">
+					<li><h1 class="card--narrow__title">St. Thomas</h1></li>
+					<li><p class="left">Paradise Inn</p></li>
+					<li><p class="right"><span class="strikethrough">$109</span> $89</p></li>
+				</ul>
+			</a>
+		</ul>
+
+		<ul class="card card--narrow full-to-thirds">
+			<li class="bangkok"></li>
+			<a href="#" class="clean-link--secondary">
+				<ul class="card--narrow__content">
+					<li><h1 class="card--narrow__title">Bangkok</h1></li>
+					<li><p class="left">Hilton Bangkok</p></li>
+					<li><p class="right"><span class="strikethrough">$289</span> $250</p></li>
+				</ul>
+			</a>
+		</ul>
+	</ul>
+<footer>
+	<ul class="clean-list">
+		<li><a href="/index.html" class="clean-link">Flights</a></li>
+		<li><a href="/index.html" class="clean-link">Lodging</a></li>
+		<li><a href="/index.html" class="clean-link">Cars</a></li>
+		<li><a href="/index.html" class="clean-link">Specials</a></li>
+	</ul>
+	<ul class="social center">
+		<li><a href="http://facebook.com" target=_blank><img src="../images/social/facebook.svg"></a></li>
+		<li><a href="http://twitter.com" target=_blank><img src="../images/social/twitter.svg"></a></li>
+		<li><a href="http://instagram.com" target=_blank><img src="../images/social/instagram.svg"></a></li>
+		<li><a href="http://youtube.com" target=_blank><img src="../images/social/youtube.svg"></a></li>
+	</ul>
+	<p>Our mission is to provide complete pricing transparency and arm you with the tools you need to make the smartest bookings. No hidden fees, no fine print, no dishonesty about our prices. <a href="#" class="clean-link">Learn more.</a></p>
+</footer>
+</section>
+
+<script src="/javascripts/pikaday.js"></script>
+<script>
+new Pikaday({ field: document.getElementById('datepickera') });
+new Pikaday({ field: document.getElementById('datepickerb') });
+new Pikaday({ field: document.getElementById('datepickerc') });
+new Pikaday({ field: document.getElementById('datepickerd') });
+new Pikaday({ field: document.getElementById('datepickere') });
+new Pikaday({ field: document.getElementById('datepickerf') });
+</script>
+  </body>
+</html>

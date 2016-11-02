@@ -1,0 +1,528 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <link href="https://fonts.googleapis.com/css?family=Amatica+SC" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+    <script src="https://use.typekit.net/xrd0jix.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <link type="image/ico" href="images/favicon.ico" rel="icon" />
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Amsterdam Cars</title>
+
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+    <script src="/javascripts/all.js"></script>
+    <script src="./javascripts/all.js"></script>
+  </head>
+
+  <body class="car-results">
+    <nav>
+<div class="container">
+	<ul class="half-to-third--large left">
+		<li><a href="/index.html"><img class="logo" src="../images/logo.svg"></a></li>
+		<li><a class="icon__text clean-link--secondary" href="/index.html">Wanderlust</a></li>
+	</ul>
+
+	<div class="full-to-two-thirds nav-list clean-list">
+		<ul>
+			<li class="nav-list__link"><a class="clean-link" href="/index.html">Flights</a></li>
+			<li class="nav-list__link"><a class="clean-link" href="/index.html">Lodging</a></li>
+			<li class="nav-list__link"><a class="clean-link" href="/index.html">Cars</a></li>
+			<li class="nav-list__link"><a class="clean-link" href="/index.html">Specials</a></li>
+		</ul>
+
+		<ul class="right">
+			<li class="nav-single__link"><a class="clean-link" href="#">Log in</a></li>
+		</ul>
+	</div>
+</div>
+</nav>
+
+<div class="container margin-top">
+
+	<div class="one-third left hide-until-large">
+	<div class="filter">
+		<input type="button" value="Create price alert" class="button button--tertiary left" onclick="location.href='/flight-results.html';">
+		<p><strong><a href="#" class="clean-link">Read about driving rules in The Netherlands</a></strong></p>
+
+		<ul class="full block">
+			<li>
+				<select>
+					<option value="lowest to highest">Sort results</option>
+					<option value="lowest to highest">Price: Lowest to highest</option>
+					<option value="lowest to highest">Price: Highest to lowest</option>
+					<option value="lowest to highest">Duration: shortest to longest</option>
+					<option value="lowest to highest">Duration: longest to shortest</option>
+					<option value="lowest to highest">Takeoff: earliest to latest</option>
+					<option value="lowest to highest">Takeoff: latest to earliest</option>
+				</select>
+			</li>
+		</ul>
+
+		<ul class="filter__title"><strong>Price</strong>
+			<div class="filter__range-values">
+				<li><p class="filter__label left">$116</p></li>
+				<li><p class="filter__label right">$344</p></li>
+			</div>
+			<input type="range" value=0><input type="range" value=100>
+		</ul>
+
+		<ul class="filter__title"><strong>Pick-up</strong>
+			<li><label class="filter__label"><input type="checkbox">AMS: Schiphol</label></li>
+			<li><label class="filter__label"><input type="checkbox">Non-airport</label></li>
+		</ul>
+
+		<ul class="filter__title"><strong>Zipcar</strong>
+			<li><label class="filter__label"><input type="checkbox">Show Zipcar</label></li>
+		</ul>
+
+		<ul class="filter__title"><strong>Distance from:</strong>
+		<li><input type="text" name="distance" placeholder="Schiphol airport"></li>
+			<div class="filter__range-values">
+				<li><p class="filter__label left">1 mile</p></li>
+				<li><p class="filter__label right">20+ miles</p></li>
+			</div>
+			<input type="range" value=0><input type="range" value=100>
+		</ul>
+
+		<ul class="filter__title"><strong>Capacity</strong>
+			<ul class="filter__subtitle"><p><strong>Passengers</strong></p>
+				<li><label class="filter__label"><input type="checkbox">1 - 2 passengers</label></li>
+				<li><label class="filter__label"><input type="checkbox">3 - 4 passengers</label></li>
+				<li><label class="filter__label"><input type="checkbox">6+ passengers</label></li>
+			</ul>
+		</ul>
+
+		<ul class="filter__title"><strong>Car Type</strong>
+				<li><label class="filter__label"><input type="checkbox">Small</label></li>
+				<li><label class="filter__label"><input type="checkbox">Convertible</label></li>
+				<li><label class="filter__label"><input type="checkbox">Medium</label></li>
+				<li><label class="filter__label"><input type="checkbox">Large</label></li>
+				<li><label class="filter__label"><input type="checkbox">SUV</label></li>
+				<li><label class="filter__label"><input type="checkbox">Van</label></li>
+				<li><label class="filter__label"><input type="checkbox">Luxury</label></li>
+		</ul>
+		<ul class="filter__title"><strong>Rental Agency</strong>
+				<li><label class="filter__label"><input type="checkbox">Alamo</label></li>
+				<li><label class="filter__label"><input type="checkbox">Avis</label></li>
+				<li><label class="filter__label"><input type="checkbox">Budget</label></li>
+				<li><label class="filter__label"><input type="checkbox">Dollar</label></li>
+				<li><label class="filter__label"><input type="checkbox">Enterprise</label></li>
+				<li><label class="filter__label"><input type="checkbox">Eurocar</label></li>
+				<li><label class="filter__label"><input type="checkbox">Hertz</label></li>
+				<li><label class="filter__label"><input type="checkbox">Major</label></li>
+				<li><label class="filter__label"><input type="checkbox">National</label></li>
+				<li><label class="filter__label"><input type="checkbox">Sixt</label></li>
+				<li><label class="filter__label"><input type="checkbox">Thrifty</label></li>
+		</ul>		
+
+	</div>
+	</div>
+
+	<div class="full-to-two-thirds right">
+		<div class="form-table--secondary">
+
+			<div class="half-to-third">
+				<label>Pick-up location</label>
+	      		<input class="text--chosen" type="text" name="pick-up location" placeholder="AMS Schiphol">
+	      <label>Return location</label>
+	      		<input class="text--chosen" type="text" name="return location" placeholder="AMS Schiphol">
+			</div>
+
+			<div class="half-to-third">
+       	<label>Pick-up date</label>
+	       	<input type="text" id="datepicker" placeholder="11/19/2016">
+				<label>Return date</label>
+	       	<input type="text" id="datepicker2" placeholder="11/29/2016">
+
+	    </div>
+
+			<div class="quarter-to-hide">
+				<label>Time</label>
+				<select name="pick-up time">
+					<option value="12:00pm">12 pm</option>
+				  <option value="1:00pm">1 pm</opn>
+				  <option value="2:00pm">2 pm</option>
+				  <option value="3:00pm">3 pm</option>
+				  <option value="4:00pm">4 pm</option>
+				  <option value="5:00pm">5 pm</option>
+				</select>
+			</div>
+				
+			<div class="quarter-to-hide">
+				<label>Time</label>
+				<select name="return time">
+					<option value="12:00pm">12 pm</option>
+				  <option value="1:00pm">1 pm</option>
+				  <option value="2:00pm">2 pm</option>
+				  <option value="3:00pm">3 pm</option>
+				  <option value="4:00pm">4 pm</option>
+				  <option value="5:00pm">5 pm</option>
+				</select>
+			</div>
+
+			<div class="hide-to-twelfth">
+				<label>Time</label>
+				<select name="pick-up time">
+					<option value="12:00pm">12 pm</option>
+				  <option value="1:00pm">1 pm</option>
+				  <option value="2:00pm">2 pm</option>
+				  <option value="3:00pm">3 pm</option>
+				  <option value="4:00pm">4 pm</option>
+				  <option value="5:00pm">5 pm</option>
+				</select>
+
+				<label>Time</label>
+				<select name="return time">
+					<option value="12:00pm">12 pm</option>
+				  <option value="1:00pm">1 pm</option>
+				  <option value="2:00pm">2 pm</option>
+				  <option value="3:00pm">3 pm</option>
+				  <option value="4:00pm">4 pm</option>
+				  <option value="5:00pm">5 pm</option>
+				</select>
+			</div>		
+
+			<div class="half-to-quarter">			
+				<input type="button" value="Update" class="button button--secondary" onclick="location.href='/car-results.html';">
+			</div>
+
+
+	<div class="background--secondary">
+		<form class="form--dropdown hide-on-large half-always">
+	    <div class="multiselect hide-on-large">
+	       <div class="selectBox" onclick="showCheckboxes()">
+            <select>
+              <option>Filter results</option>
+            </select>
+            <div class="overSelect hide-on-large"></div>
+	       </div>
+	       <div id="checkboxes">
+	       		<p>Pick-up</p>
+								<label class="filter__label"><input type="checkbox">AMS: Schiphol</label>
+								<label class="filter__label"><input type="checkbox">Non-airport</label>
+						<p>Zipcar</p>
+            	<label class="filter__label" for="AMS"><input type="checkbox">Show Zipcar</label>
+	       		<p>Capacity</p>
+								<label class="filter__label"><input type="checkbox">1 - 2 passengers</label>
+								<label class="filter__label"><input type="checkbox">3 - 5 passengers</label>
+								<label class="filter__label"><input type="checkbox">6 + passengers</label>
+            <p>Car Type</p>
+								<label class="filter__label"><input type="checkbox">Small</label>
+								<label class="filter__label"><input type="checkbox">Convertible</label>
+								<label class="filter__label"><input type="checkbox">Medium</label>
+								<label class="filter__label"><input type="checkbox">Large</label>
+								<label class="filter__label"><input type="checkbox">SUV</label>
+								<label class="filter__label"><input type="checkbox">Van</label>
+								<label class="filter__label"><input type="checkbox">Luxury</label>
+
+            <p>Rental Agency</p>
+            		<label class="filter__label"><input type="checkbox">Alamo</label>
+            		<label class="filter__label"><input type="checkbox">Avis</label>
+            		<label class="filter__label"><input type="checkbox">Budget</label>
+            		<label class="filter__label"><input type="checkbox">Dollar</label>
+            		<label class="filter__label"><input type="checkbox">Enterprise</label>
+            		<label class="filter__label"><input type="checkbox">Eurocar</label>
+            		<label class="filter__label"><input type="checkbox">Hertz</label>
+            		<label class="filter__label"><input type="checkbox">Major</label>
+            		<label class="filter__label"><input type="checkbox">National</label>
+            		<label class="filter__label"><input type="checkbox">Sixt</label>
+            		<label class="filter__label"><input type="checkbox">Thrifty</label>
+	       </div>
+	    </div>
+		</form>
+
+		<ul class="hide-on-large half-always drop-down">
+				<li>
+					<select>
+						<option value="lowest to highest">Sort results</option>
+						<option value="lowest to highest">Price: Lowest to highest</option>
+						<option value="lowest to highest">Price: Highest to lowest</option>
+					</select>
+				</li>
+			</ul>
+	</div>
+
+
+		</div>
+
+		<ul class="card card--wide">
+			<ul class="card">
+				<ul class="half-to-third--small">
+					<li class="corsa"></li>
+				</ul>
+			</ul>
+				<li class="card-row card--wide__row">
+					<ul>
+						<li><h2 class="lighter"><strong>Compact</strong></h2></li>
+					</ul>
+				</li>
+
+				<li class="card-row card--wide__row">
+					<p class="card-row__detail">Opel Corsa or similar</p>
+				</li>
+				<li class="card-row card--wide__row">
+					<p class="card-row__detail">Budget</p>
+				</li>
+				<li class="card-row card--wide__row">
+					<p class="card-row__detail">5 people, 4 doors</p>
+				</li>
+				<li class="card-column card-column--small right hide-until-large">
+					<ul>
+						<li><h2 class="lighter"><strong>$116</strong></h2></li>
+						<li class="card-column__type">($11/day)</li>
+						<li class="card-column__detail"><strong>includes tax &amp; all fees</strong></li>
+						<li class="margin-left"><input type="button" value="Book" class="button button--main " onclick="location.href='/flight-results.html';"></li>
+					</ul>
+				</li>
+
+				<li class="card-row hide-on-large card--wide__row">
+					<ul>			
+						<li class="card-column__type">($11/day)</li>
+						<li><h2 class="lighter"><strong>$116</strong></h2></li>
+						<li class="card-column__detail"><strong>includes tax &amp; all fees</strong></li>
+					</ul>
+				</li>
+				<li><input type="button" value="Book" class="button button--sm-screen" onclick="location.href='/flight-results.html';"></li>
+		</ul>
+
+		<ul class="card card--wide">
+			<ul class="card">
+				<ul class="half-to-third--small">
+					<li class="golf"></li>
+				</ul>
+			</ul>
+				<li class="card-row card--wide__row">
+					<ul>
+						<li><h2 class="lighter"><strong>Economy</strong></h2></li>
+					</ul>
+				</li>
+
+				<li class="card-row card--wide__row">
+					<p class="card-row__detail">V W Golf or similar</p>
+				</li>
+				<li class="card-row card--wide__row">
+					<p class="card-row__detail">Avis</p>
+				</li>
+				<li class="card-row card--wide__row">
+					<p class="card-row__detail">5 people, 4 doors</p>
+				</li>
+				<li class="card-column card-column--small right hide-until-large">
+					<ul>
+						<li><h2 class="lighter"><strong>$116</strong></h2></li>
+						<li class="card-column__type">($11/day)</li>
+						<li class="card-column__detail"><strong>includes tax &amp; all fees</strong></li>
+						<li class="margin-left"><input type="button" value="Book" class="button button--main " onclick="location.href='/flight-results.html';"></li>
+					</ul>
+				</li>
+
+				<li class="card-row hide-on-large card--wide__row">
+					<ul>			
+						<li class="card-column__type">($11/day)</li>
+						<li><h2 class="lighter"><strong>$116</strong></h2></li>
+						<li class="card-column__detail"><strong>includes tax &amp; all fees</strong></li>
+					</ul>
+				</li>
+				<li><input type="button" value="Book" class="button button--sm-screen" onclick="location.href='/flight-results.html';"></li>
+		</ul>
+
+		<ul class="card card--wide">
+			<ul class="card">
+				<ul class="half-to-third--small">
+					<li class="polo"></li>
+				</ul>
+			</ul>
+				<li class="card-row card--wide__row">
+					<ul>
+						<li><h2 class="lighter"><strong>Economy</strong></h2></li>
+					</ul>
+				</li>
+
+				<li class="card-row card--wide__row">
+					<p class="card-row__detail">V W polo or similar</p>
+				</li>
+				<li class="card-row card--wide__row">
+					<p class="card-row__detail">Budget</p>
+				</li>
+				<li class="card-row card--wide__row">
+					<p class="card-row__detail">5 people, 4 doors</p>
+				</li>
+				<li class="card-column card-column--small right hide-until-large">
+					<ul>
+						<li><h2 class="lighter"><strong>$116</strong></h2></li>
+						<li class="card-column__type">($11/day)</li>
+						<li class="card-column__detail"><strong>includes tax &amp; all fees</strong></li>
+						<li class="margin-left"><input type="button" value="Book" class="button button--main " onclick="location.href='/flight-results.html';"></li>
+					</ul>
+				</li>
+
+				<li class="card-row hide-on-large card--wide__row">
+					<ul>			
+						<li class="card-column__type">($11/day)</li>
+						<li><h2 class="lighter"><strong>$116</strong></h2></li>
+						<li class="card-column__detail"><strong>includes tax &amp; all fees</strong></li>
+					</ul>
+				</li>
+				<li><input type="button" value="Book" class="button button--sm-screen" onclick="location.href='/flight-results.html';"></li>
+		</ul>
+
+		<ul class="card card--wide">
+			<ul class="card">
+				<ul class="half-to-third--small">
+					<li class="ka"></li>
+				</ul>
+			</ul>
+				<li class="card-row card--wide__row">
+					<ul>
+						<li><h2 class="lighter"><strong>Mini</strong></h2></li>
+					</ul>
+				</li>
+
+				<li class="card-row card--wide__row">
+					<p class="card-row__detail">Ford Ka or similar</p>
+				</li>
+				<li class="card-row card--wide__row">
+					<p class="card-row__detail">Budget</p>
+				</li>
+				<li class="card-row card--wide__row">
+					<p class="card-row__detail">5 people, 4 doors</p>
+				</li>
+				<li class="card-column card-column--small right hide-until-large">
+					<ul>
+						<li><h2 class="lighter"><strong>$129</strong></h2></li>
+						<li class="card-column__type">($13/day)</li>
+						<li class="card-column__detail"><strong>includes tax &amp; all fees</strong></li>
+						<li class="margin-left"><input type="button" value="Book" class="button button--main " onclick="location.href='/flight-results.html';"></li>
+					</ul>
+				</li>
+
+				<li class="card-row hide-on-large card--wide__row">
+					<ul>			
+						<li class="card-column__type">($13/day)</li>
+						<li><h2 class="lighter"><strong>$129</strong></h2></li>
+						<li class="card-column__detail"><strong>includes tax &amp; all fees</strong></li>
+					</ul>
+				</li>
+				<li><input type="button" value="Book" class="button button--sm-screen" onclick="location.href='/flight-results.html';"></li>
+		</ul>
+
+		<ul class="card card--wide">
+			<ul class="card">
+				<ul class="half-to-third--small">
+					<li class="panda"></li>
+				</ul>
+			</ul>
+				<li class="card-row card--wide__row">
+					<ul>
+						<li><h2 class="lighter"><strong>Economy</strong></h2></li>
+					</ul>
+				</li>
+
+				<li class="card-row card--wide__row">
+					<p class="card-row__detail">Fiat Panda or similar</p>
+				</li>
+				<li class="card-row card--wide__row">
+					<p class="card-row__detail">Enterprise</p>
+				</li>
+				<li class="card-row card--wide__row">
+					<p class="card-row__detail">5 people, 4 doors</p>
+				</li>
+				<li class="card-column card-column--small right hide-until-large">
+					<ul>
+						<li><h2 class="lighter"><strong>$130</strong></h2></li>
+						<li class="card-column__type">($13/day)</li>
+						<li class="card-column__detail"><strong>includes tax &amp; all fees</strong></li>
+						<li class="margin-left"><input type="button" value="Book" class="button button--main " onclick="location.href='/flight-results.html';"></li>
+					</ul>
+				</li>
+
+				<li class="card-row hide-on-large card--wide__row">
+					<ul>			
+						<li class="card-column__type">($13/day)</li>
+						<li><h2 class="lighter"><strong>$130</strong></h2></li>
+						<li class="card-column__detail"><strong>includes tax &amp; all fees</strong></li>
+					</ul>
+				</li>
+				<li><input type="button" value="Book" class="button button--sm-screen" onclick="location.href='/flight-results.html';"></li>
+		</ul>	
+
+		<ul class="card card--wide">
+			<ul class="card">
+				<ul class="half-to-third--small">
+					<li class="fiesta"></li>
+				</ul>
+			</ul>
+				<li class="card-row card--wide__row">
+					<ul>
+						<li><h2 class="lighter"><strong>Economy</strong></h2></li>
+					</ul>
+				</li>
+
+				<li class="card-row card--wide__row">
+					<p class="card-row__detail">Ford Fiesta or similar</p>
+				</li>
+				<li class="card-row card--wide__row">
+					<p class="card-row__detail">Eurocar</p>
+				</li>
+				<li class="card-row card--wide__row">
+					<p class="card-row__detail">5 people, 4 doors</p>
+				</li>
+				<li class="card-column card-column--small right hide-until-large">
+					<ul>
+						<li><h2 class="lighter"><strong>$130</strong></h2></li>
+						<li class="card-column__type">($13/day)</li>
+						<li class="card-column__detail"><strong>includes tax &amp; all fees</strong></li>
+						<li class="margin-left"><input type="button" value="Book" class="button button--main " onclick="location.href='/flight-results.html';"></li>
+					</ul>
+				</li>
+
+				<li class="card-row hide-on-large card--wide__row">
+					<ul>			
+						<li class="card-column__type">($13/day)</li>
+						<li><h2 class="lighter"><strong>$130</strong></h2></li>
+						<li class="card-column__detail"><strong>includes tax &amp; all fees</strong></li>
+					</ul>
+				</li>
+				<li><input type="button" value="Book" class="button button--sm-screen" onclick="location.href='/flight-results.html';"></li>
+		</ul>		
+		
+		<ul class="results-page">
+	<a href="#"><li class="results-page__button"><p>1</p></li></a>
+	<a href="#"><li class="results-page__button"><p>2</p></li></a>
+	<a href="#"><li class="results-page__button"><p>3</p></li></a>
+	<a href="#"><li class="results-page__button"><p>...</p></li></a>
+	<a href="#"><li class="results-page__button"><p>38</p></li></a>
+	<a href="#"><li class="results-page__button arrow-right"><p>`</p></li></a>
+</ul>
+
+	</div>
+
+	<footer>
+	<ul class="clean-list">
+		<li><a href="/index.html" class="clean-link">Flights</a></li>
+		<li><a href="/index.html" class="clean-link">Lodging</a></li>
+		<li><a href="/index.html" class="clean-link">Cars</a></li>
+		<li><a href="/index.html" class="clean-link">Specials</a></li>
+	</ul>
+	<ul class="social center">
+		<li><a href="http://facebook.com" target=_blank><img src="../images/social/facebook.svg"></a></li>
+		<li><a href="http://twitter.com" target=_blank><img src="../images/social/twitter.svg"></a></li>
+		<li><a href="http://instagram.com" target=_blank><img src="../images/social/instagram.svg"></a></li>
+		<li><a href="http://youtube.com" target=_blank><img src="../images/social/youtube.svg"></a></li>
+	</ul>
+	<p>Our mission is to provide complete pricing transparency and arm you with the tools you need to make the smartest bookings. No hidden fees, no fine print, no dishonesty about our prices. <a href="#" class="clean-link">Learn more.</a></p>
+</footer>
+
+</div>
+
+<script src="/javascripts/pikaday.js"></script>
+<script>
+new Pikaday({ field: document.getElementById('datepicker') });
+new Pikaday({ field: document.getElementById('datepicker2') });
+</script>
+
+  </body>
+</html>
