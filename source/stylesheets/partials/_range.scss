@@ -56,6 +56,10 @@ input[type="range"] {
     outline: none;
   }
 
+  @-ms-document url-prefix() { 
+    display: none;
+  }
+
   &::-webkit-slider-runnable-track {
     @include track();
     @include shadow($track-shadow-size, $track-shadow-blur, $track-shadow-color);

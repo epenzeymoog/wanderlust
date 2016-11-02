@@ -32,6 +32,13 @@
 	}
 }
 
+//Hide for EI
+@media screen\0 {
+    .hide-ms {
+    	display: none;
+    }
+}
+
 //Clean lists & links
 .clean-list {
   list-style: none;
