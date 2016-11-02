@@ -10,6 +10,20 @@ layout: layout
 	<div class="one-third left hide-until-large">
 		<section class="filter">
 			<input type="button" value="Create price alert" class="button button--tertiary left" onclick="location.href='/flight-results.html';">
+
+		<ul class="full block">
+			<li>
+				<select>
+					<option value="lowest to highest">Sort result</option>
+					<option value="lowest to highest">Price: Lowest to highest</option>
+					<option value="lowest to highest">Price: Highest to lowest</option>
+					<option value="lowest to highest">Duration: shortest to longest</option>
+					<option value="lowest to highest">Duration: longest to shortest</option>
+					<option value="lowest to highest">Takeoff: earliest to latest</option>
+					<option value="lowest to highest">Takeoff: latest to earliest</option>
+				</select>
+			</li>
+		</ul>
 				
 			<ul class="filter__title"><strong>Price</strong>
 				<div class="filter__range-values">
@@ -17,6 +31,11 @@ layout: layout
 					<li><p class="filter__label right">$1944</p></li>
 				</div>
 				<input type="range" value=0><input type="range" value=100>
+			</ul>
+
+			<ul class="filter__title"><strong>View flights by:</strong>
+				<li><label class="filter__label"><input type="checkbox">roundtrip</label></li>
+				<li><label class="filter__label"><input type="checkbox">flight-by-flight</label></li>
 			</ul>
 
 			<ul class="filter__title"><strong>Stops</strong>
@@ -48,30 +67,11 @@ layout: layout
 			</ul>
 
 			<ul class="filter__title"><strong>Airlines</strong>
-				<li><label class="filter__label"><input type="checkbox">Aer Lingus</label></li>
-				<li><label class="filter__label"><input type="checkbox">Aeromexico</label></li>
-				<li><label class="filter__label"><input type="checkbox">Air Canada</label></li>
-				<li><label class="filter__label"><input type="checkbox">Air Europe</label></li>
-				<li><label class="filter__label"><input type="checkbox">Air France</label></li>
-				<li><label class="filter__label"><input type="checkbox">Air India</label></li>
-				<li><label class="filter__label"><input type="checkbox">Alitalia</label></li>
-				<li><label class="filter__label"><input type="checkbox">American Airlines</label></li>
-				<li><label class="filter__label"><input type="checkbox">ANA</label></li>
-				<li><label class="filter__label"><input type="checkbox">Australian Airlines</label></li>
-				<li><label class="filter__label"><input type="checkbox">British Airways</label></li>
-				<li><label class="filter__label"><input type="checkbox">Cathay Pacific</label></li>
-				<li><label class="filter__label"><input type="checkbox">Copa Airlines</label></li>
-				<li><label class="filter__label"><input type="checkbox">Delta</label></li>
-				<li><label class="filter__label"><input type="checkbox">Emirates</label></li>
-				<li><label class="filter__label"><input type="checkbox">EtihadAirways</label></li>
-				<li><label class="filter__label"><input type="checkbox">EVA Air</label></li>
-				<li><label class="filter__label"><input type="checkbox">Finnair</label></li>
-				<li><label class="filter__label"><input type="checkbox">Iberia</label></li>
-				<li><label class="filter__label"><input type="checkbox">Jet Airways</label></li>
-				<li><label class="filter__label"><input type="checkbox">KLM</label></li>
-				<li><label class="filter__label"><input type="checkbox">LOT Polish Airlines</label></li>
-				<li><label class="filter__label"><input type="checkbox">SWISS</label></li>
-				<li><label class="filter__label"><input type="checkbox">United</label></li>
+				<li>
+					<% ["Aer Lingus", "Aeromexico", "Air Canada", "Air Europe", "Air France", "Alitalia", "American Airlines", "ANA", "Australian Airlines", "British Airways", "Cathay Pacific", "Copa Airlines", "Delta", "Emirates", "Etihad Airways", "EVA Air", "Finnair", "Iberia", "Jet Airways", "KLM", "LOT Polish Airlines", "SWISS", "United"].each do |airline| %>
+						<label class="filter__label"><input type="checkbox"><%= airline %></label>
+					<% end %>
+				</li>
 			</ul>
 		</section>
 	</div>
@@ -131,54 +131,12 @@ layout: layout
 				</select>
 			</div>
 			
-
 			<div class="half-to-quarter">
-			
 				<input type="button" value="Update" class="button button--secondary" onclick="location.href='/flight-results.html';">
 			</div>
-		</div>
-
-
-	<section class="card--wide card--alternative">
-		<ul class="hide-to-three-quarters"><p class="ib"><strong>Sort by:</strong></p>
-			<li class="one-third">
-				<select name="price">
-					<option value="lowest to highest">Price</option>
-					<option value="lowest to highest">Lowest to highest</option>
-					<option value="lowest to highest">Highest to lowest</option>
-				</select>
-			</li>
-			<li class="one-third">
-				<select name="price">
-					<option value="lowest to highest">Duration</option>
-					<option value="lowest to highest">Show shortest first</option>
-					<option value="lowest to highest">Show longest first</option>
-				</select>
-			</li>
-			<li class="one-third">
-				<select name="price">
-					<option value="lowest to highest">Takeoff</option>
-					<option value="lowest to highest">Show earliest first</option>
-					<option value="lowest to highest">Show latest first</option>
-				</select>
-			</li>
-		</ul>
-
-		<ul class="right one-third hide-on-medium">
-			<li class="half right">
-				<select>
-					<option value="lowest to highest">Sort by</option>
-					<option value="lowest to highest">Price: Lowest to highest</option>
-					<option value="lowest to highest">Price: Highest to lowest</option>
-					<option value="lowest to highest">Duration: shortest to longest</option>
-					<option value="lowest to highest">Duration: longest to shortest</option>
-					<option value="lowest to highest">Takeoff: earliest to latest</option>
-					<option value="lowest to highest">Takeoff: latest to earliest</option>
-				</select>
-			</li>
-		</ul>
-
-		<form class="form--dropdown hide-on-large">
+	
+	<div class="background--secondary">
+		<form class="form--dropdown hide-on-large half-always test">
 	    <div class="multiselect hide-on-large">
 	       <div class="selectBox" onclick="showCheckboxes()">
             <select>
@@ -187,6 +145,10 @@ layout: layout
             <div class="overSelect hide-on-large"></div>
 	       </div>
 	       <div id="checkboxes">
+	       		<p>View flights by:</p>
+	       		<% ["roundtrip", "flight-by-flight"].each do |flights| %>
+								<label class="filter__label"><input type="checkbox"><%= flights %></label>
+							<% end %>
 	       		<p>Stops</p>
 	            <% ["nonstop", "1 stop", "2+ stops"].each do |stops| %>
 								<label class="filter__label"><input type="checkbox"><%= stops %></label>
@@ -206,14 +168,21 @@ layout: layout
 	    </div>
 		</form>
 
-
-
-		<ul class="right on-quarter">
-			<li><p><a href="#" class="clean-link"><strong>Round-trip</strong></a></p></li>
-			<li><p><a href="#" class="clean-link">Flight-by-flight</a></p></li>
-		</ul>
-
-	</section>
+		<ul class="hide-on-large half-always drop-down">
+				<li>
+					<select>
+						<option value="lowest to highest">Sort result</option>
+						<option value="lowest to highest">Price: Lowest to highest</option>
+						<option value="lowest to highest">Price: Highest to lowest</option>
+						<option value="lowest to highest">Duration: shortest to longest</option>
+						<option value="lowest to highest">Duration: longest to shortest</option>
+						<option value="lowest to highest">Takeoff: earliest to latest</option>
+						<option value="lowest to highest">Takeoff: latest to earliest</option>
+					</select>
+				</li>
+			</ul>
+	</div>
+</div>
 
 
 		<ul class="card card--wide">

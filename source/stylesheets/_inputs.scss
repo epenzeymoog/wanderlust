@@ -42,7 +42,7 @@ input[type="button"] {
 .button--secondary {
   background-color: $alt-cta;
   margin-left: 5%;
-  width: 97%;
+  width: 95%;
 
   @media (min-width: $lg-screen) {
     margin-right: 0;
@@ -237,37 +237,50 @@ input[type="date"]::-webkit-outer-spin-button {
   margin: 0; 
 }
 
-//Filter drop down on small screens
+//Filter and sort drop downs on small screens
+.drop-down select {
+width: 91%;
+background-color: #ECF8FD;
+}
+
 .form--dropdown {
   display: inline-block;
-  width: 190px;
 
   input[type="checkbox"] {
     margin-right: 5px;
   }
+
+  select {
+    background-color: #ECF8FD;
+  }
 }
+
 .multiselect {
-    width: 190px;
+  width: 100%;
 }
+
 .selectBox {
-    position: relative;
+  position: relative;
 }
-.selectBox select {
-    width: 60%;
-    font-weight: bold;
+
+.test {
+  width: 50%;
 }
+
 .overSelect {
-    position: absolute;
-    left: 0; right: 0; top: 0; bottom: 0;
+  position: absolute;
+  left: 0; right: 0; top: 0; bottom: 0;
 }
+
 #checkboxes {
-    display: none;
-    background-color: $white;
-    border: 1px $secondary solid;
-    border-radius: 5px;
-    padding: 1em 3em 1em 1em;
-    position: absolute;
+  display: none;
+  background-color: $white;
+  border: 1px $secondary solid;
+  border-radius: 5px;
+  padding: 1em 3em 1em 1em;
+  position: absolute;
 }
+
 #checkboxes label {
     display: block;
 }
