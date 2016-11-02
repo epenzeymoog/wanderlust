@@ -4,18 +4,19 @@
 
 <p>Wanderlust is static travel search engine website for searching for flights, lodging and car rentals, with a design backed by user research and testing.</p>
 
-<p>This website was built with Middleman. Use the following instructions to install (or <a href="https://middlemanapp.com/basics/install/">check out their docs</a>)</p>
-
-
-<p>Clone the repository</p>
+<p>First, clone the repository by copying the following line and pasting it into your terminal:</p>
 <code>git clone git@github.com:epenzeymoog/wanderlust.git</code>
 
+<p>This website was built with Middleman. Use the following instructions to install (or <a href="https://middlemanapp.com/basics/install/">check out their docs</a>)</p>
 
-<p>Make sure you have xcode installed:</p>
+<p>The first step is to make sure you have xcode installed:</p>
 <code>$ xcode-select --install</code>
 
 <p>Then install middleman:</p>
 <code>$ gem install middleman</code>
+
+<p>Bundle install, please:</p>
+<code>$ bundle install</code>
 
 <p>You'll use Middleman's server:</p>
 <code>$ middleman server</code>

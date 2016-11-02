@@ -256,7 +256,11 @@ background-color: #ECF8FD;
 }
 
 .multiselect {
-  width: 100%;
+  width: 108%;
+
+  @media (min-width: $sm-screen) {
+    width: 101%;
+  }
 }
 
 .selectBox {
@@ -264,7 +268,7 @@ background-color: #ECF8FD;
 }
 
 .test {
-  width: 50%;
+  width: 49%;
 }
 
 .overSelect {

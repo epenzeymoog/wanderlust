@@ -39,6 +39,7 @@ nav {
 	color: $white;
 	display: block;
 	float: left;
+	font-size: .8em;
 	line-height: 2;
 	margin-right: 16px;
 	text-transform: uppercase;
@@ -48,6 +49,7 @@ nav {
 		}
 
 	@media (min-width: $md-screen) {	
+		font-size: 1em;
 		margin-right: 30px;
 	
 		&:last-of-type {
@@ -58,7 +60,7 @@ nav {
 
 .nav-single__link {
 	color: white;
-	line-height: 2;
+	// line-height: 2;
 	padding-right: 1em;
 }
 

@@ -11,6 +11,21 @@ layout: layout
 	<div class="filter">
 		<input type="button" value="Create price alert" class="button button--tertiary left" onclick="location.href='/flight-results.html';">
 		<p><strong><a href="#" class="clean-link">Read about driving rules in The Netherlands</a></strong></p>
+
+		<ul class="full block">
+			<li>
+				<select>
+					<option value="lowest to highest">Sort results</option>
+					<option value="lowest to highest">Price: Lowest to highest</option>
+					<option value="lowest to highest">Price: Highest to lowest</option>
+					<option value="lowest to highest">Duration: shortest to longest</option>
+					<option value="lowest to highest">Duration: longest to shortest</option>
+					<option value="lowest to highest">Takeoff: earliest to latest</option>
+					<option value="lowest to highest">Takeoff: latest to earliest</option>
+				</select>
+			</li>
+		</ul>
+
 		<ul class="filter__title"><strong>Price</strong>
 			<div class="filter__range-values">
 				<li><p class="filter__label left">$116</p></li>
@@ -126,6 +141,53 @@ h
 			<div class="half-to-quarter">			
 				<input type="button" value="Update" class="button button--secondary" onclick="location.href='/car-results.html';">
 			</div>
+
+
+	<div class="background--secondary">
+		<form class="form--dropdown hide-on-large half-always">
+	    <div class="multiselect hide-on-large">
+	       <div class="selectBox" onclick="showCheckboxes()">
+            <select>
+              <option>Filter results</option>
+            </select>
+            <div class="overSelect hide-on-large"></div>
+	       </div>
+	       <div id="checkboxes">
+	       		<p>Pick-up</p>
+	       		<% ["AMS: Schiphol", "Non-airport"].each do |pickup| %>
+								<label class="filter__label"><input type="checkbox"><%= pickup %></label>
+							<% end %>
+						<p>Zipcar</p>
+            	<label class="filter__label" for="AMS"><input type="checkbox">Show Zipcar</label>
+	       		<p>Capacity</p>
+	            <% ["1 - 2 passengers", "3 - 5 passengers", "6 + passengers"].each do |capacity| %>
+								<label class="filter__label"><input type="checkbox"><%= capacity %></label>
+							<% end %>
+            <p>Car Type</p>
+	            <% ["Small", "Convertible", "Medium", "Large", "SUV", "Van", "Luxury"].each do |car| %>
+								<label class="filter__label"><input type="checkbox"><%= car %></label>
+							<% end %>
+
+            <p>Rental Agency</p>
+            	<% ["Alamo", "Avis", "Budget", "Dollar", "Enterprise", "Eurocar", "Hertz", "Major", "National", "Sixt", "Thrifty"].each do |rental| %>
+            		<label class="filter__label"><input type="checkbox"><%= rental %></label>
+							<% end %>
+	       </div>
+	    </div>
+		</form>
+
+		<ul class="hide-on-large half-always drop-down">
+				<li>
+					<select>
+						<option value="lowest to highest">Sort results</option>
+						<option value="lowest to highest">Price: Lowest to highest</option>
+						<option value="lowest to highest">Price: Highest to lowest</option>
+					</select>
+				</li>
+			</ul>
+	</div>
+
+
 		</div>
 
 		<ul class="card card--wide">
