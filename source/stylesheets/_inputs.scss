@@ -136,6 +136,11 @@ input[type="button"] {
   height: 25px;
   margin: 5px 5px 0 0;
   width: 25px;
+
+  &:hover {
+    cursor: pointer;
+    opacity: .7;
+  }
 }
 
 .calendar-icon {
@@ -160,6 +165,11 @@ input[type="button"] {
 
 .grey {
   background-color: $light-grey;
+
+  &:hover {
+    cursor: initial;
+    opacity: 1;
+  }
 }
 
 .arrow-right {
@@ -176,14 +186,6 @@ input[type="button"] {
 
   @media (min-width: $md-screen) {
     padding-bottom: 2em;
-  }
-}
-
-.form-table--secondary .small-dropdown {
-  width: 80%;
-
-  @media (min-width: $sm-screen) {
-    width: 90%;
   }
 }
 
@@ -339,6 +341,14 @@ background-color: #ECF8FD;
 
   select {
     background-color: #ECF8FD;
+  }
+}
+
+.small-dropdown {
+  width: 80%;
+
+  @media (min-width: $sm-screen) {
+    width: 90%;
   }
 }
 
