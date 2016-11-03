@@ -72,6 +72,9 @@ layout: layout
 				</li>
 			</ul>
 		</section>
+
+	<%= partial "partials/calendar" %>
+
 	</div>
 
 	<div class="full-to-two-thirds right">
@@ -129,7 +132,7 @@ layout: layout
 				</select>
 			</div>
 			
-			<div class="half-to-quarter">
+			<div class="form-table__button">
 				<input type="button" value="Update" class="button button--secondary" onclick="location.href='/flight-results.html';">
 			</div>
 	
@@ -353,38 +356,7 @@ layout: layout
 			<input type="button" value="Book" class="button button--sm-screen" onclick="location.href='/flight-results.html';">
 		</section>
 
-		<section class="card card--wide">
-			<ul>				
-				<li class="card__detail--emphasized"><strong>9:55am ORD - 11:59 AMS</strong></li>
-				<li class="card__detail">8h 04m</li>
-				<li class="card__detail"><strong>1 stop TXL 45m</strong></li>			
-			</ul>		
-			<p class="card__detail--emphasized">Royal Dutch Airlines</p>	
-			<ul class="text-right hide-until-large right">
-				<li class="hide-ms"><h2 class="lighter"><strong>$955</strong></h2></li>
-				<li class="hide-ms">Economy</li>
-				<li class="card__detail--fineprint hide-ms"><strong>includes tax &amp; all fees</strong></li>
-				<li class="margin-left"><input type="button" value="Book" class="button button--main " onclick="location.href='/flight-results.html';"></li>
-			</ul>		
-			<ul>
-				<li class="card__detail--emphasized"><strong>9:55am ORD - 11:59 ORD</strong></li>
-				<li class="card__detail">8h 04m</li>
-				<li class="card__detail"><strong>nonstop</strong></li>
-			</ul>		
-			<p class="card__detail--emphasized">British Airways</p>				
-			<ul>
-				<li class="card__detail"><strong>included:</strong></li>
-				<li class="card__detail"><strong>1 free carry-on</strong></li>
-				<li class="card__detail"><strong>1 checked bag</strong></li>
-				<li class="underline "><a class="clean-link" href="#">view all details</a></li>
-			</ul>		
-			<ul class="hide-on-large">							
-				<li class="card__detail">Economy</li>
-				<li><h2 class="lighter"><strong>$955</strong></h2></li>
-				<li class="card__detail--fineprint"><strong>includes tax &amp; all fees</strong></li>			
-			</ul>
-			<input type="button" value="Book" class="button button--sm-screen" onclick="location.href='/flight-results.html';">
-		</section>
+
 		
 		<%=partial "partials/results-pages" %>
 

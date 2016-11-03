@@ -50,6 +50,16 @@ input[type="button"] {
   }
 }
 
+.form-table__button {
+  display: inline-block;
+  width: 48%;
+
+  @media (min-width: $lg-screen) {
+    margin-left: .2em;
+    width: 21%;
+  }
+}
+
 @-moz-document url-prefix() { 
   .button--secondary {
      position: relative;
@@ -79,8 +89,9 @@ input[type="button"] {
   display: inline-block;
   float: right;
   margin-top: 1em;
+}
 
-  a {
+.results-page__button {
     background-color: $white;
     border: 1px solid $light-grey;
     border-radius: 3px;
@@ -89,7 +100,7 @@ input[type="button"] {
     height: 28px;
     margin-right: 5px;
     text-decoration: none;
-    width: 30px;
+    width: 28px;
 
     &:nth-of-type(4) {
       border: none;
@@ -100,6 +111,51 @@ input[type="button"] {
       opacity: .7;
     }
   }
+
+.button--rectangle {
+  border-radius: 3px;
+  display: inline-block;
+  height: 25px;
+  margin: 0 5px 5px 0;
+  width: 45px;  
+
+  p {
+    color: $white;
+  }
+}
+
+.button--square {
+  border-radius: 3px;
+  float: left;
+  height: 25px;
+  margin: 5px 5px 0 0;
+  width: 25px;
+}
+
+.calendar-icon {
+  bottom: 2em;
+  position: relative;
+  right: 6.5em;
+}
+
+.red {
+  background-color: #D83F3F;
+}
+
+.green {
+  background-color: #9CD260;
+}
+
+.yellow {
+  background-color: #F6D34B;
+}
+
+.orange {
+  background-color: #E4A53F;
+}
+
+.grey {
+  background-color: $light-grey;
 }
 
 .arrow-right {
