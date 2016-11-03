@@ -23,7 +23,7 @@ layout: layout
 				</select>
 			</div>
 				
-			<ul class="form-column__title"><strong><p class="hide-ms">Price</strong>
+			<ul class="form-column__title"><strong><p class="hide-ms">Price</p></strong>
 				<div class="form-column__range-values hide-ms">
 					<li><p class="form-column__label left">$955</p></li>
 					<li><p class="form-column__label right">$1944</p></li>
@@ -31,18 +31,18 @@ layout: layout
 				<input class="hide-ms" type="range" value=0><input class="hide-ms" type="range" value=100>
 			</ul>
 
-			<ul class="form-column__title"><strong>View flights by:</strong>
+			<ul class="form-column__title"><p>View flights by:</p>
 				<li><label class="form-column__label"><input type="checkbox">roundtrip</label></li>
 				<li><label class="form-column__label"><input type="checkbox">flight-by-flight</label></li>
 			</ul>
 
-			<ul class="form-column__title"><strong>Stops</strong>
+			<ul class="form-column__title"><p>Stops</p>
 				<li><label class="form-column__label"><input type="checkbox">nonstop</label></li>
 				<li><label class="form-column__label"><input type="checkbox">1 stop</label></li>
 				<li><label class="form-column__label"><input type="checkbox">2+ stops</label></li>
 			</ul>
 
-			<ul class="form-column__title hide-ms"><p><strong>Times</strong></p>
+			<ul class="form-column__title hide-ms"><p>Times</p>
 				<li><p class="form-column__subtitle hide-ms">Take-off: Chicago</p></li>
 				<li><p class="form-column__label">Friday 5:30am - 10:00pm</p></li>
 				<li><input type="range" value=0><input type="range" value=100></li>
@@ -50,11 +50,9 @@ layout: layout
 				<li><p class="form-column__subtitle">Take-off: Amsterdam</p></li>
 				<li><p class="form-column__label">Friday 5:30am - 10:00pm</p></li>
 				<li><input type="range" value=0><input type="range" value=100></li>
-
-				<li><p class="form-column__subtitle">Show landing times</p></li>
 			</ul>
 
-			<ul class="form-column__title"><strong>Airports</strong>
+			<ul class="form-column__title"><p>Airports</p>
 				<ul class="form-column__subtitle"><p><strong>Chicago</strong></p>
 					<li><label class="form-column__label"><input type="checkbox">ORD: O'Hare International</label></li>
 					<li><label class="form-column__label"><input type="checkbox">MDW: Midway</label></li>
@@ -64,7 +62,7 @@ layout: layout
 				</ul>
 			</ul>
 
-			<ul class="form-column__title"><strong>Airlines</strong>
+			<ul class="form-column__title"><p>Airlines</p>
 				<li>
 					<% ["Aer Lingus", "Aeromexico", "Air Canada", "Air Europe", "Air France", "Alitalia", "American Airlines", "ANA", "Australian Airlines", "British Airways", "Cathay Pacific", "Copa Airlines", "Delta", "Emirates", "Etihad Airways", "EVA Air", "Finnair", "Iberia", "Jet Airways", "KLM", "LOT Polish Airlines", "SWISS", "United"].each do |airline| %>
 						<label class="form-column__label"><input type="checkbox"><%= airline %></label>
@@ -96,7 +94,7 @@ layout: layout
 
 			<div class="quarter-to-hide">
 				<label>Adults</label>
-				<select name="Adults">
+				<select class="small-dropdown" name="Adults">
 					<option value="more filters selected">1 Adult</option>
 				  <option value="volvo">2 Adults</option>
 				  <option value="saab">3 Adults</option>
@@ -106,7 +104,7 @@ layout: layout
 				
 			<div class="quarter-to-hide">
 				<label>Kids</label>
-				<select name="Kids">
+				<select class="small-dropdown" name="Kids">
 					<option value="more filters selected">0 Kids</option>
 				  <option value="volvo">2 Kids</option>
 				  <option value="saab">3 Kids</option>
@@ -140,7 +138,7 @@ layout: layout
 			<form class="form--dropdown hide-on-large half-always">
 		    <div class="multiselect hide-on-large">
 		        <div class="selectBox" onclick="showCheckboxes()">
-	            <select>
+	            <select class="small-dropdown">
 	              <option>Filter results</option>
 	            </select>
 	            <div class="overSelect hide-on-large"></div>
@@ -178,7 +176,7 @@ layout: layout
 			</form>
 
 			<div class="hide-on-large half-always drop-down">
-				<select>
+				<select class="small-dropdown">
 					<option value="sort-results">Sort results</option>
 					<option value="price-low-to-high">Price: Lowest to highest</option>
 					<option value="price-high-to-low">Price: Highest to lowest</option>
@@ -456,8 +454,9 @@ layout: layout
 		</section>
 
 		<%=partial "partials/results-pages" %>
-
+	
 		<p class="right text-right half clear hide-on-large margin-top">Flexible dates? Check out our <a href="#" class="">price tracking calendar</a> to find the cheapest flights.</p>
+
 
 	</div>
 
