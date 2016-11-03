@@ -67,7 +67,7 @@
 }
 
 //Hotel photos
-.dropjes, .hagel-slag, .canal-apt, .condo-apt, .brouwer, .loft-apt {
+.dropjes, .hagel-slag, .canal-apt, .condo-apt, .brouwer, .loft-apt, .nynke, .houseboat {
 	border-radius: 5px;
 	display: inline-block;
 	float: left;
@@ -105,8 +105,19 @@
 	position: relative;
 }
 
+.houseboat {
+	background: url(../images/lodging/houseboat.jpg) center no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
 .brouwer {
 	background: url(../images/lodging/brouwer.jpg) center no-repeat;
+	background-size: cover;
+}
+
+.nynke {
+	background: url(../images/lodging/Nynke.jpg) center no-repeat;
 	background-size: cover;
 }
 
