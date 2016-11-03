@@ -129,29 +129,29 @@ input[type="button"] {
   }
 }
 
-.filter {
+.form-column {
   padding-right: 10% ;
   width: 90%
 }
 
-.filter label{
+.form-column label{
   display: block;
 }
 
-.filter label:hover {
+.form-column label:hover {
   cursor: pointer;
 }
 
-.filter input[type=checkbox] {
+.form-column input[type=checkbox] {
   margin-right:5px;
 }
 
-.filter input[type=checkbox]:hover {
+.form-column input[type=checkbox]:hover {
   background-color: $off-white;
   cursor: pointer;
 }
 
-.filter--secondary {
+.form-column--secondary {
   input[type="checkbox"] {
     margin-right: 5px;
   }
@@ -160,15 +160,15 @@ input[type="button"] {
     width: 44%;
   }
 
-  .filter__range-values {
+  .form-column__range-values {
     height: 1.5em;
   }
 
-  .filter__title {
+  .form-column__title {
     margin-top: 0;
   }
 
-  .filter__range-values {
+  .form-column__range-values {
     width: 88%;
   }
 }

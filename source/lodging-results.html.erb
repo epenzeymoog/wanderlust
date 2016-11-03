@@ -7,47 +7,42 @@ layout: layout
 
 <div class="container margin-top">
 	<div class="form-table--secondary">
-
 		<div class="full-to-half left">	
 				<div class="half">
 					<label>Location</label>
 		      		<input type="text" name="location" placeholder="Amsterdam">
 		      <label>Arriving</label>
-		       	<input type="text" id="datepicker3" placeholder="11/19/2016">
-		       	
+		       	<input type="text" id="datepicker3" placeholder="11/19/2016"> 	
 				</div>
 
 				<div class="half">
 	       	<label>Rooms</label>
-		      <select name="Rooms">
-						<option value="more filters selected">1 Room</option>
-					  <option value="volvo">2 Rooms</option>
-					  <option value="saab">3 Rooms</option>
-					  <option value="fiat">4 Rooms</option>
-					</select>
+			      <select name="Rooms">
+							<option value="more filters selected">1 Room</option>
+						  <option value="volvo">2 Rooms</option>
+						  <option value="saab">3 Rooms</option>
+						  <option value="fiat">4 Rooms</option>
+						</select>
 					<label>Departing</label>
 		       <input type="text" id="datepicker4" placeholder="11/29/2016">
 		    </div>
 		</div>
 
-	<div class="full-to-half right">
-		    <div class="half-always filter--secondary">
-		      <div class="clean-list padding-bottom"><p class="padding-bottom--small">Type</p>
-		      	<label class="filter__label margin-right"><input type="checkbox">hotel</label>
-						<label class="filter__label margin-right"><input type="checkbox">airbnb</label>
-						<span class="ib"><label class="filter__label"><input type="checkbox">hostel</label></span>
-					</div>
-					<div class="filter__range-values hide-ms">
-						<p class="filter__label left">$955</p>
-						<p class="filter__label right">$1944</p>
-					</div>
-					<input class="hide-ms" type="range" value=0><input class="hide-ms" type="range" value=100>
-				
+		<div class="full-to-half right">
+	    <div class="half-always form-column--secondary">
+	      <div class="clean-list padding-bottom"><p class="padding-bottom--small">Type</p>
+	      	<label class="form-column__label margin-right"><input type="checkbox">hotel</label>
+					<label class="form-column__label margin-right"><input type="checkbox">airbnb</label>
+					<span class="ib"><label class="form-column__label"><input type="checkbox">hostel</label></span>
 				</div>
-
+				<div class="form-column__range-values hide-ms">
+					<p class="form-column__label left">$955</p>
+					<p class="form-column__label right">$1944</p>
+				</div>
+				<input class="hide-ms" type="range" value=0><input class="hide-ms" type="range" value=100>
+			</div>
 
 			<div class="half-always align-top">
-
 				<div class="half-always">
 					<label>Adults</label>
 					<select name="Adults">
@@ -72,154 +67,129 @@ layout: layout
 			<div class="half-always centered-element">
 				<input type="button" value="Update" class="button button--secondary--half ms-button" onclick="location.href='/flight-results.html';">
 			</div>
-
-
 		</div>
+	</div>
 
+	<section class="card card--wide full-to-half left clear">
+		<div>
+			<div class="card full loft-apt">
+				<span class="airbnb"></span>
+			</div>
+			<ul class="left clear-until-large">
+				<li>
+					<h2 class="lighter uppercase margin-bottom"><strong>Cozy loft 1</strong></h2>
+				</li>
+				<li>
+					<img src="/images/lodging/4-stars.png">
+				</li>
+				<li>
+					<p class="card__detail--emphasized">Neighborhood: Centrum</p>
+				</li>
+				<li>
+					<p class="card__detail">10 Noord Gezelligestraat</p>
+				</li>
+				<li>
+					<p class="card__detail--emphasized">12 mi from Schiphol Airport</p>
+				</li>
+			</ul>
+				<ul class="text-right right hide-until-large">						
+						<li><h2 class="lighter"><strong>$580</strong></h2></li>
+						<li class="card-detail--secondary">($58/day)</li>
+						<li class="card__detail--fineprint"><strong>includes tax &amp; all fees</strong></li>
+						<li class="margin-left"><input type="button" value="Book" class="button button--main " onclick="location.href='/lodging-results.html';"></li>	
+				</ul>
+				<ul class="hide-on-large clear">						
+						<li class="card-detail--secondary">($58/day)</li>
+						<li><h2 class="lighter"><strong>$580</strong></h2></li>
+						<li class="card__detail--fine-print"><strong>includes tax &amp; all fees</strong></li>					
+				</ul>
+					<input type="button" value="Book" class="button button--sm-screen" onclick="location.href='/lodging-results.html';">
 		</div>
+	</section>
+
+	<section class="card card--wide full-to-half right">
+		<div>
+			<div class="card full loft-apt">
+				<span class="airbnb"></span>
+			</div>
+			<ul class="left clear-until-large">
+				<li>
+					<h2 class="lighter uppercase margin-bottom"><strong>Cozy loft 1</strong></h2>
+				</li>
+				<li>
+					<img src="/images/lodging/4-stars.png">
+				</li>
+				<li>
+					<p class="card__detail--emphasized">Neighborhood: Centrum</p>
+				</li>
+				<li>
+					<p class="card__detail">10 Noord Gezelligestraat</p>
+				</li>
+				<li>
+					<p class="card__detail--emphasized">12 mi from Schiphol Airport</p>
+				</li>
+			</ul>
+				<ul class="text-right right hide-until-large">						
+						<li><h2 class="lighter"><strong>$580</strong></h2></li>
+						<li class="card-detail--secondary">($58/day)</li>
+						<li class="card__detail--fineprint"><strong>includes tax &amp; all fees</strong></li>
+						<li class="margin-left"><input type="button" value="Book" class="button button--main " onclick="location.href='/lodging-results.html';"></li>	
+				</ul>
+				<ul class="hide-on-large clear">						
+						<li class="card-detail--secondary">($58/day)</li>
+						<li><h2 class="lighter"><strong>$580</strong></h2></li>
+						<li class="card__detail--fine-print"><strong>includes tax &amp; all fees</strong></li>					
+				</ul>
+					<input type="button" value="Book" class="button button--sm-screen" onclick="location.href='/lodging-results.html';">
+		</div>
+	</section>
 
 
 
-<div class="full-to-half left clear no-padding-bottom">
-		<ul class="card card--wide">
-			<ul class="card">
-				<ul class="full">
-					<li class="loft-apt">
-						<span class="airbnb"></span>
+<!-- 	<section class="full-to-half right ">
+		<div class="card card--wide">
+				<div class="card full loft-apt">
+					<span class="airbnb"></span>
+				</div>
+				<ul>
+					<li class="card--wide__row">
+						<h2 class="lighter uppercase margin-bottom"><strong>Cozy loft 1</strong></h2>
 					</li>
-				</ul>
-			</ul>
-				<li class="card-row card--wide__row">
-					<ul>
-						<li><h2 class="lighter margin-bottom"><strong>Cozy loft</strong></h2></li>
-					</ul>
-				</li>
-				<li class="card-row card--wide__row">
-					<li><img src="/images/lodging/4-stars.png"></li>
-				</li>
-
-				<li class="card-row card--wide__row">
-					<p class="card-row__detail">Neighborhood: Centrum</p>
-				</li>
-				<li class="card-row card--wide__row">
-					<p class="card-row__detail"><strong>10 Noord Gezelligestraat</strong></p>
-				</li>
-				<li class="card-row card--wide__row">
-					<p class="card-row__detail">12 mi from Schiphol Airport</p>
-				</li>
-				<li class="card-column card-column--small right hide-until-large">
-					<ul>
-						<li><h2 class="lighter"><strong>$580</strong></h2></li>
-						<li class="card-column__type">($58/day)</li>
-						<li class="card-column__detail"><strong>includes tax &amp; all fees</strong></li>
-						<li class="margin-left"><input type="button" value="Book" class="button button--main " onclick="location.href='/lodging-results.html';"></li>
-					</ul>
-				</li>
-
-				<li class="card-row hide-on-large card--wide__row">
-					<ul>			
-						<li class="card-column__type">($58/day)</li>
-						<li><h2 class="lighter"><strong>$590</strong></h2></li>
-						<li class="card-column__detail"><strong>includes tax &amp; all fees</strong></li>
-					</ul>
-				</li>
-				<li><input type="button" value="Book" class="button button--sm-screen" onclick="location.href='/lodging-results.html';"></li>
-		</ul>	
-	</div>
-
-
-<div class="full-to-half right no-padding-bottom">
-		<ul class="card card--wide">
-			<ul class="card">
-				<ul class="full">
-					<li class="brouwer">
+					<li class="card--wide__row">
+						<img src="/images/lodging/4-stars.png">
 					</li>
-				</ul>
-			</ul>
-				<li class="card-row card--wide__row">
-					<ul>
-						<li><h2 class="lighter margin-bottom"><strong>Hotel Brouwer</strong></h2></li>
-					</ul>
-				</li>
-				<li class="card-row card--wide__row">
-					<li><img src="/images/lodging/4-stars.png"></li>
-				</li>
+					<li class="card--wide__row">
+						<p class="card-row__detail">Neighborhood: Centrum</p>
+					</li>
+					<li class="card--wide__row">
+						<p class="card-row__detail"><strong>10 Noord Gezelligestraat</strong></p>
+					</li>
+					<li class="card--wide__row">
+						<p class="card-row__detail">12 mi from Schiphol Airport</p>
+					</li>
+					<li class="card-column card-column--small right hide-until-large">
+						<ul>
+							<li><h2 class="lighter"><strong>$580</strong></h2></li>
+							<li class="card-detail--secondary">($58/day)</li>
+							<li class="card__detail--fineprint"><strong>includes tax &amp; all fees</strong></li>
+							<li class="margin-left"><input type="button" value="Book" class="button button--main " onclick="location.href='/lodging-results.html';"></li>
+						</ul>
+					</li>
+					<li class="hide-on-large card--wide__row">
+						<ul>			
+							<li class="card-detail--secondary">($58/day)</li>
+							<li><h2 class="lighter"><strong>$580</strong></h2></li>
+							<li class="card__detail--fineprint"><strong>includes tax &amp; all fees</strong></li>
+						</ul>
+					</li>
+					<li>
+						<input type="button" value="Book" class="button button--sm-screen" onclick="location.href='/lodging-results.html';">
+					</li>
+				</ul>	
+		</div>
+	</section> -->
 
-				<li class="card-row card--wide__row">
-					<p class="card-row__detail">Neighborhood: Centrum</p>
-				</li>
-				<li class="card-row card--wide__row">
-					<p class="card-row__detail"><strong>14 Oost Makkelijkstraat</strong></p>
-				</li>
-				<li class="card-row card--wide__row">
-					<p class="card-row__detail">13 mi from Schiphol Airport</p>
-				</li>
-				<li class="card-column card-column--small right hide-until-large">
-					<ul>
-						<li><h2 class="lighter"><strong>$790</strong></h2></li>
-						<li class="card-column__type">($79/day)</li>
-						<li class="card-column__detail"><strong>includes tax &amp; all fees</strong></li>
-						<li class="margin-left"><input type="button" value="Book" class="button button--main " onclick="location.href='/lodging-results.html';"></li>
-					</ul>
-				</li>
-
-				<li class="card-row hide-on-large card--wide__row">
-					<ul>			
-						<li class="card-column__type">($79/day)</li>
-						<li><h2 class="lighter"><strong>$790</strong></h2></li>
-						<li class="card-column__detail"><strong>includes tax &amp; all fees</strong></li>
-					</ul>
-				</li>
-				<li><input type="button" value="Book" class="button button--sm-screen" onclick="location.href='/lodging-results.html';"></li>
-		</ul>	
-	</div>
-
-
-	<div class="full-to-half left clear no-padding-bottom lodging">
-		<ul class="card card--wide">
-			<ul class="card">
-				<ul class="full">
-					<li class="dropjes"></li>
-				</ul>
-			</ul>
-				<li class="card-row card--wide__row">
-					<ul>
-						<li><h2 class="lighter margin-bottom"><strong>Hotel Dropjes</strong></h2></li>
-					</ul>
-				</li>
-				<li class="card-row card--wide__row">
-					<li><img src="/images/lodging/4-stars.png"></li>
-				</li>
-
-				<li class="card-row card--wide__row">
-					<p class="card-row__detail">Neighborhood: Centrum</p>
-				</li>
-				<li class="card-row card--wide__row">
-					<p class="card-row__detail"><strong>68 Zuid Kolibriestraat</strong></p>
-				</li>
-				<li class="card-row card--wide__row">
-					<p class="card-row__detail">11 mi from Schiphol Airport</p>
-				</li>
-				<li class="card-column card-column--small right hide-until-large">
-					<ul>
-						<li><h2 class="lighter"><strong>$580</strong></h2></li>
-						<li class="card-column__type">($58/day)</li>
-						<li class="card-column__detail"><strong>includes tax &amp; all fees</strong></li>
-						<li class="margin-left"><input type="button" value="Book" class="button button--main " onclick="location.href='/lodging-results.html';"></li>
-					</ul>
-				</li>
-
-				<li class="card-row hide-on-large card--wide__row">
-					<ul>			
-						<li class="card-column__type">($58/day)</li>
-						<li><h2 class="lighter"><strong>$580</strong></h2></li>
-						<li class="card-column__detail"><strong>includes tax &amp; all fees</strong></li>
-					</ul>
-				</li>
-				<li><input type="button" value="Book" class="button button--sm-screen" onclick="location.href='/lodging-results.html';"></li>
-		</ul>	
-	</div>
-
+<!-- 
 
 	<div class="full-to-half right no-padding-bottom lodging">
 		<ul class="card card--wide">
@@ -640,7 +610,7 @@ layout: layout
 				</li>
 				<li><input type="button" value="Book" class="button button--sm-screen" onclick="location.href='/lodging-results.html';"></li>
 		</ul>	
-	</div>
+	</div> -->
 
 
 
@@ -651,6 +621,7 @@ layout: layout
 
 </div>
 
+<!-- JavaScript for Pikaday calendars -->
 <script src="/javascripts/pikaday.js"></script>
 <script>
 new Pikaday({ field: document.getElementById('datepicker3') });

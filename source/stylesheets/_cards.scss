@@ -1,25 +1,13 @@
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 //Shared card styles
 .card {
 	background-color: $almost-white;
 	border-radius: 5px;
-}
-
-//Shared card row styles
-.card-row {
-	padding-bottom: .4em;
-	width: 100%;
-}
-
-.no-padding-bottom .card-row {
-	padding-bottom: 0;
-}
-
-.lodging {
-	margin-top: 0;
-
-	@media (min-width: $lg-screen) {
-		margin-top: -6em;
-	}
 }
 
 //Wide card styles
@@ -29,73 +17,32 @@
 	padding: 1em;
 }
 
-.card--narrow__row {
-	display: inline-block;
-	margin: 0 auto;
-	padding-bottom: 0em;
-
-	@media (min-width: $md-screen) {
-		padding-bottom: 2em;
-	}
-}
-
-.card--wide__row {
+.clear-until-large {
 	clear: both;
 
 	@media (min-width: $lg-screen) {
 		clear: initial;
-	}
+	}	
 }
 
-.card-column {
-	bottom: 3em;
-	position: relative;
-	right: .1em;
+.text-right {
 	text-align: right;
 }
-
-.card-column--small {
-	bottom: 8.5em;
-}
-
 
 //Narrow card styles
 .card--narrow {
 	display: inline-block;
 	margin-bottom: 2em;
 	overflow: hidden;
+	
 	&:last-child {
 		margin-right: 0;
 	}
-
-	@media (min-width: 701px) {
-		margin-bottom: 0em;
-	}
 }
 
-.card--narrow__position {
-	display: block;
-	margin: 0 auto;
-	overflow: hidden;
-	padding-bottom: 0em;
-
-	@media (min-width: $md-screen) {
-		padding-bottom: 2em;
-	}
-}
-
-.card--narrow__content {
+.card__content {
 	color: $main;
-	margin: 0;
 	padding: .5em .5em 2em .5em;
-}
-
-//Alternative card styles
-.card--alternative {
-	border: none;
-	border-radius: 5px;
-	height: 3em;
-	background-color: #ECF8FD;
 }
 
 //Promotions photos
@@ -104,7 +51,6 @@
 	height: 200px;
 	width: 100%;
 }
-
 
 .oslo {
 	background: url(../images/promotions/Oslo.jpg) center no-repeat;
@@ -131,6 +77,18 @@
 }
 
 //Hotel photos
+
+.dropjes, .hagel-slag, .canal-apt,
+.condo-apt, .brouwer, .loft-apt {
+	border-radius: 5px;
+	display: inline-block;
+	float: left;
+	height: 120px;
+	margin-right: 3em;
+	margin-top: 5px;
+	width: 100%;
+}
+
 .loft-apt {
 	background: url(../images/lodging/loft-apt.jpg) center no-repeat;
 	background-size: cover;
@@ -187,17 +145,17 @@
 }
 
 //Car photos
-.golf, .corsa, .polo, .ka, .panda, .fiesta, .dropjes, .hagel-slag, .canal-apt,
-.condo-apt, .brouwer, .loft-apt, .dropjes, .hagel-slag, .canal-apt, .condo-apt,
-.brouwer {
-	border: 1px solid $light-grey;
-	border-radius: 5px;
+.golf, .corsa, .polo, .ka, .panda, .fiesta {
 	display: inline-block;
 	float: left;
-	height: 120px;
-	margin-right: 3em;
+	height: 140px;
+	margin-right: 7%;
 	margin-top: 5px;
-	width: 100%;
+	width: 200px;
+
+	@media (min-width: $ex-lg-screen) {
+		margin-right: 14%;
+	}
 }
 
 .golf {

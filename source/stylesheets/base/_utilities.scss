@@ -11,27 +11,6 @@
 	clear: both;
 }
 
-//Hide & display
-.hide-until-large {
-	display: none;
-
-	@media (min-width: $lg-screen) {
-		display: block;
-	}
-}
-
-.hide-on-large {
-	@media (min-width: $lg-screen) {
-		display: none;
-	}
-}
-
-.hide-on-medium {
-	@media (min-width: 600px) {
-		display: none;
-	}
-}
-
 //Hide for EI
 @media screen\0 {
     .hide-ms {
@@ -120,10 +99,4 @@
   .centered-element {
      bottom: 3.5em
   }
-}
-
-//Misc
-.strikethrough {
-	color: $secondary;
-	text-decoration: line-through;
 }

@@ -8,66 +8,60 @@ layout: layout
 <div class="container margin-top">
 
 	<div class="one-third left hide-until-large">
-	<div class="filter">
+	<div class="form-column">
 		<input type="button" value="Create price alert" class="button button--tertiary left" onclick="location.href='/flight-results.html';">
 		<p><strong><a href="#" class="clean-link">Read about driving rules in The Netherlands</a></strong></p>
 
-		<ul class="full block">
-			<li>
-				<select>
-					<option value="lowest to highest">Sort results</option>
-					<option value="lowest to highest">Price: Lowest to highest</option>
-					<option value="lowest to highest">Price: Highest to lowest</option>
-					<option value="lowest to highest">Duration: shortest to longest</option>
-					<option value="lowest to highest">Duration: longest to shortest</option>
-					<option value="lowest to highest">Takeoff: earliest to latest</option>
-					<option value="lowest to highest">Takeoff: latest to earliest</option>
-				</select>
-			</li>
-		</ul>
+		<div class="full block">
+			<select>
+				<option value="lowest to highest">Sort results</option>
+				<option value="lowest to highest">Price: Lowest to highest</option>
+				<option value="lowest to highest">Price: Highest to lowest</option>
+			</select>
+		</div>
 
-		<ul class="filter__title"><strong>Price</strong>
-			<div class="filter__range-values hide-ms">
-				<li><p class="filter__label left">$116</p></li>
-				<li><p class="filter__label right">$344</p></li>
+		<ul class="form-column__title"><strong>Price</strong>
+			<div class="form-column__range-values hide-ms">
+				<li><p class="form-column__label left">$116</p></li>
+				<li><p class="form-column__label right">$344</p></li>
 			</div>
 			<input class="hide-ms" type="range" value=0><input class="hide-ms" type="range" value=100>
 		</ul>
 
-		<ul class="filter__title"><strong>Pick-up</strong>
-			<li><label class="filter__label"><input type="checkbox">AMS: Schiphol</label></li>
-			<li><label class="filter__label"><input type="checkbox">Non-airport</label></li>
+		<ul class="form-column__title"><strong>Pick-up</strong>
+			<li><label class="form-column__label"><input type="checkbox">AMS: Schiphol</label></li>
+			<li><label class="form-column__label"><input type="checkbox">Non-airport</label></li>
 		</ul>
 
-		<ul class="filter__title"><strong>Zipcar</strong>
-			<li><label class="filter__label"><input type="checkbox">Show Zipcar</label></li>
+		<ul class="form-column__title"><strong>Zipcar</strong>
+			<li><label class="form-column__label"><input type="checkbox" checked>Show Zipcar</label></li>
 		</ul>
 
-		<ul class="filter__title"><strong>Distance from:</strong>
+		<ul class="form-column__title"><strong>Distance from:</strong>
 		<li><input type="text" name="distance" placeholder="Schiphol airport"></li>
-			<div class="filter__range-values">
-				<li><p class="filter__label left">1 mile</p></li>
-				<li><p class="filter__label right">20+ miles</p></li>
+			<div class="form-column__range-values">
+				<li><p class="form-column__label left">1 mile</p></li>
+				<li><p class="form-column__label right">20+ miles</p></li>
 			</div>
 			<input class="hide-ms" type="range" value=0><input class="hide-ms" type="range" value=100>
 		</ul>
 
-		<ul class="filter__title"><strong>Capacity</strong>
-			<ul class="filter__subtitle"><p><strong>Passengers</strong></p>
-				<li><label class="filter__label"><input type="checkbox">1 - 2 passengers</label></li>
-				<li><label class="filter__label"><input type="checkbox">3 - 4 passengers</label></li>
-				<li><label class="filter__label"><input type="checkbox">6+ passengers</label></li>
+		<ul class="form-column__title"><strong>Capacity</strong>
+			<ul class="form-column__subtitle"><p><strong>Passengers</strong></p>
+				<li><label class="form-column__label"><input type="checkbox">1 - 2 passengers</label></li>
+				<li><label class="form-column__label"><input type="checkbox">3 - 4 passengers</label></li>
+				<li><label class="form-column__label"><input type="checkbox">6+ passengers</label></li>
 			</ul>
 		</ul>
 
-		<ul class="filter__title"><strong>Car Type</strong>
+		<ul class="form-column__title"><strong>Car Type</strong>
 		<% ["Small", "Convertible", "Medium", "Large", "SUV", "Van", "Luxury"].each do |car| %>
-				<li><label class="filter__label"><input type="checkbox"><%= car %></label></li>
+				<li><label class="form-column__label"><input type="checkbox"><%= car %></label></li>
 			<% end %>
 		</ul>
-		<ul class="filter__title"><strong>Rental Agency</strong>
+		<ul class="form-column__title"><strong>Rental Agency</strong>
 			<% ["Alamo", "Avis", "Budget", "Dollar", "Enterprise", "Eurocar", "Hertz", "Major", "National", "Sixt", "Thrifty"].each do |rental| %>
-				<li><label class="filter__label"><input type="checkbox"><%= rental %></label></li>
+				<li><label class="form-column__label"><input type="checkbox"><%= rental %></label></li>
 			<% end %>
 		</ul>		
 
@@ -155,22 +149,22 @@ layout: layout
 	       <div id="checkboxes">
 	       		<p>Pick-up</p>
 	       		<% ["AMS: Schiphol", "Non-airport"].each do |pickup| %>
-								<label class="filter__label"><input type="checkbox"><%= pickup %></label>
+								<label class="form-column__label"><input type="checkbox"><%= pickup %></label>
 							<% end %>
 						<p>Zipcar</p>
-            	<label class="filter__label" for="AMS"><input type="checkbox">Show Zipcar</label>
+            	<label class="form-column__label" for="AMS"><input type="checkbox">Show Zipcar</label>
 	       		<p>Capacity</p>
 	            <% ["1 - 2 passengers", "3 - 5 passengers", "6 + passengers"].each do |capacity| %>
-								<label class="filter__label"><input type="checkbox"><%= capacity %></label>
+								<label class="form-column__label"><input type="checkbox"><%= capacity %></label>
 							<% end %>
             <p>Car Type</p>
 	            <% ["Small", "Convertible", "Medium", "Large", "SUV", "Van", "Luxury"].each do |car| %>
-								<label class="filter__label"><input type="checkbox"><%= car %></label>
+								<label class="form-column__label"><input type="checkbox"><%= car %></label>
 							<% end %>
 
             <p>Rental Agency</p>
             	<% ["Alamo", "Avis", "Budget", "Dollar", "Enterprise", "Eurocar", "Hertz", "Major", "National", "Sixt", "Thrifty"].each do |rental| %>
-            		<label class="filter__label"><input type="checkbox"><%= rental %></label>
+            		<label class="form-column__label"><input type="checkbox"><%= rental %></label>
 							<% end %>
 	       </div>
 	    </div>
@@ -190,246 +184,221 @@ layout: layout
 
 		</div>
 
-		<ul class="card card--wide">
-			<ul class="card">
-				<ul class="half-to-third--small">
-					<li class="corsa"></li>
+	<section class="card card--wide">
+		<div class="corsa"></div>		
+		<div class="clear-until-large">
+				<ul class="ib">
+					<li>
+						<h2 class="lighter uppercase"><strong>Compact</strong></h2>
+					</li>
+					<li>
+						<p class="card__detail">Corsa or similar</p>
+					</li>
+					<li>
+						<p class="card__detail">Budget</p>
+					</li>
+					<li>
+						<p class="card__detail">5 people, 4 doors</p>
+					</li>
 				</ul>
-			</ul>
-				<li class="card-row card--wide__row">
-					<ul>
-						<li><h2 class="lighter"><strong>Compact</strong></h2></li>
-					</ul>
-				</li>
-
-				<li class="card-row card--wide__row">
-					<p class="card-row__detail">Opel Corsa or similar</p>
-				</li>
-				<li class="card-row card--wide__row">
-					<p class="card-row__detail">Budget</p>
-				</li>
-				<li class="card-row card--wide__row">
-					<p class="card-row__detail">5 people, 4 doors</p>
-				</li>
-				<li class="card-column card-column--small right hide-until-large">
-					<ul>
-						<li><h2 class="lighter"><strong>$116</strong></h2></li>
-						<li class="card-column__type">($11/day)</li>
-						<li class="card-column__detail"><strong>includes tax &amp; all fees</strong></li>
-						<li class="margin-left"><input type="button" value="Book" class="button button--main " onclick="location.href='/flight-results.html';"></li>
-					</ul>
-				</li>
-
-				<li class="card-row hide-on-large card--wide__row">
-					<ul>			
-						<li class="card-column__type">($11/day)</li>
-						<li><h2 class="lighter"><strong>$116</strong></h2></li>
-						<li class="card-column__detail"><strong>includes tax &amp; all fees</strong></li>
-					</ul>
-				</li>
-				<li><input type="button" value="Book" class="button button--sm-screen" onclick="location.href='/flight-results.html';"></li>
-		</ul>
-
-		<ul class="card card--wide">
-			<ul class="card">
-				<ul class="half-to-third--small">
-					<li class="golf"></li>
+			<div class="right hide-until-large ">
+				<ul class="right text-right">
+					<li><h2 class="lighter"><strong>$116</strong></h2></li>
+					<li class="card-detail--secondary">($11/day)</li>
+					<li class="card__detail--fineprint"><strong>includes tax &amp; all fees</strong></li>
+					<li class="margin-left"><input type="button" value="Book" class="button button--main " onclick="location.href='/flight-results.html';"></li>
 				</ul>
-			</ul>
-				<li class="card-row card--wide__row">
-					<ul>
-						<li><h2 class="lighter"><strong>Economy</strong></h2></li>
-					</ul>
-				</li>
-
-				<li class="card-row card--wide__row">
-					<p class="card-row__detail">V W Golf or similar</p>
-				</li>
-				<li class="card-row card--wide__row">
-					<p class="card-row__detail">Avis</p>
-				</li>
-				<li class="card-row card--wide__row">
-					<p class="card-row__detail">5 people, 4 doors</p>
-				</li>
-				<li class="card-column card-column--small right hide-until-large">
-					<ul>
-						<li><h2 class="lighter"><strong>$116</strong></h2></li>
-						<li class="card-column__type">($11/day)</li>
-						<li class="card-column__detail"><strong>includes tax &amp; all fees</strong></li>
-						<li class="margin-left"><input type="button" value="Book" class="button button--main " onclick="location.href='/flight-results.html';"></li>
-					</ul>
-				</li>
-
-				<li class="card-row hide-on-large card--wide__row">
-					<ul>			
-						<li class="card-column__type">($11/day)</li>
-						<li><h2 class="lighter"><strong>$116</strong></h2></li>
-						<li class="card-column__detail"><strong>includes tax &amp; all fees</strong></li>
-					</ul>
-				</li>
+			</div>			
+		</div>
+		<div class="hide-on-large clear">
+			<ul>			
+				<li class="card-detail--secondary">($11/day)</li>
+				<li><h2 class="lighter"><strong>$116</strong></h2></li>
+				<li class="card__detail--fineprint"><strong>includes tax &amp; all fees</strong></li>
 				<li><input type="button" value="Book" class="button button--sm-screen" onclick="location.href='/flight-results.html';"></li>
-		</ul>
+			</ul>
+		</div>		
+	</section>
 
-		<ul class="card card--wide">
-			<ul class="card">
-				<ul class="half-to-third--small">
-					<li class="polo"></li>
+	<section class="card card--wide">
+		<div class="corsa"></div>		
+		<div class="clear-until-large">
+				<ul class="ib">
+					<li>
+						<h2 class="lighter uppercase"><strong>Compact</strong></h2>
+					</li>
+					<li>
+						<p class="card__detail">Corsa or similar</p>
+					</li>
+					<li>
+						<p class="card__detail">Budget</p>
+					</li>
+					<li>
+						<p class="card__detail">5 people, 4 doors</p>
+					</li>
 				</ul>
-			</ul>
-				<li class="card-row card--wide__row">
-					<ul>
-						<li><h2 class="lighter"><strong>Economy</strong></h2></li>
-					</ul>
-				</li>
-
-				<li class="card-row card--wide__row">
-					<p class="card-row__detail">V W polo or similar</p>
-				</li>
-				<li class="card-row card--wide__row">
-					<p class="card-row__detail">Budget</p>
-				</li>
-				<li class="card-row card--wide__row">
-					<p class="card-row__detail">5 people, 4 doors</p>
-				</li>
-				<li class="card-column card-column--small right hide-until-large">
-					<ul>
-						<li><h2 class="lighter"><strong>$116</strong></h2></li>
-						<li class="card-column__type">($11/day)</li>
-						<li class="card-column__detail"><strong>includes tax &amp; all fees</strong></li>
-						<li class="margin-left"><input type="button" value="Book" class="button button--main " onclick="location.href='/flight-results.html';"></li>
-					</ul>
-				</li>
-
-				<li class="card-row hide-on-large card--wide__row">
-					<ul>			
-						<li class="card-column__type">($11/day)</li>
-						<li><h2 class="lighter"><strong>$116</strong></h2></li>
-						<li class="card-column__detail"><strong>includes tax &amp; all fees</strong></li>
-					</ul>
-				</li>
-				<li><input type="button" value="Book" class="button button--sm-screen" onclick="location.href='/flight-results.html';"></li>
-		</ul>
-
-		<ul class="card card--wide">
-			<ul class="card">
-				<ul class="half-to-third--small">
-					<li class="ka"></li>
+			<div class="right hide-until-large ">
+				<ul class="right text-right">
+					<li><h2 class="lighter"><strong>$116</strong></h2></li>
+					<li class="card-detail--secondary">($11/day)</li>
+					<li class="card__detail--fineprint"><strong>includes tax &amp; all fees</strong></li>
+					<li class="margin-left"><input type="button" value="Book" class="button button--main " onclick="location.href='/flight-results.html';"></li>
 				</ul>
-			</ul>
-				<li class="card-row card--wide__row">
-					<ul>
-						<li><h2 class="lighter"><strong>Mini</strong></h2></li>
-					</ul>
-				</li>
-
-				<li class="card-row card--wide__row">
-					<p class="card-row__detail">Ford Ka or similar</p>
-				</li>
-				<li class="card-row card--wide__row">
-					<p class="card-row__detail">Budget</p>
-				</li>
-				<li class="card-row card--wide__row">
-					<p class="card-row__detail">5 people, 4 doors</p>
-				</li>
-				<li class="card-column card-column--small right hide-until-large">
-					<ul>
-						<li><h2 class="lighter"><strong>$129</strong></h2></li>
-						<li class="card-column__type">($13/day)</li>
-						<li class="card-column__detail"><strong>includes tax &amp; all fees</strong></li>
-						<li class="margin-left"><input type="button" value="Book" class="button button--main " onclick="location.href='/flight-results.html';"></li>
-					</ul>
-				</li>
-
-				<li class="card-row hide-on-large card--wide__row">
-					<ul>			
-						<li class="card-column__type">($13/day)</li>
-						<li><h2 class="lighter"><strong>$129</strong></h2></li>
-						<li class="card-column__detail"><strong>includes tax &amp; all fees</strong></li>
-					</ul>
-				</li>
+			</div>			
+		</div>
+		<div class="hide-on-large clear">
+			<ul>			
+				<li class="card-detail--secondary">($11/day)</li>
+				<li><h2 class="lighter"><strong>$116</strong></h2></li>
+				<li class="card__detail--fineprint"><strong>includes tax &amp; all fees</strong></li>
 				<li><input type="button" value="Book" class="button button--sm-screen" onclick="location.href='/flight-results.html';"></li>
-		</ul>
+			</ul>
+		</div>		
+	</section>
 
-		<ul class="card card--wide">
-			<ul class="card">
-				<ul class="half-to-third--small">
-					<li class="panda"></li>
+	<section class="card card--wide">
+		<div class="corsa"></div>		
+		<div class="clear-until-large">
+				<ul class="ib">
+					<li>
+						<h2 class="lighter uppercase"><strong>Compact</strong></h2>
+					</li>
+					<li>
+						<p class="card__detail">Corsa or similar</p>
+					</li>
+					<li>
+						<p class="card__detail">Budget</p>
+					</li>
+					<li>
+						<p class="card__detail">5 people, 4 doors</p>
+					</li>
 				</ul>
-			</ul>
-				<li class="card-row card--wide__row">
-					<ul>
-						<li><h2 class="lighter"><strong>Economy</strong></h2></li>
-					</ul>
-				</li>
-
-				<li class="card-row card--wide__row">
-					<p class="card-row__detail">Fiat Panda or similar</p>
-				</li>
-				<li class="card-row card--wide__row">
-					<p class="card-row__detail">Enterprise</p>
-				</li>
-				<li class="card-row card--wide__row">
-					<p class="card-row__detail">5 people, 4 doors</p>
-				</li>
-				<li class="card-column card-column--small right hide-until-large">
-					<ul>
-						<li><h2 class="lighter"><strong>$130</strong></h2></li>
-						<li class="card-column__type">($13/day)</li>
-						<li class="card-column__detail"><strong>includes tax &amp; all fees</strong></li>
-						<li class="margin-left"><input type="button" value="Book" class="button button--main " onclick="location.href='/flight-results.html';"></li>
-					</ul>
-				</li>
-
-				<li class="card-row hide-on-large card--wide__row">
-					<ul>			
-						<li class="card-column__type">($13/day)</li>
-						<li><h2 class="lighter"><strong>$130</strong></h2></li>
-						<li class="card-column__detail"><strong>includes tax &amp; all fees</strong></li>
-					</ul>
-				</li>
-				<li><input type="button" value="Book" class="button button--sm-screen" onclick="location.href='/flight-results.html';"></li>
-		</ul>	
-
-		<ul class="card card--wide">
-			<ul class="card">
-				<ul class="half-to-third--small">
-					<li class="fiesta"></li>
+			<div class="right hide-until-large ">
+				<ul class="right text-right">
+					<li><h2 class="lighter"><strong>$116</strong></h2></li>
+					<li class="card-detail--secondary">($11/day)</li>
+					<li class="card__detail--fineprint"><strong>includes tax &amp; all fees</strong></li>
+					<li class="margin-left"><input type="button" value="Book" class="button button--main " onclick="location.href='/flight-results.html';"></li>
 				</ul>
-			</ul>
-				<li class="card-row card--wide__row">
-					<ul>
-						<li><h2 class="lighter"><strong>Economy</strong></h2></li>
-					</ul>
-				</li>
-
-				<li class="card-row card--wide__row">
-					<p class="card-row__detail">Ford Fiesta or similar</p>
-				</li>
-				<li class="card-row card--wide__row">
-					<p class="card-row__detail">Eurocar</p>
-				</li>
-				<li class="card-row card--wide__row">
-					<p class="card-row__detail">5 people, 4 doors</p>
-				</li>
-				<li class="card-column card-column--small right hide-until-large">
-					<ul>
-						<li><h2 class="lighter"><strong>$130</strong></h2></li>
-						<li class="card-column__type">($13/day)</li>
-						<li class="card-column__detail"><strong>includes tax &amp; all fees</strong></li>
-						<li class="margin-left"><input type="button" value="Book" class="button button--main " onclick="location.href='/flight-results.html';"></li>
-					</ul>
-				</li>
-
-				<li class="card-row hide-on-large card--wide__row">
-					<ul>			
-						<li class="card-column__type">($13/day)</li>
-						<li><h2 class="lighter"><strong>$130</strong></h2></li>
-						<li class="card-column__detail"><strong>includes tax &amp; all fees</strong></li>
-					</ul>
-				</li>
+			</div>			
+		</div>
+		<div class="hide-on-large clear">
+			<ul>			
+				<li class="card-detail--secondary">($11/day)</li>
+				<li><h2 class="lighter"><strong>$116</strong></h2></li>
+				<li class="card__detail--fineprint"><strong>includes tax &amp; all fees</strong></li>
 				<li><input type="button" value="Book" class="button button--sm-screen" onclick="location.href='/flight-results.html';"></li>
-		</ul>		
-		
+			</ul>
+		</div>		
+	</section>
+
+	<section class="card card--wide">
+		<div class="corsa"></div>		
+		<div class="clear-until-large">
+				<ul class="ib">
+					<li>
+						<h2 class="lighter uppercase"><strong>Compact</strong></h2>
+					</li>
+					<li>
+						<p class="card__detail">Corsa or similar</p>
+					</li>
+					<li>
+						<p class="card__detail">Budget</p>
+					</li>
+					<li>
+						<p class="card__detail">5 people, 4 doors</p>
+					</li>
+				</ul>
+			<div class="right hide-until-large ">
+				<ul class="right text-right">
+					<li><h2 class="lighter"><strong>$116</strong></h2></li>
+					<li class="card-detail--secondary">($11/day)</li>
+					<li class="card__detail--fineprint"><strong>includes tax &amp; all fees</strong></li>
+					<li class="margin-left"><input type="button" value="Book" class="button button--main " onclick="location.href='/flight-results.html';"></li>
+				</ul>
+			</div>			
+		</div>
+		<div class="hide-on-large clear">
+			<ul>			
+				<li class="card-detail--secondary">($11/day)</li>
+				<li><h2 class="lighter"><strong>$116</strong></h2></li>
+				<li class="card__detail--fineprint"><strong>includes tax &amp; all fees</strong></li>
+				<li><input type="button" value="Book" class="button button--sm-screen" onclick="location.href='/flight-results.html';"></li>
+			</ul>
+		</div>		
+	</section>
+
+	<section class="card card--wide">
+		<div class="corsa"></div>		
+		<div class="clear-until-large">
+				<ul class="ib">
+					<li>
+						<h2 class="lighter uppercase"><strong>Compact</strong></h2>
+					</li>
+					<li>
+						<p class="card__detail">Corsa or similar</p>
+					</li>
+					<li>
+						<p class="card__detail">Budget</p>
+					</li>
+					<li>
+						<p class="card__detail">5 people, 4 doors</p>
+					</li>
+				</ul>
+			<div class="right hide-until-large ">
+				<ul class="right text-right">
+					<li><h2 class="lighter"><strong>$116</strong></h2></li>
+					<li class="card-detail--secondary">($11/day)</li>
+					<li class="card__detail--fineprint"><strong>includes tax &amp; all fees</strong></li>
+					<li class="margin-left"><input type="button" value="Book" class="button button--main " onclick="location.href='/flight-results.html';"></li>
+				</ul>
+			</div>			
+		</div>
+		<div class="hide-on-large clear">
+			<ul>			
+				<li class="card-detail--secondary">($11/day)</li>
+				<li><h2 class="lighter"><strong>$116</strong></h2></li>
+				<li class="card__detail--fineprint"><strong>includes tax &amp; all fees</strong></li>
+				<li><input type="button" value="Book" class="button button--sm-screen" onclick="location.href='/flight-results.html';"></li>
+			</ul>
+		</div>		
+	</section>
+
+	<section class="card card--wide">
+		<div class="corsa"></div>		
+		<div class="clear-until-large">
+				<ul class="ib">
+					<li>
+						<h2 class="lighter uppercase"><strong>Compact</strong></h2>
+					</li>
+					<li>
+						<p class="card__detail">Corsa or similar</p>
+					</li>
+					<li>
+						<p class="card__detail">Budget</p>
+					</li>
+					<li>
+						<p class="card__detail">5 people, 4 doors</p>
+					</li>
+				</ul>
+			<div class="right hide-until-large ">
+				<ul class="right text-right">
+					<li><h2 class="lighter"><strong>$116</strong></h2></li>
+					<li class="card-detail--secondary">($11/day)</li>
+					<li class="card__detail--fineprint"><strong>includes tax &amp; all fees</strong></li>
+					<li class="margin-left"><input type="button" value="Book" class="button button--main " onclick="location.href='/flight-results.html';"></li>
+				</ul>
+			</div>			
+		</div>
+		<div class="hide-on-large clear">
+			<ul>			
+				<li class="card-detail--secondary">($11/day)</li>
+				<li><h2 class="lighter"><strong>$116</strong></h2></li>
+				<li class="card__detail--fineprint"><strong>includes tax &amp; all fees</strong></li>
+				<li><input type="button" value="Book" class="button button--sm-screen" onclick="location.href='/flight-results.html';"></li>
+			</ul>
+		</div>		
+	</section>		
 		<%=partial "partials/results-pages" %>
 
 	</div>
@@ -438,6 +407,7 @@ layout: layout
 
 </div>
 
+<!-- JavaScript for Pikaday calendars -->
 <script src="/javascripts/pikaday.js"></script>
 <script>
 new Pikaday({ field: document.getElementById('datepicker') });

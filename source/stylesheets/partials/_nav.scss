@@ -1,7 +1,7 @@
 nav {
 	background-color: $background;
 	height: 6em;
-	padding-bottom: .5em;
+	padding-bottom: 7em;
 	padding-top: 1em;
 	width: 100%;
 
@@ -9,8 +9,8 @@ nav {
 		display: inline-block;
 	}
 
-	@media (min-width: 830px) {
-		height: 4em;
+	@media (min-width: $lg-screen) {
+		padding-bottom: 1em;
 	}
 }
 

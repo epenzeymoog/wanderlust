@@ -1,7 +1,7 @@
 //Card typography
 .lighter {
+	color: $main;
 	font-weight: lighter;
-	text-transform: uppercase;
 }
 
 .section-title {
@@ -15,56 +15,60 @@
 	text-transform: uppercase;
 }
 
-.card--narrow__title {
-	font-size: 1.5em;
-	font-weight: 300;
-	text-align: center;
-}
-
-.card-column__type {
+.card-detail--secondary {
 	color: $secondary;
 	padding: .2em 0;
 }
 
-.card-column__detail {
-	font-size: .75em;
-	line-height: 1;
+.card__detail--emphasized, .card__detail, .card__detail--additional {
+	display: inline-block;
+}
+
+.card__detail--emphasized {
+	color: $main;
+}
+
+.card__detail {
+	color: $secondary;
+	line-height: 2;
+}
+
+.card__detail--fineprint {
+	font-size: .75rem;
 	padding: .5em 0;
 }
 
-.card-row__main {
-	display: inline-block;
-	padding-right: 15px;
-}
-
-.card-row__detail {
-	color: $secondary;
-	display: inline-block;
-	padding-right: 15px;
-}
-
-.card-row__detail--additional {
-	display: inline-block;
-	text-decoration: underline;
-}
-
-//Filter typography
-.filter__title {
+//Form-column typography
+.form-column__title {
 	font-size: 1.5rem;
 	font-weight: 300;
 	margin-top: 1em;
-
-	&:first-of-type {
-		// margin-top: 3em;
-	}
 }
 
-.filter__subtitle {
+.form-column__subtitle {
 	font-size: 1.125rem;
 	margin-top: .5em;
 }
 
-.filter__label {
+.form-column__label {
 	color: $secondary;
 	font-size: 1rem;
+}
+
+//Typography helpers
+.strikethrough {
+	color: $secondary;
+	text-decoration: line-through;
+}
+
+.underline {
+	text-decoration: underline;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.uppercase {
+	text-transform: uppercase;
 }
