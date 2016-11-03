@@ -7,11 +7,11 @@
 @import "base/typography";
 @import "base/utilities";
 @import "base/pikaday";
+@import "base/inputs";
 
 @import "partials/footer";
 @import "partials/nav";
 @import "partials/range";
 
-@import "hero";
-@import "cards";
-@import "inputs";
+@import "modules/hero";
+@import "modules/cards";
