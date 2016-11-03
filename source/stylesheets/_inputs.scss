@@ -116,7 +116,7 @@ input[type="button"] {
   border-radius: 3px;
   display: inline-block;
   height: 25px;
-  margin: 0 5px 5px 0;
+  margin: 0 5px 3px 0;
   width: 45px;  
 
   p {
@@ -133,9 +133,7 @@ input[type="button"] {
 }
 
 .calendar-icon {
-  bottom: 2em;
-  position: relative;
-  right: 6.5em;
+  margin: 3px 0 0 30px;
 }
 
 .red {
