@@ -167,8 +167,6 @@ input[type="button"] {
   text-align: center;
 }
 
-
-//Input styles
 .form-table--secondary {
   padding-bottom: .5em;
 
@@ -203,7 +201,6 @@ input[type="button"] {
 }
 
 .form-column input[type=checkbox]:hover {
-  background-color: $off-white;
   cursor: pointer;
 }
 
@@ -277,6 +274,31 @@ select {
   }
 }
 
+.form-table__inputs {
+  clear: both;
+  margin: 0 1em;
+  padding: 2em 0 1em 0;
+}
+
+.form-table input[type="text"],
+.form-table input[type="date"],
+.form-table input[type="submit"],
+.form-table textarea,
+.form-table select {
+  background: hsla (195, 195%, 195%, .9);
+  box-sizing: content-box;
+  color: #606060;
+  display: inline-block;
+  font-size: .9em;
+  height: 30px;
+  transition: ease-in-out 0.2s;
+  width: 97%;
+  -ms-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  -webkit-appearance: none;
+}
+
 input[type="date"],
 input[type="time"],
 input[type="submit"],
@@ -327,20 +349,16 @@ background-color: #ECF8FD;
   position: relative;
 }
 
-.test {
-  width: 49%;
-}
-
 .overSelect {
-  position: absolute;
   left: 0; right: 0; top: 0; bottom: 0;
+  position: absolute;
 }
 
 #checkboxes {
-  display: none;
   background-color: $white;
   border: 1px $secondary solid;
   border-radius: 5px;
+  display: none;
   padding: 1em 3em 1em 1em;
   position: absolute;
 }

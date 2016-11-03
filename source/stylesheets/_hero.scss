@@ -16,7 +16,6 @@ header {
 	color: $white;
 	font-family: $Amatic;
 	font-size: 3em;
-	margin: 0;
 	padding: 1em 0;
 	text-align: center;
 
@@ -35,9 +34,6 @@ header {
   color: $main;
 	display: block;
   font-family: $Futura;
-  font-weight: 300;
-  letter-spacing: .1px;
-  margin: 0 auto;
   padding-bottom: 3em;
 	
 	input {
@@ -50,32 +46,6 @@ header {
   text-transform: uppercase;
 }
 
-.form-table input[type="text"],
-.form-table input[type="date"],
-.form-table input[type="submit"],
-.form-table textarea,
-.form-table select {
-  background: hsla(195, 195%, 195%, .9);
-  border: 1px solid grey;
-  border-radius: 3px;
-  box-sizing: content-box;
-  color: #606060;
-  display: inline-block;
-  font-size: .9em;
-  height: 30px;
-  line-height: normal;
-  margin: 5px 0px 20px 0;
-  padding: 0;
-  padding-left: 8px;
-  outline: none;
-  transition: ease-in-out 0.2s;
-  width: 97%;
-  -ms-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-  -webkit-appearance: none;
-}
-
 .form-table__meta-label {
   background: $secondary;
   border: 1px solid #ccc;
@@ -84,14 +54,11 @@ header {
   cursor: pointer;
   display: inline-block;
   float: left;
-  font-size: .7em;
   font-weight: 100;
   left: 1px;
-  letter-spacing: 1px;
   margin: 0;
   padding: 5px 20px 5px 10px;
   text-align: center;
-  text-transform: uppercase;
   width: 6.75em;
 
   @media (min-width: $md-screen) {
@@ -112,8 +79,8 @@ header {
 .form-table__additional-options a {
 	color: $main;
 	display: inline;
-	float: left;
   font-weight: 100;
+  float: left;
   padding: 1em 14px 0;
   text-decoration: none;
 
@@ -124,12 +91,6 @@ header {
   @media (min-width: $md-screen) {
   	font-size: 1.2em;
   }
-}
-
-.form-table__inputs {
-	clear: both;
-	margin: 0 1em;
-	padding: 2em 0 1em 0;
 }
 
 .form-table .block {
@@ -145,7 +106,7 @@ input:checked + label {
   background: hsla(195, 195%, 195%, .9);
   border: 1px solid $white;
   border-bottom: 1px solid #EAEAEC; 
-  color: grey;
+  color: $main;
 }
 
 #tab1:checked ~ #content1,
